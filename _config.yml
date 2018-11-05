@@ -1,0 +1,12 @@
+title: OpenTTD
+email: info@openttd.org
+description: >- # this means to ignore newlines until "baseurl:"
+  An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
