@@ -10,3 +10,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+exclude:
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock

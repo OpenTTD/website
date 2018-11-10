@@ -1,9 +1,12 @@
-FROM nginx:alpine
+# This is a multi-stage Docker build
 
-WORKDIR /workdir
+# Build the HTML from the source
+FROM alpine as html
+
+WORKDIR /source/
 
 # Copy the Gemfiles, so the dependencies can be installed correctly
-COPY Gemfile Gemfile.lock /workdir/
+COPY Gemfile Gemfile.lock /source/
 
 RUN apk --no-cache add \
         build-base \
@@ -19,17 +22,12 @@ RUN apk --no-cache add \
         build-base \
         ruby-dev
 
-# Copy the rest of Jekyll files
-COPY \
-    *.html \
-    *.md \
-    *.yml \
-    _layouts \
-    _posts \
-    /workdir/
+COPY . /source/
 
-COPY scripts/startup.sh /usr/bin/startup
+RUN mkdir /html \
+    && jekyll build -s /source -d /html
 
-ENTRYPOINT ["startup"]
-CMD []
+# Copy the HTML and serve it via nginx
+FROM nginx:alpine
+COPY --from=html /html/ /usr/share/nginx/html/
 
