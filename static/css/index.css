@@ -1,0 +1,128 @@
+
+#index-banner {
+	background: url("../img//layout/openttd-index.png") repeat-x;
+	height: auto !important;
+	height: 183px;
+	margin-bottom: 10px;
+	min-height: 183px;
+}
+#openttd-banner {
+	background: url("../img//layout/openttd-128.gif") no-repeat;
+	background-position: left center;
+	color: #FFFFFF;
+	font-size: 24px;
+	float: right;
+	height: 181px;
+	width: 520px;
+}
+#openttd-text {
+	margin: 43px 0px 0px 130px;
+	text-align: left;
+}
+#openttd-banner-left-1, #openttd-banner-left-4, #openttd-banner-left-7 {
+	background: url("../img//layout/frontpage-teaser-1.jpg") no-repeat;
+	height: 183px;
+}
+#openttd-banner-left-2, #openttd-banner-left-5 {
+	background: url("../img//layout/frontpage-teaser-2.jpg") no-repeat;
+	height: 183px;
+}
+#openttd-banner-left-3, #openttd-banner-left-6 {
+	background: url("../img//layout/frontpage-teaser-3.jpg") no-repeat;
+	height: 183px;
+}
+#openttd-banner-right {
+	background: url("../img//layout/openttd-index-right.png") no-repeat;
+	float: right;
+	height: 183px;
+	width: 15px;
+}
+
+#banner-links {
+	color: #CCCCCC;
+	float: right;
+	font-size: 11px;
+	height: 183px;
+	text-align: left;
+	width: 210px;
+}
+#banner-links ul {
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+}
+#banner-links ul li {
+	list-style-type: none;
+}
+#banner-links ul li a {
+	color: #FFFFFF;
+	display: block;
+	height: 50px;
+	padding-top: 5px;
+	text-decoration: none;
+}
+#banner-links ul li a:hover {
+	color: #999999;
+}
+#banner-links .h3 {
+	font-size: 14px;
+	margin-left: 55px;
+}
+#banner-links .h5 {
+	font-size: 11px;
+	margin-left: 55px;
+	color: #CCCCCC;
+}
+#banner-download {
+	background: url("../img//layout/index-download.gif") no-repeat;
+}
+#banner-wiki {
+	background: url("../img//layout/index-wiki.gif") no-repeat;
+}
+#banner-forum {
+	background: url("../img//layout/index-forum.gif") no-repeat;
+}
+
+#index-right {
+	float: right;
+	width: 246px;
+}
+#screenshot {
+	font-size: 11px;
+}
+#screenshot-image {
+	background-color: #FCB030;
+	padding: 6px 0px 0px 0px;
+	height: 184px;
+}
+#screenshot-image img {
+	border: 1px solid #FFFFFF;
+}
+#screenshot-content {
+	background-color: #FEE7C0;
+	padding: 10px 10px 10px 0px;
+	text-align: right;
+}
+#donate {
+	background: url("../img//layout/section-donate-bg.png") repeat;
+	border: 1px solid #EFCBCB;
+	margin: 10px 0px 10px 0px;
+}
+#donate a {
+	display: block;
+	margin: 0px 10px 10px 10px;
+	text-decoration: none;
+	text-align: justify;
+}
+#donate-text {
+	color: #000000;
+}
+#donate-header {
+	background: url("../img//layout/section-donate.png") no-repeat;
+	color: #B30000;
+	display: block;
+	height: 45px;
+	margin: 5px;
+	padding: 5px 0px 0px 50px;
+	text-align: left;
+}
+
