@@ -4,7 +4,7 @@ body {
 	text-align: center;
 }
 html {
-	background: url("../img//layout/background.png") repeat;
+	background: url("../img/layout/background.png") repeat;
 	color: black;
 	font-family: "Trebuchet MS", Arial, Verdana, Sans-Serif;
 	font-size: 12px;
@@ -19,7 +19,7 @@ a {
 	color: #DD6000;
 }
 hr {
-	background: url("../img//layout/hr.png") repeat-x;
+	background: url("../img/layout/hr.png") repeat-x;
 	border: none;
 	height: 2px;
 	width: 95%;
@@ -52,7 +52,7 @@ h5, .h5 {
 }
 
 #languages {
-	background: url("../img//layout/languages-bg.png") repeat-x;
+	background: url("../img/layout/languages-bg.png") repeat-x;
 	height: 22px;
 	margin: 0px auto;
 	width: 800px;
@@ -67,13 +67,13 @@ h5, .h5 {
 	width: 18px;
 }
 #languages-left {
-	background: url("../img//layout/languages-bg-left.png") no-repeat;
+	background: url("../img/layout/languages-bg-left.png") no-repeat;
 	float: left;
 	height: 22px;
 	width: 15px;
 }
 #languages-right {
-	background: url("../img//layout/languages-bg-right.png") no-repeat;
+	background: url("../img/layout/languages-bg-right.png") no-repeat;
 	float: right;
 	height: 22px;
 	width: 15px;
@@ -86,26 +86,26 @@ h5, .h5 {
 }
 
 #header {
-	background: url("../img//layout/header-bg.png") repeat;
+	background: url("../img/layout/header-bg.png") repeat;
 	height: 90px;
 	margin: 0px auto;
 	width: 800px;
 }
 #header-left {
-	background: url("../img//layout/header-bg-left.png") repeat-y;
+	background: url("../img/layout/header-bg-left.png") repeat-y;
 	float: left;
 	height: 90px;
 	width: 15px;
 }
 #header-right {
-	background: url("../img//layout/header-bg-right.png") repeat-y;
+	background: url("../img/layout/header-bg-right.png") repeat-y;
 	float: right;
 	height: 90px;
 	width: 15px;
 }
 
 #download-fast-1, #download-fast-2, #download-fast-3 {
-	background: url("../img//layout/download-fast.png") no-repeat;
+	background: url("../img/layout/download-fast.png") no-repeat;
         float: left;
 	height: 33px;
 	line-height: 12px;
@@ -144,7 +144,7 @@ h5, .h5 {
 	width: 90px;
 }
 #openttd-logo {
-	background: url("../img//layout/openttd-64.gif") no-repeat;
+	background: url("../img/layout/openttd-64.gif") no-repeat;
 	background-position: left center;
 	float: right;
 	height: 75px;
@@ -152,7 +152,7 @@ h5, .h5 {
 	width: 250px;
 }
 #openttd-logo-ipv6 {
-	background: url("../img//layout/openttd-64-ipv6.gif") no-repeat;
+	background: url("../img/layout/openttd-64-ipv6.gif") no-repeat;
 	background-position: left center;
 	float: right;
 	height: 75px;
@@ -191,7 +191,7 @@ h5, .h5 {
 }
 
 #navigation {
-	background: url("../img//layout/navigation-bg.png") repeat-x;
+	background: url("../img/layout/navigation-bg.png") repeat-x;
 	height: auto !important;
 	height: 32px;
 	margin: 0px auto;
@@ -200,13 +200,13 @@ h5, .h5 {
 	width: 800px;
 }
 #navigation-left {
-	background: url("../img//layout/navigation-bg-left.png") no-repeat;
+	background: url("../img/layout/navigation-bg-left.png") no-repeat;
 	float: left;
 	height: 32px;
 	width: 15px;
 }
 #navigation-right {
-	background: url("../img//layout/navigation-bg-right.png") no-repeat;
+	background: url("../img/layout/navigation-bg-right.png") no-repeat;
 	float: right;
 	height: 32px;
 	width: 15px;
@@ -229,11 +229,11 @@ h5, .h5 {
 	text-decoration: none;
 }
 #navigation-bar li a:hover {
-	background: url("../img//layout/navigation-bg-hover.png") repeat-x;
+	background: url("../img/layout/navigation-bg-hover.png") repeat-x;
 	color: #444444;
 }
 #navigation-bar li.selected {
-	background: url("../img//layout/navigation-bg-selected.png") repeat-x;
+	background: url("../img/layout/navigation-bg-selected.png") repeat-x;
 }
 #navigation-bar li.selected a {
 	color: #444444;
@@ -245,41 +245,41 @@ h5, .h5 {
 	width: 800px;
 }
 #content-top {
-	background: url("../img//layout/content-bg-top.png") repeat-x;
+	background: url("../img/layout/content-bg-top.png") repeat-x;
 	width: 800px;
 }
 #content-top-left {
-	background: url("../img//layout/content-bg-top-left.png") no-repeat;
+	background: url("../img/layout/content-bg-top-left.png") no-repeat;
 	float: left;
 	height: 11px;
 	width: 15px;
 }
 #content-top-right {
-	background: url("../img//layout/content-bg-top-right.png") no-repeat;
+	background: url("../img/layout/content-bg-top-right.png") no-repeat;
 	float: right;
 	height: 11px;
 	width: 15px;
 }
 #content-left {
-	background: url("../img//layout/content-bg-left.png") repeat-y;
+	background: url("../img/layout/content-bg-left.png") repeat-y;
 }
 #content-right {
-	background: url("../img//layout/content-bg-right.png") repeat-y;
+	background: url("../img/layout/content-bg-right.png") repeat-y;
 	background-position: right;
 }
 #content-bottom {
-	background: url("../img//layout/content-bg-bottom.png") repeat-x;
+	background: url("../img/layout/content-bg-bottom.png") repeat-x;
 	height: 40px;
 	width: 800px;
 }
 #content-bottom-left {
-	background: url("../img//layout/content-bg-bottom-left.png") no-repeat;
+	background: url("../img/layout/content-bg-bottom-left.png") no-repeat;
 	float: left;
 	height: 40px;
 	width: 15px;
 }
 #content-bottom-right {
-	background: url("../img//layout/content-bg-bottom-right.png") no-repeat;
+	background: url("../img/layout/content-bg-bottom-right.png") no-repeat;
 	float: right;
 	height: 40px;
 	width: 15px;
@@ -312,7 +312,7 @@ h5, .h5 {
 	width: 15px;
 }
 #footer-right {
-	background: url("../img//layout/footer-bg-right.png") no-repeat;
+	background: url("../img/layout/footer-bg-right.png") no-repeat;
 	float: right;
 	height: 95px;
 	width: 15px;
