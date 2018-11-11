@@ -22,7 +22,6 @@ hr {
 	background: url("../img/layout/hr.png") repeat-x;
 	border: none;
 	height: 2px;
-	width: 95%;
 }
 h3, .h3 {
 	font-weight: normal;
@@ -241,48 +240,16 @@ h5, .h5 {
 
 #content-main {
 	background-color: white;
-	margin: 7px auto;
-	width: 800px;
-}
-#content-top {
-	background: url("../img/layout/content-bg-top.png") repeat-x;
-	width: 800px;
-}
-#content-top-left {
-	background: url("../img/layout/content-bg-top-left.png") no-repeat;
-	float: left;
-	height: 11px;
-	width: 15px;
-}
-#content-top-right {
-	background: url("../img/layout/content-bg-top-right.png") no-repeat;
-	float: right;
-	height: 11px;
-	width: 15px;
-}
-#content-left {
-	background: url("../img/layout/content-bg-left.png") repeat-y;
-}
-#content-right {
-	background: url("../img/layout/content-bg-right.png") repeat-y;
-	background-position: right;
+	margin: 12px auto;
+	width: 776px;
+	padding: 7px;
+	margin-bottom: 36px;
+	border-radius: 5px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
 }
 #content-bottom {
-	background: url("../img/layout/content-bg-bottom.png") repeat-x;
-	height: 40px;
-	width: 800px;
-}
-#content-bottom-left {
-	background: url("../img/layout/content-bg-bottom-left.png") no-repeat;
-	float: left;
-	height: 40px;
-	width: 15px;
-}
-#content-bottom-right {
-	background: url("../img/layout/content-bg-bottom-right.png") no-repeat;
-	float: right;
-	height: 40px;
-	width: 15px;
+    overflow: hidden;
+	padding-bottom: 6px;
 }
 #content-bottom-links {
 	float: left;
@@ -294,44 +261,6 @@ h5, .h5 {
 	font-size: 11px;
 	padding: 7px 5px 0px 5px;
 }
-#content {
-	margin: 0px 12px 0px 12px;
-	padding-top: 12px;
-}
-
-#footer {
-	background: url("../img/layout/footer-bg.png") repeat-x;
-	height: 95px;
-	margin: 5px auto;
-	width: 800px;
-}
-#footer-left {
-	background: url("../img/layout/footer-bg-left.png") no-repeat;
-	float: left;
-	height: 95px;
-	width: 15px;
-}
-#footer-right {
-	background: url("../img/layout/footer-bg-right.png") no-repeat;
-	float: right;
-	height: 95px;
-	width: 15px;
-}
-#footer-banner {
-	float: left;
-	margin: 17px 0px 0px 5px;
-}
-#footer-logo {
-	line-height: 95px;
-	text-align: center;
-}
-
-#w3c-logo {
-	margin: 17px 0px 0px 5px;
-	padding: 17px 0px 0px 0px;
-	text-align: center;
-}
-
 #hr-clear {
 	clear: both;
 }

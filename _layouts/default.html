@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="Description" content="An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features." />
         <meta name="Keywords" content="Transport,Tycoon,Deluxe,TTDLX,TTD,OpenTTD,OTTD" />
@@ -10,9 +10,50 @@
         <link rel="stylesheet" href="static/css/page.css" type="text/css" />
         <link rel="stylesheet" href="static/css/index.css" type="text/css" />
         <title>{{ page.title }}</title>
-  </head>
-  <body>
-    CABBAGE
-    {{ content }}
-  </body>
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-left"></div>
+            <div id="header-right"></div>
+            <div id="download-fast-2">
+                <h5><a href="/en/download-stable">Download stable (1.8.0)</a></h5>
+                <h5><a href="/en/download-trunk">Download nightly (r28004)</a></h5>
+            </div>
+            <div id="header-logo">
+                <div id="openttd-logo">
+                    <div id="openttd-logo-text"><a href="/en/"><img src="//media.openttd.org/images/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
+                </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <div id="navigation-left"></div>
+            <div id="navigation-right"></div>
+            <ul id="navigation-bar">
+                <li         class="selected" > <a href="/en/">      Home           </a></li>
+                <li > <a href="/en/about">      About          </a></li>
+                <li> <a href="//wiki.openttd.org/">Manual </a></li>
+                <li > <a href="/en/screenshots">Screenshots    </a></li>
+                <li > <a href="/en/servers">    Servers        </a></li>
+                <li > <a href="/en/development">Development    </a></li>
+                <li> <a href="//forum.openttd.org/">Forum </a></li>
+                <li> <a href="//wiki.openttd.org/Community">Community </a></li>
+                <li > <a href="/en/contact">    Contact        </a></li>
+                <li > <a href="/en/donate">     Donate         </a></li>
+            </ul>
+        </div>
+        <div id="content-main">
+            {{ content }}
+            <hr id="hr-clear" />
+            <div id="content-bottom">
+                <div id="content-bottom-links">
+                    <a href="http://account.openttd.org/en/policy">Privacy Policy</a> |
+                    <a href="http://account.openttd.org/en/login">Login</a> |
+                    <a href="http://www.openttd.org/contact">Contact</a>
+                </div>
+                <div id="content-bottom-copyright">
+                    Copyright &copy; 2005-2018 OpenTTD Team
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
