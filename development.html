@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<div id="section-full">
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Translating</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>If you would like to translate the game, please contact our <a href="/en/contact">translations manager</a>. He will give you an account to <a href="//translator.openttd.org/">our Web Translator</a> and he will create everything needed in case you want to start with a translation of a yet untranslated language. </p>
+            <p>For errors in the translation you should also contact our <a href="/en/contact">translations manager</a>.</p>
+        </div>
+    </div>
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>What to do When You Find a Bug</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>When you think you found a bug in OpenTTD you should:</p>
+            <ul>
+                <li>Make sure you are running a recent version, i.e. run the latest stable, testing or nightly based on where you found the bug.</li>
+                <li>Make sure you are not running a non-official binary, like a patch pack. If you are playing with a patch pack you should report any bugs to the forum thread related to that patch pack.</li>
+                <li>Make it reproducable for the developers. In other words, create a savegame in which you can reproduce the issue once loaded. For Windows users it is very useful to give us the crash.dmp and crash.log which are created on crashes.</li>
+                <li>Check whether the bug is already reported on our <a href="https://github.com/OpenTTD/OpenTTD/issues">bug tracker</a>. This includes searching for recently closed bug reports as the bug might already be fixed.</li>
+                <li>When you are certain it is an unknown bug you should make a bug report at our <a href="https://github.com/OpenTTD/OpenTTD/issues">bug tracker</a>. The bug report must contain a savegame, preferably crash.sav and the last (automatically) saved savegame. It must also contain crash.log and crash.png (if they were created). For crashes on Windows must attach the crash.dmp files too. For bugs in nightlies you must also specify the revision of the nightly.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Obtaining The Source Code</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>For OpenTTD we use the <a href="http://git-scm.com/">git</a> version control system. OpenTTD's source code repository using git is accessible by anyone on the following URL:</p>
+            <ul>
+                <li><a href="https://github.com/OpenTTD/OpenTTD">https://github.com/OpenTTD/OpenTTD</a></li>
+            </ul>
+            <p>You can also <a href="https://github.com/OpenTTD/OpenTTD">browse</a> the repository online, or <a href="http://finger.openttd.org">query available versions</a> (for automated tools). The <a href="//docs.openttd.org">documentation</a> of the source is created by DoxyGen.</p>
+            <p>To download the source code you need a git client. See <a href="https://git-scm.com/book/en/v1/Getting-Started">Getting Started</a> for more information about git and how to use it.</p>
+        </div>
+    </div>
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Compiling</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>OpenTTD depends on a few libraries. You need to install their development package to be able to compile OpenTTD. These libraries are:</p>
+            <ul>
+                <li><a href="http://www.zlib.net/">zlib</a> for decompressing content downloads and compression of the savegames from 0.3.0 to 1.0.5.</li>
+                <li><a href="http://tukaani.org/xz/">liblzma</a> for compression of the savegames since 1.1.0.</li>
+                <li><a href="http://www.oberhumer.com/opensource/lzo/">lzo2</a> for loading old (before 0.3.0) savegames.</li>
+                <li><a href="http://www.libpng.org/pub/png/libpng.html">libpng</a> for making screenshots and loading heightmaps.</li>
+                <li><a href="http://www.freetype.org/">freetype2</a> for loading fonts with support for UTF-8.</li>
+                <li><a href="http://fontconfig.org/">fontconfig</a> to find those fonts (not needed on Windows).</li>
+                <li><a href="http://www.libsdl.org/">sdl</a> to be able to draw on the screen (not needed on Windows and Mac OS X).</li>
+                <li><a href="http://icu-project.org/">icu</a> to be able to render bi-directional text (Arabic, Hebrew, etc.)</li>
+            </ul>
+            <p>For further instructions on how to properly set up your system to build OpenTTD, take a look at our wiki page about <a href="//wiki.openttd.org/Coding_Tools">development environments</a>.</p>
+        </div>
+    </div>
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Development of NewGRF Extensions</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>OpenTTD allows the use of NewGRFs and different base sets for graphics, sounds and music.</p>
+            <p>These files require special formats and you may need to use the following helper programs to assist with the creation of these add-ons:</p>
+            <ul>
+                <li><a href="http://bundles.openttdcoop.org/nml"     >nml     </a> High-level language and compiler for writing NewGRFs. See also the <a href="http://newgrf-specs.tt-wiki.net/wiki/NML:Main">specs</a> and <a href="http://www.tt-wiki.net/wiki/NMLTutorial">tutorial</a></li>
+                <li><a href="/en/download-grfcodec">grfcodec</a> Compiles NewGRF's low-level programming language NFO into a GRF file. Use the enclosed nforenum to check the code for sanity. See also the <a href="http://newgrf-specs.tt-wiki.net/wiki/Main_Page">specs</a> and <a href="http://www.tt-wiki.net/wiki/NFOTutorial">tutorial</a>.</li>
+                <li><a href="/en/download-catcodec">catcodec</a> Compiles the sound set description file (sfo) and the sounds into a sound set</li>
+            </ul>
+            <p>For further help see the <a href="//wiki.openttd.org/Development">wiki</a>, the <a href="http://dev.openttdcoop.org">DevZone</a> or visit the <a href="http://www.tt-forums.net/viewforum.php?f=66">forums</a>.</p>
+            <p>NewGRFs can be made available to players via the <a href="//bananas.openttd.org/en/manager/">online content</a>.</p>
+        </div>
+    </div>
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Development of AIs and Game Scripts</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>OpenTTD provides a script interface, which is used to provide computer players or altered game behaviour and goals.</p>
+            <p>Scripts and associated libraries are written in squirrel (version 2) and need to make use of OpenTTD's API for Scripts. Useful ressources include:</p>
+            <ul>
+                <li><a href="//noai.openttd.org/api/">NoAI API</a> API for OpenTTD's AIs.</li>
+                <li><a href="//nogo.openttd.org/api/">NoGo API</a> API for OpenTTD's Game Scripts.</li>
+                <li><a href="//wiki.openttd.org/AI:Main_Page">Wiki</a>  Wiki section dedicated to Script development.</li>
+                <li><a href="http://www.tt-forums.net/viewforum.php?f=65">Forum</a> Forum dedicated to OpenTTD's Script development.</li>
+                <li><a href="http://squirrel-lang.org/doc/squirrel2.html">Squirrel 2 Reference</a> Reference manual for the squirrel language.</li>
+            </ul>
+            <p>Scripts can be made available to players via the <a href="//bananas.openttd.org/en/manager/">online content</a>.</p>
+        </div>
+    </div>
+</div>
