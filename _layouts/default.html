@@ -1,10 +1,59 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {{ content }}
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Description" content="An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features." />
+        <meta name="Keywords" content="Transport,Tycoon,Deluxe,TTDLX,TTD,OpenTTD,OTTD" />
+        <link rel="icon" href="static/favicon.ico" type="image/icon" />
+        <link rel="stylesheet" href="static/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/page.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/index.css" type="text/css" />
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-left"></div>
+            <div id="header-right"></div>
+            <div id="download-fast-2">
+                <h5><a href="download-stable">CABBAGE stable (1.8.0)</a></h5>
+                <h5><a href="download-trunk">CABBAGE nightly (r28004)</a></h5>
+            </div>
+            <div id="header-logo">
+                <div id="openttd-logo">
+                    <div id="openttd-logo-text"><a href=""><img src="static/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
+                </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <div id="navigation-left"></div>
+            <div id="navigation-right"></div>
+            <ul id="navigation-bar">
+                <li class="{% if page.active_nav == 'home' %}selected{% endif %}"><a href="index.html">Home</a></li>
+                <li class="{% if page.active_nav == 'about' %}selected{% endif %}"><a href="about.html">About</a></li>
+                <li><a href="https://wiki.openttd.org/">Manual</a></li>
+                <li class="{% if page.active_nav == 'screenshots' %}selected{% endif %}"><a href="screenshots.html">Screenshots</a></li>
+                <li class="{% if page.active_nav == 'servers' %}selected{% endif %}"><a href="servers.html">Servers</a></li>
+                <li class="{% if page.active_nav == 'development' %}selected{% endif %}"><a href="development.html">Development</a></li>
+                <li><a href="https://forum.openttd.org/">Forum</a></li>
+                <li><a href="https://wiki.openttd.org/Community">Community</a></li>
+                <li class="{% if page.active_nav == 'contact' %}selected{% endif %}"><a href="contact.html">Contact</a></li>
+                <li class="{% if page.active_nav == 'donate' %}selected{% endif %}"><a href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+        <div id="content-main">
+            {{ content }}
+            <hr id="hr-clear" />
+            <div id="content-bottom">
+                <div id="content-bottom-links">
+                    <a href="https://account.openttd.org/en/policy">Privacy Policy</a> |
+                    <a href="https://account.openttd.org/en/login">Login</a> |
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div id="content-bottom-copyright">
+                    Copyright &copy; 2005-2018 OpenTTD Team
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
