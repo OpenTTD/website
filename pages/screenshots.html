@@ -7,11 +7,29 @@ permalink: /screenshots.html
 <div id="section-full">
     <div class="section-header">
         <div class="section-icon"></div>
-        <h3>Screenshots</h3>
+        <h3>OpenTTD showcase</h3>
     </div>
     <div class="section-item">
         <div class="content">
-            CABBAGE
+            <p>This section shows some interesting features and eyecandy of OpenTTD. If you think you have screenshots worthy of inclusion in this section, drop a mail to <a href="mailto:info@openttd.org">info@openttd.org</a>. You can write a short story as a caption. Only images in PNG format will be accepted!</p>
+            <p>Click on one of the images to get a better view.</p>
         </div>
     </div>
+    {% assign grouped_screenshots = site.screenshots | group_by:"group" %}
+    {% for group in grouped_screenshots %}
+        <div class="section-header">
+            <div class="section-icon"></div>
+            <h3>Screenshots from {{ group.name }}</h3>
+        </div>
+        <div class="section-item">
+            <div class="content">
+                {% for screenshot in group.items %}
+                    <a href="{{ screenshot.url | remove_first: '/' }}">
+                        <img src="{{ screenshot.id | remove_first: '/'}}_thumb.png" alt="{{ screenshot.caption }}" width="240" height="184"/>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
 </div>
+

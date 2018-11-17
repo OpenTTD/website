@@ -15,5 +15,20 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+defaults:
+  # set the template for screenshots collection
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "screenshots"
+    values:
+      layout: "screenshot"
+
 collections:
-  - people
+  screenshots:
+    output: true
+  people:
+    output: false
