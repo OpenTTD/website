@@ -1,4 +1,5 @@
 <!-- _includes/base.html -->
+<!-- solves the problem of providing valid relative urls when content is in different dirs -->
 {% assign base = '' %}
 {% assign depth = page.url | split: '/' | size | minus: 1 %}
 {% if    depth <= 1 %}{% assign base = '.' %}
