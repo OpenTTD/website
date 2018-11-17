@@ -29,16 +29,16 @@
             <div id="navigation-left"></div>
             <div id="navigation-right"></div>
             <ul id="navigation-bar">
-                <li class="selected" ><a href="">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="{% if page.active_nav == 'home' %}selected{% endif %}"><a href="index.html">Home</a></li>
+                <li class="{% if page.active_nav == 'about' %}selected{% endif %}"><a href="about.html">About</a></li>
                 <li><a href="https://wiki.openttd.org/">Manual</a></li>
-                <li><a href="screenshots.html">Screenshots</a></li>
-                <li><a href="servers.html">Servers</a></li>
-                <li><a href="development.html">Development</a></li>
+                <li class="{% if page.active_nav == 'screenshots' %}selected{% endif %}"><a href="screenshots.html">Screenshots</a></li>
+                <li class="{% if page.active_nav == 'servers' %}selected{% endif %}"><a href="servers.html">Servers</a></li>
+                <li class="{% if page.active_nav == 'development' %}selected{% endif %}"><a href="development.html">Development</a></li>
                 <li><a href="https://forum.openttd.org/">Forum</a></li>
                 <li><a href="https://wiki.openttd.org/Community">Community</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="donate.html">Donate</a></li>
+                <li class="{% if page.active_nav == 'contact' %}selected{% endif %}"><a href="contact.html">Contact</a></li>
+                <li class="{% if page.active_nav == 'donate' %}selected{% endif %}"><a href="donate.html">Donate</a></li>
             </ul>
         </div>
         <div id="content-main">
