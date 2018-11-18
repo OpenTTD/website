@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div id="section-full">
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Archived News</h3>
+    </div>
+    <div class="section-item">
+        <div class="title">
+            <h3><a href="/en/news/234">{{ page.title }}</a></h3>
+        </div>
+        <div class="date">
+            <h5>{{ page.date | date: "%Y-%m-%d %H:%M:00" }}</h5>
+        </div>
+        <div class="user">
+            <h5>
+                Posted by
+                <!-- get the author nickname by looping over people in the site
+                     we abstract this so we can change nicks etc freely
+                     also in future we might link the author name to a list of all their posts -->
+                {% for person in site.people %}
+                    {% assign person_id = person.id | remove_first: "/people/" %}
+                    {% if page.author == person_id %}
+                        {{ person.nick }}
+                    {% endif %}
+                {% endfor %}
+            </h5>
+        </div>
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</div>
