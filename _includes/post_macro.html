@@ -1,12 +1,9 @@
 <div class="section-item">
     <div class="title">
         <h3>
-            <!--! don't link titles of posts to themselves -->
-            {% if page.path contains '_news' %}
-                {{ post.title }}
-            {% else %}
-                <a href="{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
-            {% endif %}
+            <!--! I don't know why base has to be reimported, it should be in scope already but eh -->
+            {% include base.html %}
+            <a href="{{ base }}{{ post.url }}">{{ post.title }}</a>
         </h3>
     </div>
     <div class="date">
