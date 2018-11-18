@@ -1,0 +1,25 @@
+<div class="section-item">
+    <div class="title">
+        <h3><a href="{{ news_item.url | remove_first: '/' }}">{{ news_item.title }}</a></h3>
+    </div>
+    <div class="date">
+        <h5>{{ news_item.date | date: "%Y-%m-%d %H:%M:00" }}</h5>
+    </div>
+    <div class="user">
+        <h5>
+            Posted by
+            <!-- get the author nickname by looping over people in the site
+                 we abstract this so we can change nicks etc freely
+                 also in future we might link the author name to a list of all their posts -->
+            {% for person in site.people %}
+                {% assign person_id = person.id | remove_first: "/people/" %}
+                {% if news_item.author == person_id %}
+                    {{ person.nick }}
+                {% endif %}
+            {% endfor %}
+        </h5>
+    </div>
+    <div class="content">
+        {{ news_item.content }}
+    </div>
+</div>

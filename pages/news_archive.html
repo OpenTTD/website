@@ -8,38 +8,10 @@ permalink: /news_archive.html
         <div class="section-icon"></div>
         <h3>Archived News</h3>
     </div>
-    <div class="section-item">
-        <div class="content">
-            <!-- news sort order is by post id (numeric); could be extended to sort by date -->
-            {% assign news = site.news | reverse %}
-            {% for news_item in news %}
-                <!-- there is probably a way to do this with reusable templates instead of replicating markup from layouts/news.html -->
-                <div class="title">
-                    <h3><a href="{{ news_item.url | remove_first: '/' }}">{{ news_item.title }}</a></h3>
-                </div>
-                <div class="date">
-                    <h5>{{ news_item.date | date: "%Y-%m-%d %H:%M:00" }}</h5>
-                </div>
-                <div class="user">
-                    <h5>
-                        Posted by
-                        <!-- get the author nickname by looping over people in the site
-                             we abstract this so we can change nicks etc freely
-                             also in future we might link the author name to a list of all their posts -->
-                        {% for person in site.people %}
-                            {% assign person_id = person.id | remove_first: "/people/" %}
-                            {% if news_item.author == person_id %}
-                                {{ person.nick }}
-                            {% endif %}
-                        {% endfor %}
-                    </h5>
-                </div>
-                <div class="content">
-                    {{ news_item.content }}
-                </div>
-
-            {% endfor %}
-        </div>
-    </div>
+    <!-- news sort order is by post id (numeric); could be extended to sort by date -->
+    {% assign news = site.news | reverse %}
+    {% for news_item in news %}
+        {% include news_post_macro.html %}
+    {% endfor %}
 </div>
 
