@@ -13,7 +13,7 @@ permalink: /news_archive.html
             {% for news_item in site.news %}
                 <!-- there is probably a way to do this with reusable templates instead of replicating markup from layouts/news.html -->
                 <div class="title">
-                    <h3><a href="/en/news/CABBAGE">{{ news_item.title }}</a></h3>
+                    <h3><a href="{{ news_item.url | remove_first: '/' }}">{{ news_item.title }}</a></h3>
                 </div>
                 <div class="date">
                     <h5>{{ news_item.date | date: "%Y-%m-%d %H:%M:00" }}</h5>
