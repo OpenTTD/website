@@ -1,16 +1,16 @@
 <div class="section-item">
     <div class="title">
         <h3>
-            <!--! don't link titles of news item to themselves -->
+            <!--! don't link titles of posts to themselves -->
             {% if page.path contains '_news' %}
-                {{ news_item.title }}
+                {{ post.title }}
             {% else %}
-                <a href="{{ news_item.url | remove_first: '/' }}">{{ news_item.title }}</a>
+                <a href="{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
             {% endif %}
         </h3>
     </div>
     <div class="date">
-        <h5>{{ news_item.date | date: "%Y-%m-%d" }}</h5>
+        <h5>{{ post.date | date: "%Y-%m-%d" }}</h5>
     </div>
     <div class="user">
         <h5>
@@ -20,13 +20,13 @@
                  also in future we might link the author name to a list of all their posts -->
             {% for person in site.people %}
                 {% assign person_id = person.id | remove_first: "/people/" %}
-                {% if news_item.author == person_id %}
+                {% if post.author == person_id %}
                     {{ person.nick }}
                 {% endif %}
             {% endfor %}
         </h5>
     </div>
     <div class="content">
-        {{ news_item.content }}
+        {{ post.content }}
     </div>
 </div>

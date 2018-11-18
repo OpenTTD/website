@@ -26,7 +26,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "news_item"
+      layout: "post"
   # set the template for screenshots collection
   - scope:
       path: ""

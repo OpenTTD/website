@@ -93,11 +93,11 @@ permalink: /index.html
                     <h3>Recent News</h3>
                 </div>
                 <!-- news sort order is by post id (numeric); could be extended to sort by date -->
-                {% assign news = site.posts | reverse %}
-                {% for news_item in news %}
-                    {% include news_item_macro.html %}
+                {% assign posts = site.posts | reverse %}
+                {% for post in posts %}
+                    {% include post_macro.html %}
                 {% endfor %}
-                <div class="right"><a href="news_archive.html">Archived News</a></div>
+                <div class="right"><a href="archives.html">Archived News</a></div>
             </div>
         </div>
     </div>
