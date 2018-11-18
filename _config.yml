@@ -26,7 +26,7 @@ defaults:
       path: ""
       type: "news"
     values:
-      layout: "news"
+      layout: "news_item"
   # set the template for screenshots collection
   - scope:
       path: ""

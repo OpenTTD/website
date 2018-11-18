@@ -11,7 +11,7 @@ permalink: /news_archive.html
     <!-- news sort order is by post id (numeric); could be extended to sort by date -->
     {% assign news = site.news | reverse %}
     {% for news_item in news %}
-        {% include news_post_macro.html %}
+        {% include news_item_macro.html %}
     {% endfor %}
 </div>
 
