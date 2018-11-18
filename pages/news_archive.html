@@ -10,7 +10,9 @@ permalink: /news_archive.html
     </div>
     <div class="section-item">
         <div class="content">
-            {% for news_item in site.news %}
+            <!-- news sort order is by post id (numeric); could be extended to sort by date -->
+            {% assign news = site.news | reverse %}
+            {% for news_item in news %}
                 <!-- there is probably a way to do this with reusable templates instead of replicating markup from layouts/news.html -->
                 <div class="title">
                     <h3><a href="{{ news_item.url | remove_first: '/' }}">{{ news_item.title }}</a></h3>
