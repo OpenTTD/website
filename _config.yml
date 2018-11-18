@@ -24,7 +24,7 @@ defaults:
   # set the template for news collection
   - scope:
       path: ""
-      type: "news"
+      type: "posts"
     values:
       layout: "news_item"
   # set the template for screenshots collection
@@ -35,10 +35,6 @@ defaults:
       layout: "screenshot"
 
 collections:
-  # Jekyll has built in support for a blog system based on _posts
-  # but it's overkill, so I made a simple news collection
-  news:
-    output: true
   # profiles for post authors, contributors for contact page etc
   people:
     output: false
