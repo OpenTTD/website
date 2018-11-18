@@ -79,11 +79,16 @@ permalink: /index.html
                 <div id="donate">
                 </div>
                 <div id="screenshot">
+                    {% assign latest_screenshot = site.screenshots[0] %}
                     <div id="screenshot-image">
-                        <a href="screenshots.html"><img src="//media.openttd.org/images/layout/screenshot.png" alt="Screenshot" /></a>
+                        <a href="screenshots.html"><img src="{{ latest_screenshot.id | remove_first: '/'}}_thumb.png"
+                                                        alt="{{ latest_screenshot.caption }}"
+                                                        width="232"
+                                                        height="178" /></a>
                     </div>
                     <div id="screenshot-content">
-                        Latest User Screenshot of 1.8.0<br />
+                        {{ latest_screenshot.caption }}
+                        <br />
                     </div>
                 </div>
             </div>
