@@ -1,0 +1,10 @@
+---
+title: Language issues
+author: Darkvater
+---
+
+We are getting a lot of questions about bad fonts, only '?' characters for non-latin languages, etc. We would clearly like to state to <b>READ</b> the readme bundled with the game, section '9. Troubleshooting', or online <a href="readme.txt">here</a>.<p/>
+
+To state this here shortly: you need to specify a font in openttd.cfg in the small_font/medium_font and large_font sections to get proper characters for Japanese, Russian, etc. Some languages have sprite-versions of the fonts available, you can put that in the [newgrf-static] section of the cfg file.<p/>
+
+Completely unrelated, but Release Candidate 4 has a bug that it starts up in russian for the first time. The solution is to either try to find your way through all the '?'-s and change the language, delete russian.lng file or set 'language=english.lng' in the config file.<p/>

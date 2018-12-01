@@ -1,0 +1,10 @@
+---
+title: OSX port is moving to native video and sound drivers
+author: TrueBrain
+---
+
+Because SDL caused a lot of problems in the OSX port, '<i>egladil</i>' decided to write native video- and sound drivers. Due to this, people should have less problems when compiling themselves. It also fixes some runtime issues like the lazy-pointer crash and the crash that occasionally happened when resizing the window in window mode. In theory the native drivers should be faster as well.
+<p>
+We really need people to use the native drivers to find any issues in them, so we highly recommend that people download the OSX binary without SDL and report any problems they encounter. The SDL build will still be made for a while, just in case the native driver fails on something important, but eventually they will be discontinued. At that time, all (hopefully none), issues should have been found and fixed.
+<p>
+For questions, suggestions or problems, please contact Bjarni (see contact page).
