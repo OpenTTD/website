@@ -11,16 +11,7 @@
     </div>
     <div class="user">
         <h5>
-            Posted by
-            <!-- get the author nickname by looping over people in the site
-                 we abstract this so we can change nicks etc freely
-                 also in future we might link the author name to a list of all their posts -->
-            {% for person in site.people %}
-                {% assign person_id = person.id | remove_first: "/people/" %}
-                {% if post.author == person_id %}
-                    {{ person.nick }}
-                {% endif %}
-            {% endfor %}
+            Posted by {{ post.author }}
         </h5>
     </div>
     <div class="content">
