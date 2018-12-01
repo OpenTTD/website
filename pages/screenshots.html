@@ -30,10 +30,10 @@ permalink: /screenshots.html
         <div class="section-item">
             <div class="content">
                 {% for screenshot in group.items %}
-                    <a href="{{ screenshot.url | remove_first: '/' }}">
+                    <a href="{{ base }}{{ screenshot.url }}">
                         {% assign stripped_content = screenshot.content | strip_html | strip_newlines %}
                         <img
-                            src="{{ screenshot.id | remove_first: '/'}}_thumb.png"
+                            src="{{ base }}{{ screenshot.id }}_thumb.png"
                             alt="{{ stripped_content }}"
                             title="{{ stripped_content | truncatewords: 5 }}"
                             width="240"

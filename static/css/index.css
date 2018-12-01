@@ -99,8 +99,8 @@
 }
 #screenshot-content {
 	background-color: #FEE7C0;
-	padding: 10px 10px 10px 0px;
-	text-align: right;
+	padding: 10px 10px 10px 10px;
+	text-align: left;
 }
 #donate {
 	background: url("../img/layout/section-donate-bg.png") repeat;

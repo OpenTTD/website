@@ -4,15 +4,21 @@ layout: default
 
 <div id="section-full">
     <div class="section-header">
-      <div class="section-icon"></div>
-      <h3>OpenTTD screenshot</h3>
+        <div class="section-icon"></div>
+        <h3>OpenTTD screenshot</h3>
     </div>
     <div class="section-item">
-      <div class="content">
-        <p>{{ page.content }}</p>
-        <a href="{{ page.id | remove_first: '/screenshots/'}}.png">
-            <img src="{{ page.id | remove_first: '/screenshots/'}}.png" alt="{{ page.content }}" style="max-width: 734px;" />
-        </a>
-      </div>
+        <div class="content">
+            <p>{{ page.content }}</p>
+            <a href="{{ base }}{{ page.id }}.png">
+                {% assign stripped_content = page.content | strip_html | strip_newlines %}
+                <img
+                    src="{{ base }}{{ page.id }}.png"
+                    alt="{{ stripped_content }}"
+                    title="{{ stripped_content | truncatewords: 5 }}"
+                    style="max-width: 734px;"
+                    />
+            </a>
+        </div>
     </div>
-  </div>
+</div>

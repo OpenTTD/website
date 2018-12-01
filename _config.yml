@@ -2,10 +2,9 @@ title: OpenTTD
 email: info@openttd.org
 description: >- # this means to ignore newlines until "baseurl:"
   An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: ""
 
-# Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
@@ -16,18 +15,15 @@ exclude:
   - Gemfile.lock
 
 defaults:
-  # set the default template
   - scope:
       path: ""
     values:
       layout: "default"
-  # set the template for news collection
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  # set the template for screenshots collection
   - scope:
       path: ""
       type: "screenshots"
@@ -35,9 +31,7 @@ defaults:
       layout: "screenshot"
 
 collections:
-  # profiles for post authors, contributors for contact page etc
   people:
     output: false
-  # vanilla, this is simply a collection of screenshots with metadata, captions etc
   screenshots:
     output: true

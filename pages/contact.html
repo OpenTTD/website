@@ -13,12 +13,11 @@ permalink: /contact.html
     <div class="section-item">
         <div class="content">
             <p>Individual developers are reachable at the following addresses. Note: these are not meant for your questions about a feature, bug, can't get something to work, or want something implemented. You should direct these questions to the <a href="https://forum.openttd.org/">forums</a> or in our IRC channel.</p>
-            <p>Bug reports can be discussed on IRC or forums, but the best place for it to be addressed is on our <a href="development.html">bug tracker</a>.</p>
+            <p>Bug reports can be discussed on IRC or forums, but the best place for it to be addressed is on our <a href="{{ base }}/development.html">bug tracker</a>.</p>
             <p>Do not address support requests or general questions to individual developers. You will not get an answer this way!</p>
             <ul class="section-list">
-                {% assign high_priority_contacts = site.people | where_exp: "person", "person.sort_priority >= 0" %}
+                {% assign high_priority_contacts = site.people | where_exp: "person", "person.sort_priority >= 0" | sort: "sort_priority" %}
                 {% assign lower_priority_contacts = site.people | where_exp: "person", "person.sort_priority == nil" %}
-                {% assign high_priority_contacts = high_priority_contacts | sort: "sort_priority" %}
                 {% assign people_sorted = high_priority_contacts | concat: lower_priority_contacts %}
                 {% for person in people_sorted %}
                     <li>
@@ -29,9 +28,9 @@ permalink: /contact.html
                             {% endif %}
                         </div>
                             <div class="content">
-                            <span style="display:block;">Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+                            <span style="display: block;">Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
                             {% if person.role %}
-                                <span style="display:block;">Role: {{ person.role }}</span>
+                                <span style="display: block;">Role: {{ person.role }}</span>
                             {% endif %}
                         <div>
                     </li>
@@ -45,7 +44,7 @@ permalink: /contact.html
     </div>
     <div class="section-item">
         <div class="content">
-            <p>For a more immediate form of communication you can join us in the <a href="irc://irc.oftc.net/openttd">#openttd</a> channel on <a href="http://www.oftc.net/">OFTC</a> with your favourite <a href="http://www.irchelp.org">IRC</a> client. You can use the channel for questions, problems, development or general discussion.</p>
+            <p>For a more immediate form of communication you can join us in the <a href="irc://irc.oftc.net/openttd">#openttd</a> channel on <a href="https://www.oftc.net/">OFTC</a> with your favourite <a href="https://www.irchelp.org">IRC</a> client. You can use the channel for questions, problems, development or general discussion.</p>
         </div>
     </div>
     <div class="section-header">
@@ -93,7 +92,7 @@ permalink: /contact.html
                 </tr>
             </table>
             <br />
-            <a href="//devs.openttd.org/~truebrain/mirror.txt">Donate a mirror</a>
+            <a href="https://devs.openttd.org/~truebrain/mirror.txt">Donate a mirror</a>
         </div>
     </div>
 </div>

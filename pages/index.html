@@ -18,12 +18,12 @@ permalink: /index.html
                                 <span class="h5">Latest version: 1.8.0</span>
                                 </a>
                             </li>
-                            <li id="banner-wiki"> <a href="//wiki.openttd.org/">
+                            <li id="banner-wiki"> <a href="https://wiki.openttd.org/">
                                 <span class="h3">Learn&nbsp;how&nbsp;to&nbsp;play</span>
                                 <span class="h5">Read our wiki for help</span>
                                 </a>
                             </li>
-                            <li id="banner-forum"> <a href="//forum.openttd.org/">
+                            <li id="banner-forum"> <a href="https://forum.openttd.org/">
                                 <span class="h3">Visit&nbsp;our&nbsp;community</span>
                                 <span class="h5">Join us on the forums</span>
                                 </a>
@@ -36,24 +36,16 @@ permalink: /index.html
                 </div>
             </div>
             <div id="index-right">
-                <!-- Do not need donations at the moment!
+                <!-- We are not actively looking for donations at the moment.
                     <div id="donate">
-                      <a href="/en/donate">
+                      <a href="{{ base }}/donate.html">
                         <span id="donate-header">Support us by making a small donation</span>
                         <span id="donate-text">As part of the Open Source community, we are supported by donations from users such as yourself.</span>
                       </a>
                     </div>
-                    -->
-                <!-- Not such a big issue either at the moment
-                    <div id="donate">
-                      <a href="https://secure.openttd.org/bugs/index.php?string=OSX&amp;project=1&amp;type[]=1">
-                        <span id="donate-header">Support Mac OS X port by fixing bugs in this port</span>
-                        <span id="donate-text">The Mac OS X port has many platform specific bugs that we cannot confirm or reproduce, but they should be triaged and fixed. Can you help us fix any of these problems?</span>
-                      </a>
-                    </div>
-                    -->
+                -->
                 <div id="donate">
-                    <a href="//translator.openttd.org">
+                    <a href="https://translator.openttd.org">
                         <span id="donate-header">Support us by translating</span>
                         <span id="donate-text">
                             Would you like to help translating? The following languages need help:
@@ -76,19 +68,21 @@ permalink: /index.html
                         </span>
                     </a>
                 </div>
-                <div id="donate">
-                </div>
                 <div id="screenshot">
-                    {% assign latest_screenshot = site.screenshots[0] %}
+                    {% assign latest_screenshot = site.screenshots | first %}
                     <div id="screenshot-image">
-                        <a href="screenshots.html"><img src="{{ latest_screenshot.id | remove_first: '/'}}_thumb.png"
-                                                        alt="{{ latest_screenshot.caption }}"
-                                                        width="232"
-                                                        height="178" /></a>
+                        <a href="{{ base }}/screenshots.html">
+                            {% assign stripped_content = latest_screenshot.content | strip_html | strip_newlines %}
+                            <img src="{{ base }}{{ latest_screenshot.id }}_thumb.png"
+                                alt="{{ stripped_content }}"
+                                title="{{ stripped_content | truncatewords: 5 }}"
+                                width="232"
+                                height="178"
+                                />
+                        </a>
                     </div>
                     <div id="screenshot-content">
-                        {{ latest_screenshot.caption }}
-                        <br />
+                        {{ latest_screenshot.content }}
                     </div>
                 </div>
             </div>
@@ -101,7 +95,7 @@ permalink: /index.html
                 {% for post in posts %}
                     {% include post_macro.html %}
                 {% endfor %}
-                <div class="right"><a href="archives.html">Archived News</a></div>
+                <div class="right"><a href="{{ base }}/archives.html">Archived News</a></div>
             </div>
         </div>
     </div>

@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
+    {% include base_variable.html %}
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="Description" content="An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features." />
         <meta name="Keywords" content="Transport,Tycoon,Deluxe,TTDLX,TTD,OpenTTD,OTTD" />
-        {% include base.html %}
         <link rel="icon" href="{{ base }}/static/favicon.ico" type="image/icon" />
         <link rel="stylesheet" href="{{ base }}/static/css/base.css" type="text/css" />
         <link rel="stylesheet" href="{{ base }}/static/css/page.css" type="text/css" />
@@ -40,9 +41,7 @@
                 <li class="{% if page.active_nav == 'screenshots' %}selected{% endif %}">
                     <a href="{{ base }}/screenshots.html">Screenshots</a>
                 </li>
-                <li class="{% if page.active_nav == 'servers' %}selected{% endif %}">
-                    <a href="{{ base }}/servers.html">Servers</a>
-                </li>
+                <li><a href="https://servers.openttd.org">Servers</a></li>
                 <li class="{% if page.active_nav == 'development' %}selected{% endif %}">
                     <a href="{{ base }}/development.html">Development</a>
                 </li>
