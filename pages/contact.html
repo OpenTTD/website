@@ -21,22 +21,20 @@ permalink: /contact.html
                 {% assign high_priority_contacts = high_priority_contacts | sort: "sort_priority" %}
                 {% assign people_sorted = high_priority_contacts | concat: lower_priority_contacts %}
                 {% for person in people_sorted %}
-                    {% if person.list_as_contact %}
-                        <li>
-                            <div class="header">
-                                {{ person.name }}
-                                {% if person.nick %}
-                                    ({{ person.nick }})
-                                {% endif %}
-                            </div>
-                             <div class="content">
-                                <span style="display:block;">Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
-                                {% if person.role %}
-                                    <span style="display:block;">Role: {{ person.role }}</span>
-                                {% endif %}
-                            <div>
-                        </li>
-                    {% endif %}
+                    <li>
+                        <div class="header">
+                            {{ person.name }}
+                            {% if person.nick %}
+                                ({{ person.nick }})
+                            {% endif %}
+                        </div>
+                            <div class="content">
+                            <span style="display:block;">Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+                            {% if person.role %}
+                                <span style="display:block;">Role: {{ person.role }}</span>
+                            {% endif %}
+                        <div>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
