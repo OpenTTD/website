@@ -5,7 +5,7 @@ author: Darkvater
 
 In case some of you were wondering why the latest nightlies refuse to run, or better said, just crash on Win9x (Windows95, Windows98 and Windows ME), here is the deal:
 <p>Recently OpenTTD has been converted to use UTF-8 internally, allowing for support of far more languages than it was possible until now. Think in terms of Greek, Russian (native, without sprite-replacement), Japanese, Chinese, etc.<br/>
-For this to work, UNICODE (MS calls them 'Wide') functions have been added. However these old Windows version have almost no support for UNICODE and an MS layer (<a href="http://www.microsoft.com.nsatc.net/globaldev/handson/dev/mslu_announce.mspx" target="_blank">MSLU</a>) is needed. For this to work, the application needs to be compiled with UNICODE support. And here comes the crux...<br/>
+For this to work, UNICODE (MS calls them 'Wide') functions have been added. However these old Windows version have almost no support for UNICODE and an MS layer [dead link](MSLU) is needed. For this to work, the application needs to be compiled with UNICODE support. And here comes the crux...<br/>
 The compile farm that gives you all these new versions, cannot handle UNICODE applications (more specifically, applications that have a wide startup function are not supported by mingw). So no Win9x support.</p>
 
 When will it work again? For the upcoming version 0.5 we will make a version which will play nicely on your old system. When that is? That's a surprise ;)
