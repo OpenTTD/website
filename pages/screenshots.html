@@ -16,17 +16,29 @@ permalink: /screenshots.html
             <p>Click on one of the images to get a better view.</p>
         </div>
     </div>
-    {% assign grouped_screenshots = site.screenshots | group_by:"group" %}
-    {% for group in grouped_screenshots %}
+    {% assign groups = site.screenshots | group_by_exp: "screenshot", "screenshot.path | remove_first: '_screenshots/' | split: '-' | first" %}
+    {% assign groups_sorted = groups | sort: "name" | reverse %}
+    {% for group in groups_sorted %}
         <div class="section-header">
             <div class="section-icon"></div>
-            <h3>Screenshots from {{ group.name }}</h3>
+            {% if group.name == "special" %}
+                <h3>Special screenshots</h3>
+            {% else %}
+                <h3>Screenshots from {{ group.name }}</h3>
+            {% endif %}
         </div>
         <div class="section-item">
             <div class="content">
                 {% for screenshot in group.items %}
                     <a href="{{ screenshot.url | remove_first: '/' }}">
-                        <img src="{{ screenshot.id | remove_first: '/'}}_thumb.png" alt="{{ screenshot.caption }}" width="240" height="184"/>
+                        {% assign stripped_content = screenshot.content | strip_html | strip_newlines %}
+                        <img
+                            src="{{ screenshot.id | remove_first: '/'}}_thumb.png"
+                            alt="{{ stripped_content }}"
+                            title="{{ stripped_content | truncatewords: 5 }}"
+                            width="240"
+                            height="184"
+                            />
                     </a>
                 {% endfor %}
             </div>
