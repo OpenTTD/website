@@ -4,7 +4,7 @@ branches:
 
 sudo: required
 
-language: ruby
+language: minimal
 
 services:
   - docker
