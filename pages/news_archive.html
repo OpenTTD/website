@@ -1,7 +1,9 @@
 ---
 layout: default
 title: News Archive
-permalink: /archives.html
+permalink: /news
+pagination:
+  enabled: true
 ---
 
 <div id="section-full">
@@ -9,8 +11,9 @@ permalink: /archives.html
         <div class="section-icon"></div>
         <h3>Archived News</h3>
     </div>
-    {% assign posts = site.posts %}
-    {% for post in posts %}
+    {% for post in paginator.posts %}
         {% include post_macro.html %}
     {% endfor %}
+
+    <div class="right"><a href="{{ base }}{{ paginator.next_page_path }}">More Archived News</a></div>
 </div>

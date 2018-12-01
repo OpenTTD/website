@@ -91,11 +91,10 @@ permalink: /index.html
                     <div class="section-icon"></div>
                     <h3>Recent News</h3>
                 </div>
-                {% assign posts = site.posts %}
-                {% for post in posts %}
+                {% for post in site.posts limit: 5 %}
                     {% include post_macro.html %}
                 {% endfor %}
-                <div class="right"><a href="{{ base }}/archives.html">Archived News</a></div>
+                <div class="right"><a href="{{ base }}/news/page/2/">Archived News</a></div>
             </div>
         </div>
     </div>

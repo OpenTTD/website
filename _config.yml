@@ -8,6 +8,7 @@ url: ""
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
 
 exclude:
   - Dockerfile
@@ -31,7 +32,18 @@ defaults:
       layout: "screenshot"
 
 collections:
+  posts:
+    permalink: /news/:year/:month/:day/:title.html
   people:
     output: false
   screenshots:
     output: true
+
+pagination:
+  enabled: true
+  collection: "posts"
+  per_page: 5
+  permalink: "/page/:num/"
+  category: "posts"
+  sort_field: "date"
+  sort_reverse: true
