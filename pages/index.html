@@ -97,8 +97,7 @@ permalink: /index.html
                     <div class="section-icon"></div>
                     <h3>Recent News</h3>
                 </div>
-                <!-- news sort order is by post id (numeric); could be extended to sort by date -->
-                {% assign posts = site.posts | reverse %}
+                {% assign posts = site.posts %}
                 {% for post in posts %}
                     {% include post_macro.html %}
                 {% endfor %}
