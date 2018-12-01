@@ -1,6 +1,13 @@
+branches:
+  only:
+  - master
+
 sudo: required
+
 language: ruby
+
 services:
   - docker
+
 script:
   - ./test.sh
