@@ -25,7 +25,7 @@ RUN apk --no-cache add \
 COPY . /source/
 
 RUN mkdir /html \
-    && jekyll build -s /source -d /html
+    && jekyll build --strict_front_matter -s /source -d /html
 
 # Copy the HTML and serve it via nginx
 FROM nginx:alpine
