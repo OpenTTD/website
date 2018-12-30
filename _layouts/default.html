@@ -38,7 +38,7 @@
                     <a href="{{ base }}/about.html">About</a>
                 </li>
                 <li><a href="https://wiki.openttd.org/">Manual</a></li>
-                <li class="{% if page.active_nav == 'screenshots' %}selected{% endif %}">
+                <li class="{% if page.active_nav == 'screenshots' or layout.active_nav == 'screenshots' %}selected{% endif %}">
                     <a href="{{ base }}/screenshots.html">Screenshots</a>
                 </li>
                 <li><a href="https://servers.openttd.org">Servers</a></li>
