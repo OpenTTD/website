@@ -12,6 +12,7 @@ RUN apk --no-cache add \
         build-base \
         ruby \
         ruby-dev \
+        ruby-rdoc \
     && gem update --no-document --system \
     && gem install --no-document \
         bigdecimal \
