@@ -1,0 +1,62 @@
+---
+layout: default
+section_title: Download
+css:
+    - download.css
+js:
+    - download.js
+---
+
+{% assign raw_type = page.id | split: "/" | slice: 2 | first %}
+{% assign type = raw_type | prepend: "/download-meta/" %}
+{% assign meta = site.download-meta | where: "id", type | first %}
+{% assign version = page.id | split: "/" | last %}
+
+{% unless meta.id %}
+    {{ "No download-meta entry found for " | append: raw_type | raise_error }}
+{% endunless %}
+
+<div id="section-full">
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Download</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            {{ meta.content | markdownify | replace: "@@version@@", version }}
+            <p>For all binaries officially released by us we publish the MD5, SHA1, and SHA256 checksums. You can use these checksums to check whether the file you downloaded has been modified. All three checksums should match the file you downloaded; if this is not the case it means that either the file didn't come from us or that it got broken during transport. Either way it might possibly contain dangerous modifications and the file should therefore not be trusted!</p>
+        </div>
+    </div>
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Download {{ page.name }}</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>Latest release in {{ page.name }} is {{ version }}, released on {{ page.date | date: "%Y-%m-%d %H:%M" }} UTC.</p>
+
+            <div class="changelog">[ <a href="https://binaries.openttd.org/{{ meta.folder }}/{{ version }}/changelog.txt">Changelog</a> ]</div>
+            <div id="download-combo">
+                <input type="hidden" id="download-combo-state" value="" />
+                <input type="hidden" id="download-base-name" value="{{ page.base }}" />
+            </div>
+
+            <ul id="download-data">
+                {% for file in page.files %}
+                <li id="{{ file.id }}">
+                    <div class="filename"><a href="https://binaries.openttd.org/{{ meta.folder }}/{{ version }}/{{ file.id }}">{{ file.name }}</a></div>
+                    <div class="filesize">[ {{ file.size | string_of_size }} ]</div>
+                    <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[ <a href="#" onclick="return false;">Checksums</a> ]</div>
+                    <div class="checksums" id="checksum-{{ file.id }}">
+                        md5sum&nbsp;&nbsp;&nbsp;: {{ file.md5sum }}<br />
+                        sha1sum&nbsp;&nbsp;: {{ file.sha1sum }}<br />
+                        sha256sum: {{ file.sha256sum }}<br />
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <script type="text/javascript">updateCombo(document.getElementById("download-data"));</script>
+    </div>
+</div>

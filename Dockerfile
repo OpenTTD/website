@@ -1,5 +1,24 @@
 # This is a multi-stage Docker build
 
+# Create the downloads collection
+FROM python:3.6-alpine as collection
+
+WORKDIR /source/
+
+COPY . /source/
+RUN pip install -r requirements.txt
+# Validate that what was installed was what was expected
+RUN pip freeze 2>/dev/null | grep -v "deployer" > requirements.installed \
+        && diff -u requirements.txt requirements.installed 1>&2 \
+        || ( echo "!! ERROR !! requirements.txt defined different packages or versions for installation" \
+                && exit 1 ) 1>&2
+RUN pip install flake8
+
+COPY .flake8 .flake8
+RUN flake8 fetch-downloads.py
+
+RUN python fetch-downloads.py
+
 # Build the HTML from the source
 FROM alpine as html
 
@@ -25,6 +44,7 @@ RUN apk --no-cache add \
         ruby-dev
 
 COPY . /source/
+COPY --from=collection /source/_downloads /source/_downloads
 
 RUN mkdir /html \
     && jekyll build --strict_front_matter -s /source -d /html

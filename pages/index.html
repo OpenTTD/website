@@ -14,9 +14,10 @@ permalink: /index.html
                     <div id="openttd-banner-right"></div>
                     <div id="banner-links">
                         <ul>
-                            <li id="banner-download"> <a href="https://www.openttd.org/en/download-stable">
+                            {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/'" | where: "name", "stable" | sort: "date" | last %}
+                            <li id="banner-download"> <a href="{{ base }}{{ latest_stable.url }}">
                                 <span class="h3">Download&nbsp;OpenTTD</span>
-                                <span class="h5">Latest version: 1.8.0</span>
+                                <span class="h5">Latest version: {{ latest_stable.id | split: "/" | last }}</span>
                                 </a>
                             </li>
                             <li id="banner-wiki"> <a href="https://wiki.openttd.org/">

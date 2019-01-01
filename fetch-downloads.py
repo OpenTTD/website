@@ -1,0 +1,132 @@
+"""
+This script populates the 'downloads' collection by looking firstly at
+finger.openttd.org what is currently published. After that it uses
+the index and manifest files on binaries.openttd.org to create all the
+needed markdown files in the 'downloads' collection.
+
+After running this script, you can run Jekyll, and all the download pages
+will work with the latest representation of what is available.
+"""
+
+import aiohttp
+import asyncio
+import os
+import xmltodict
+
+session = None
+
+mapping = {
+    "releases": "openttd-releases",
+    "nightlies/trunk": "openttd-nightlies",
+    "extra/openttd-useful": "openttd-useful",
+}
+
+
+async def download(url):
+    async with session.get(url) as response:
+        if response.status != 200:
+            raise Exception("URL didn't return 200", url)
+        return await response.read()
+
+
+async def get_download_folders():
+    versions = await download("https://finger.openttd.org/versions.txt")
+    versions = versions.decode().strip().split("\n")
+
+    folders = {}
+    for version in versions:
+        (version, date, folder) = version.split('\t', 2)
+
+        # Do not process custom entries
+        if folder.startswith("custom/"):
+            continue
+
+        # releases\tstable already covers openttd-releases
+        if folder == "releases\ttesting":
+            continue
+        if folder == "releases\tstable":
+            folder = "releases"
+
+        # Try to map the entry as good as we possibly can to the new naming schema
+        if folder in mapping:
+            type = mapping[folder]
+        elif folder.endswith("-trunk"):
+            type = folder[:-6] + "-nightlies"
+        elif folder.endswith("-nightly"):
+            type = folder[:-8] + "-nightlies"
+        else:
+            type = folder + "-releases"
+
+        # Remove the extra prefix
+        if type.startswith("extra/"):
+            type = type[6:]
+
+        # TODO -- Figure out what to do with aliases
+        if version[0] == "<":
+            continue
+
+        folders[folder] = type
+
+    return folders
+
+
+async def get_versions_of_folder(folder):
+    listing = await download(f"https://binaries.openttd.org/binaries/{folder}/index.xml")
+    listing = xmltodict.parse(listing.decode())
+
+    entries = listing['params']['param']['value']['struct']['member']
+    if not isinstance(entries, list):
+        entries = [entries]
+
+    versions = []
+    for entry in entries:
+        # Check if this is a directory
+        for value in entry['value']['struct']['member']:
+            if value['name'] == 'type' and value['value']['string'] == 'directory':
+                break
+        else:
+            continue
+
+        versions.append(entry['name'])
+
+    return versions
+
+
+async def fetch_manifest(folder, version):
+    manifest = await download(f"https://binaries.openttd.org/binaries/{folder}/{version}/manifest.yaml")
+    return manifest.decode()
+
+
+async def write_to_collection(type, version, manifest):
+    with open(f"_downloads/{type}/{version}.md", "wb") as f:
+        f.write("---\n".encode())
+        f.write(manifest.encode())
+        f.write("---\n".encode())
+
+
+async def main():
+    global session
+
+    os.makedirs("_downloads", exist_ok=True)
+    session = aiohttp.ClientSession()
+
+    folders = await get_download_folders()
+    for folder, type in folders.items():
+        os.makedirs(f"_downloads/{type}", exist_ok=True)
+
+        versions = await get_versions_of_folder(folder)
+        # For the nightlies, only generate the first 90; the real list is 4000+
+        if type == "openttd-nightlies":
+            versions = versions[:90]
+
+        for version in versions:
+            print(f"Adding {type}/{version} to downloads collection ..")
+            manifest = await fetch_manifest(folder, version)
+            await write_to_collection(type, version, manifest)
+
+    await session.close()
+
+
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())

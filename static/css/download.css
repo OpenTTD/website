@@ -1,0 +1,40 @@
+
+.section-item ul li {
+	clear: both;
+}
+
+.section-item .changelog {
+	float: right;
+	margin-bottom: 10px;
+	text-align: right;
+	width: 90px;
+}
+
+.section-item .download-combo {
+	background-color: white;
+	border: 1px solid #000000;
+	float: left;
+	margin-right: 10px;
+}
+
+.section-item .filename {
+	float: left;
+}
+
+.section-item .filesize {
+	float: right;
+	text-align: right;
+	width: 90px;
+}
+
+.section-item .checksums-dropdown, .section-item .checksums-dropdown-open {
+	float: right;
+}
+.section-item .checksums-dropdown-open {
+}
+
+.section-item .checksums {
+	clear: both;
+	display: none;
+	font-family: 'Courier New', monospace;
+}

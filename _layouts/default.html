@@ -11,15 +11,33 @@
         <link rel="stylesheet" href="{{ base }}/static/css/base.css" type="text/css" />
         <link rel="stylesheet" href="{{ base }}/static/css/page.css" type="text/css" />
         <link rel="stylesheet" href="{{ base }}/static/css/index.css" type="text/css" />
+        {% for filename in layout.css %}
+        <link rel="stylesheet" href="{{ base }}/static/css/{{ filename }}" type="text/css" />
+        {% endfor %}
+        {% for filename in layout.js %}
+        <script type="text/javascript" src="{{ base }}/static/js/{{ filename }}"></script>
+        {% endfor %}
         <title>OpenTTD {% if layout.section_title != nil %}| {{layout.section_title}}{% endif %} | {{ page.title }}</title>
     </head>
     <body>
         <div id="header">
+            {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/'" | where: "name", "stable" | sort: "date" | last %}
+            {% assign latest_testing = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/'" | where: "name", "testing" | sort: "date" | last %}
+            {% assign latest_nightly = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-nightlies/'" | sort: "date" | last %}
+
             <div id="header-left"></div>
             <div id="header-right"></div>
+
+            {% if latest_stable.date < latest_testing.date %}
+            <div id="download-fast-3">
+            {% else %}
             <div id="download-fast-2">
-                <h5><a href="https://www.openttd.org/en/download-stable">CABBAGE stable (1.8.0)</a></h5>
-                <h5><a href="https://www.openttd.org/en/download-trunk">CABBAGE nightly (r28004)</a></h5>
+            {% endif %}
+                <h5><a href="{{ base }}{{ latest_stable.url }}">Download stable ({{ latest_stable.id | split: "/" | last }})</a></h5>
+                {% if latest_stable.date < latest_testing.date %}
+                <h5><a href="{{ base }}{{ latest_testing.url }}">Download testing ({{ latest_testing.id | split: "/" | last }})</a></h5>
+                {% endif %}
+                <h5><a href="{{ base }}{{ latest_nightly.url }}">Download nightly ({{ latest_nightly.id | split: "/" | last }})</a></h5>
             </div>
             <div id="header-logo">
                 <div id="openttd-logo">
