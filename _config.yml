@@ -4,6 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features.
 baseurl: ""
 url: ""
+timezone: Etc/UTC
 
 markdown: kramdown
 plugins:
@@ -22,6 +23,11 @@ defaults:
       layout: "default"
   - scope:
       path: ""
+      type: "downloads"
+    values:
+      layout: "download"
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
@@ -32,10 +38,14 @@ defaults:
       layout: "screenshot"
 
 collections:
-  posts:
-    permalink: /news/:year/:month/:day/:title.html
+  downloads:
+    output: true
+  download-meta:
+    output: false
   people:
     output: false
+  posts:
+    permalink: /news/:year/:month/:day/:title.html
   screenshots:
     output: true
 

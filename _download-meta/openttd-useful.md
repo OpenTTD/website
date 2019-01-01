@@ -1,0 +1,3 @@
+---
+folder: extra/openttd-useful
+---
