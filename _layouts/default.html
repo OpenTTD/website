@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="{{ base }}/static/css/base.css" type="text/css" />
         <link rel="stylesheet" href="{{ base }}/static/css/page.css" type="text/css" />
         <link rel="stylesheet" href="{{ base }}/static/css/index.css" type="text/css" />
-        <title>OpenTTD | {{ page.title }}</title>
+        <title>OpenTTD {% if layout.section_title != nil %}| {{layout.section_title}}{% endif %} | {{ page.title }}</title>
     </head>
     <body>
         <div id="header">
