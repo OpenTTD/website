@@ -16,7 +16,7 @@ jobs:
       VERSION=$(git describe --tags)
       DATE=$(date +%Y%m%d-%H%M)
       echo "${VERSION}-${DATE}"
-      echo "##vso[build.updatebuildnumber]${VERSION}"
+      echo "##vso[build.updatebuildnumber]${VERSION}-${DATE}"
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
     displayName: 'Use "git describe" as BuildNumber'
 
