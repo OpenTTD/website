@@ -12,10 +12,10 @@ section_title: Screenshots
     <div class="section-item">
         <div class="content">
             <p>{{ page.content }}</p>
-            <a href="{{ base }}{{ page.id }}.png">
+            <a href="{{ site.baseurl }}{{ page.id }}.png">
                 {% assign stripped_content = page.content | strip_html | strip_newlines %}
                 <img
-                    src="{{ base }}{{ page.id }}.png"
+                    src="{{ site.baseurl }}{{ page.id }}.png"
                     alt="{{ stripped_content }}"
                     title="{{ stripped_content | truncatewords: 5 }}"
                     style="max-width: 734px;"

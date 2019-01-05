@@ -4,7 +4,6 @@ title: Contact
 active_nav: contact
 permalink: /contact.html
 ---
-{% include base_variable.html %}
 
 <div id="section-full">
     <div class="section-header">
@@ -14,7 +13,7 @@ permalink: /contact.html
     <div class="section-item">
         <div class="content">
             <p>Individual developers are reachable at the following addresses. Note: these are not meant for your questions about a feature, bug, can't get something to work, or want something implemented. You should direct these questions to the <a href="https://forum.openttd.org/">forums</a> or in our IRC channel.</p>
-            <p>Bug reports can be discussed on IRC or forums, but the best place for it to be addressed is on our <a href="{{ base }}/development.html">bug tracker</a>.</p>
+            <p>Bug reports can be discussed on IRC or forums, but the best place for it to be addressed is on our <a href="{{ site.baseurl }}/development.html">bug tracker</a>.</p>
             <p>Do not address support requests or general questions to individual developers. You will not get an answer this way!</p>
             <ul class="section-list">
                 {% assign high_priority_contacts = site.people | where_exp: "person", "person.sort_priority >= 0" | sort: "sort_priority" %}

@@ -4,7 +4,6 @@ title: Home
 active_nav: home
 permalink: /index.html
 ---
-{% include base_variable.html %}
 
 <div id="content-left">
     <div id="content-right">
@@ -40,7 +39,7 @@ permalink: /index.html
             <div id="index-right">
                 <!-- We are not actively looking for donations at the moment.
                     <div id="donate">
-                      <a href="{{ base }}/donate.html">
+                      <a href="{{ site.baseurl }}/donate.html">
                         <span id="donate-header">Support us by making a small donation</span>
                         <span id="donate-text">As part of the Open Source community, we are supported by donations from users such as yourself.</span>
                       </a>
@@ -73,9 +72,9 @@ permalink: /index.html
                 <div id="screenshot">
                     {% assign latest_screenshot = site.screenshots | first %}
                     <div id="screenshot-image">
-                        <a href="{{ base }}/screenshots.html">
+                        <a href="{{ site.baseurl }}/screenshots.html">
                             {% assign stripped_content = latest_screenshot.content | strip_html | strip_newlines %}
-                            <img src="{{ base }}{{ latest_screenshot.id }}_thumb.png"
+                            <img src="{{ site.baseurl }}{{ latest_screenshot.id }}_thumb.png"
                                 alt="{{ stripped_content }}"
                                 title="{{ stripped_content | truncatewords: 5 }}"
                                 width="232"
@@ -96,7 +95,7 @@ permalink: /index.html
                 {% for post in site.posts limit: 5 %}
                     {% include post_macro.html %}
                 {% endfor %}
-                <div class="right"><a href="{{ base }}/news/page/2/">Archived News</a></div>
+                <div class="right"><a href="{{ site.baseurl }}/news/page/2/">Archived News</a></div>
             </div>
         </div>
     </div>

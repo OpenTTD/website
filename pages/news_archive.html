@@ -5,7 +5,6 @@ permalink: /news
 pagination:
   enabled: true
 ---
-{% include base_variable.html %}
 
 <div id="section-full">
     <div class="section-header">
@@ -16,5 +15,5 @@ pagination:
         {% include post_macro.html %}
     {% endfor %}
 
-    <div class="right"><a href="{{ base }}{{ paginator.next_page_path }}">More Archived News</a></div>
+    <div class="right"><a href="{{ site.baseurl }}{{ paginator.next_page_path }}">More Archived News</a></div>
 </div>
