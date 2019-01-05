@@ -12,9 +12,14 @@ plugins:
   - jekyll-paginate-v2
 
 exclude:
+  - azure-pipelines.yml
   - Dockerfile
+  - fetch-downloads.py
   - Gemfile
   - Gemfile.lock
+  - nginx.default.conf
+  - requirements.base
+  - requirements.txt
 
 defaults:
   - scope:
