@@ -52,3 +52,4 @@ RUN mkdir /html \
 # Copy the HTML and serve it via nginx
 FROM nginx:alpine
 COPY --from=html /html/ /usr/share/nginx/html/
+COPY nginx.default.conf /etc/nginx/conf.d/default.conf
