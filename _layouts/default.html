@@ -41,7 +41,7 @@
             </div>
             <div id="header-logo">
                 <div id="openttd-logo">
-                    <div id="openttd-logo-text"><a href="{{ base }}"><img src="{{ base }}/static/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
+                    <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/static/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
                 </div>
             </div>
         </div>
@@ -50,26 +50,26 @@
             <div id="navigation-right"></div>
             <ul id="navigation-bar">
                 <li class="{% if page.active_nav == 'home' %}selected{% endif %}">
-                    <a href="{{ base }}/index.html">Home</a>
+                    <a href="{{ site.baseurl }}/">Home</a>
                 </li>
                 <li class="{% if page.active_nav == 'about' %}selected{% endif %}">
-                    <a href="{{ base }}/about.html">About</a>
+                    <a href="{{ site.baseurl }}/about.html">About</a>
                 </li>
                 <li><a href="https://wiki.openttd.org/">Manual</a></li>
                 <li class="{% if page.active_nav == 'screenshots' or layout.active_nav == 'screenshots' %}selected{% endif %}">
-                    <a href="{{ base }}/screenshots.html">Screenshots</a>
+                    <a href="{{ site.baseurl }}/screenshots.html">Screenshots</a>
                 </li>
                 <li><a href="https://servers.openttd.org">Servers</a></li>
                 <li class="{% if page.active_nav == 'development' %}selected{% endif %}">
-                    <a href="{{ base }}/development.html">Development</a>
+                    <a href="{{ site.baseurl }}/development.html">Development</a>
                 </li>
                 <li><a href="https://forum.openttd.org/">Forum</a></li>
                 <li><a href="https://wiki.openttd.org/Community">Community</a></li>
                 <li class="{% if page.active_nav == 'contact' %}selected{% endif %}">
-                    <a href="{{ base }}/contact.html">Contact</a>
+                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
                 </li>
                 <li class="{% if page.active_nav == 'donate' %}selected{% endif %}">
-                    <a href="{{ base }}/donate.html">Donate</a>
+                    <a href="{{ site.baseurl }}/donate.html">Donate</a>
                 </li>
             </ul>
         </div>
@@ -78,9 +78,9 @@
             <hr id="hr-clear" />
             <div id="content-bottom">
                 <div id="content-bottom-links">
-                    <a href="{{ base }}/policy.html">Privacy Policy</a> |
+                    <a href="{{ site.baseurl }}/policy.html">Privacy Policy</a> |
                     <a href="https://account.openttd.org/en/login">Login</a> |
-                    <a href="{{ base }}/contact.html">Contact</a>
+                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
                 </div>
                 <div id="content-bottom-copyright">
                     Copyright &copy; 2005-2018 OpenTTD Team
