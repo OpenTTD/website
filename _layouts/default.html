@@ -1,29 +1,28 @@
 <!doctype html>
 <html>
-    {% include base_variable.html %}
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="Description" content="An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features." />
         <meta name="Keywords" content="Transport,Tycoon,Deluxe,TTDLX,TTD,OpenTTD,OTTD" />
-        <link rel="icon" href="{{ base }}/static/favicon.ico" type="image/icon" />
-        <link rel="stylesheet" href="{{ base }}/static/css/base.css" type="text/css" />
-        <link rel="stylesheet" href="{{ base }}/static/css/page.css" type="text/css" />
-        <link rel="stylesheet" href="{{ base }}/static/css/index.css" type="text/css" />
+        <link rel="icon" href="{{ site.baseurl }}/static/favicon.ico" type="image/icon" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/page.css" type="text/css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/index.css" type="text/css" />
         {% for filename in layout.css %}
-        <link rel="stylesheet" href="{{ base }}/static/css/{{ filename }}" type="text/css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/{{ filename }}" type="text/css" />
         {% endfor %}
         {% for filename in layout.js %}
-        <script type="text/javascript" src="{{ base }}/static/js/{{ filename }}"></script>
+        <script type="text/javascript" src="{{ site.baseurl }}/static/js/{{ filename }}"></script>
         {% endfor %}
+        {% feed_meta %}
         <title>OpenTTD {% if layout.section_title != nil %}| {{layout.section_title}}{% endif %} | {{ page.title }}</title>
     </head>
     <body>
         <div id="header">
-            {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/'" | where: "name", "stable" | sort: "date" | last %}
-            {% assign latest_testing = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/'" | where: "name", "testing" | sort: "date" | last %}
-            {% assign latest_nightly = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-nightlies/'" | sort: "date" | last %}
+            {% assign latest_stable = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" |  last %}
+            {% assign latest_testing = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" | last %}
+            {% assign latest_nightly = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-nightlies/latest'" | last %}
 
             <div id="header-left"></div>
             <div id="header-right"></div>
@@ -33,11 +32,11 @@
             {% else %}
             <div id="download-fast-2">
             {% endif %}
-                <h5><a href="{{ base }}{{ latest_stable.url }}">Download stable ({{ latest_stable.id | split: "/" | last }})</a></h5>
+                <h5><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></h5>
                 {% if latest_stable.date < latest_testing.date %}
-                <h5><a href="{{ base }}{{ latest_testing.url }}">Download testing ({{ latest_testing.id | split: "/" | last }})</a></h5>
+                <h5><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></h5>
                 {% endif %}
-                <h5><a href="{{ base }}{{ latest_nightly.url }}">Download nightly ({{ latest_nightly.id | split: "/" | last }})</a></h5>
+                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ latest_nightly.version }})</a></h5>
             </div>
             <div id="header-logo">
                 <div id="openttd-logo">

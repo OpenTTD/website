@@ -7,4 +7,4 @@ There are also the free alternatives: [OpenGFX (graphics)](http://dev.openttdcoo
 These can be installed automatically by the Windows and OS/2 installers.
 Please refer to the [readme](https://binaries.openttd.org/releases/@@version@@/readme.txt) for more information.
 
-You can download the free alternatives here: [download OpenGFX](../opengfx-releases/), [download OpenSFX](../opensfx-releases/), and [download OpenMSX](../openmsx-releases/).
+You can download the free alternatives here: [download OpenGFX](../opengfx-releases/latest.html), [download OpenSFX](../opensfx-releases/latest.html), and [download OpenMSX](../openmsx-releases/latest.html).

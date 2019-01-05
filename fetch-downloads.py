@@ -41,6 +41,10 @@ async def get_download_folders():
         if folder.startswith("custom/"):
             continue
 
+        # grfcodec-trunk had two aliases; only process one
+        if folder in ("extra/nforenum-nightly", "extra/grfcodec-nightly"):
+            continue
+
         # releases\tstable already covers openttd-releases
         if folder == "releases\ttesting":
             continue
@@ -61,11 +65,7 @@ async def get_download_folders():
         if type.startswith("extra/"):
             type = type[6:]
 
-        # TODO -- Figure out what to do with aliases
-        if version[0] == "<":
-            continue
-
-        folders[folder] = type
+        folders[folder] = (type, version)
 
     return folders
 
@@ -111,7 +111,9 @@ async def main():
     session = aiohttp.ClientSession()
 
     folders = await get_download_folders()
-    for folder, type in folders.items():
+    for folder, data in folders.items():
+        type, latest = data
+
         os.makedirs(f"_downloads/{type}", exist_ok=True)
 
         versions = await get_versions_of_folder(folder)
@@ -123,6 +125,15 @@ async def main():
             print(f"Adding {type}/{version} to downloads collection ..")
             manifest = await fetch_manifest(folder, version)
             await write_to_collection(type, version, manifest)
+
+            # If this is the current version, also copy the content to "latest"
+            if version == latest:
+                # Insert the version into the header; otherwise we don't know
+                # what version this was on the downloads page.
+                manifest = manifest.split("\n")
+                manifest.insert(1, f"version: {version}")
+                manifest = "\n".join(manifest)
+                await write_to_collection(type, "latest", manifest)
 
     await session.close()
 
