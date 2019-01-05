@@ -10,7 +10,11 @@ js:
 {% assign raw_type = page.id | split: "/" | slice: 2 | first %}
 {% assign type = raw_type | prepend: "/download-meta/" %}
 {% assign meta = site.download-meta | where: "id", type | first %}
+{% unless page.version %}
 {% assign version = page.id | split: "/" | last %}
+{% else %}
+{% assign version = page.version %}
+{% endunless %}
 
 {% unless meta.id %}
     {{ "No download-meta entry found for " | append: raw_type | raise_error }}
