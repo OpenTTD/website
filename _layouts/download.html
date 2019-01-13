@@ -47,8 +47,14 @@ js:
 
             <ul id="download-data">
                 {% for file in page.files %}
+                {% assign extension = file.id | replace: page.base, "" %}
+                {% assign description = site.data.download-descriptions[extension].description %}
+                {% unless description %}
+                    {% assign description = "Unknown Filetype" %}
+                {% endunless %}
+
                 <li id="{{ file.id }}">
-                    <div class="filename"><a href="https://binaries.openttd.org/{{ meta.folder }}/{{ version }}/{{ file.id }}">{{ file.name }}</a></div>
+                    <div class="filename"><a href="https://binaries.openttd.org/{{ meta.folder }}/{{ version }}/{{ file.id }}">{{ description }}</a></div>
                     <div class="filesize">[ {{ file.size | string_of_size }} ]</div>
                     <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[ <a href="#" onclick="return false;">Checksums</a> ]</div>
                     <div class="checksums" id="checksum-{{ file.id }}">

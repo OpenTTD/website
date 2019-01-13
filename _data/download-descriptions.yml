@@ -1,0 +1,170 @@
+1mdk.i586.rpm:
+  description: Linux Mandrake (i586) (rpm)
+all.tar.gz:
+  description: Binary file for all platforms (gzip archive)
+all.zip:
+  description: Binary file for all platforms (zip archive)
+beos.pkg:
+  description: BeOS
+beos.pkg.zip:
+  description: BeOS
+beos.zip:
+  description: BeOS
+beos-bone.pkg:
+  description: BeOS Bone
+beos-bone.zip:
+  description: BeOS Bone
+beos-i586.zip:
+  description: BeOS (i586)
+beos-i686.zip:
+  description: BeOS (i686)
+beos-i686-2.zip:
+  description: BeOS (i686)
+dedicated-only-amd64.tar.gz:
+  description: Linux Generic Binaries (x86_64, 64bit) (DEDICATED ONLY)
+docs.tar.bz2:
+  description: Documentation of Source (bzip2 archive)
+docs.tar.gz:
+  description: Documentation of Source (gzip archive)
+docs.tar.xz:
+  description: Documentation of Source (xz/lzma archive)
+docs.zip:
+  description: Documentation of Source (zip archive)
+freebsd.tar.gz:
+  description: FreeBSD Generic Binaries (i386, 32bit) (gzip archive)
+linux.i386.tar.gz:
+  description: Linux Generic Binaries (i386, 32bit) (gzip archive)
+linux-generic-amd64.tar.bz2:
+  description: Linux Generic Binaries (x86_64, 64bit) (bzip2 archive)
+linux-generic-amd64.tar.gz:
+  description: Linux Generic Binaries (x86_64, 64bit) (gzip archive)
+linux-generic-amd64.tar.xz:
+  description: Linux Generic Binaries (x86_64, 64bit) (xz/lzma archive)
+linux-generic-amd64.zip:
+  description: Linux Generic Binaries (x86_64, 64bit) (zip archive)
+amd64.tar.gz:
+  description: Linux Generic Binaries (x86_64, 64bit)
+linux-debian-etch-amd64.deb:
+  description: Linux Debian Etch (x86_64, 64bit)
+linux-debian-etch-i386.deb:
+  description: Linux Debian Etch (i386, 32bit)
+linux-debian-jessie-amd64.deb:
+  description: Linux Debian Jessie (x86_64, 64bit)
+linux-debian-jessie-i386.deb:
+  description: Linux Debian Jessie (i386, 32bit)
+linux-debian-lenny-amd64.deb:
+  description: Linux Debian Lenny (x86_64, 64bit)
+linux-debian-lenny-i386.deb:
+  description: Linux Debian Lenny (i386, 32bit)
+linux-debian-stretch-amd64.deb:
+  description: Linux Debian Stretch (x86_64, 64bit)
+linux-debian-stretch-i386.deb:
+  description: Linux Debian Stretch (i386, 32bit)
+linux-debian-squeeze-amd64.deb:
+  description: Linux Debian Squeeze (x86_64, 64bit)
+linux-debian-squeeze-i386.deb:
+  description: Linux Debian Squeeze (i386, 32bit)
+linux-debian-wheezy-amd64.deb:
+  description: Linux Debian Wheezy (x86_64, 64bit)
+linux-debian-wheezy-i386.deb:
+  description: Linux Debian Wheezy (i386, 32bit)
+linux-generic-i686.tar.bz2:
+  description: Linux Generic Binaries (i686, 32bit) (bzip2 archive)
+linux-generic-i686.tar.gz:
+  description: Linux Generic Binaries (i686, 32bit) (gzip archive)
+linux-generic-i686.tar.xz:
+  description: Linux Generic Binaries (i686, 32bit) (xz/lzma archive)
+linux-generic-i686.zip:
+  description: Linux Generic Binaries (i686, 32bit) (zip archive)
+linux-ubuntu-bionic-amd64.deb:
+  description: Linux Ubuntu Bionic 18.04 (x86_64, 64 bit)
+linux-ubuntu-bionic-i386.deb:
+  description: Linux Ubuntu Bionic 18.04 (i386, 32 bit)
+linux-ubuntu-karmic-amd64.deb:
+  description: Linux Ubuntu Karmic 9.10 (x86_64, 64 bit); check known-bugs.txt if slow
+linux-ubuntu-karmic-i386.deb:
+  description: Linux Ubuntu Karmic 9.10 (i386, 32 bit); check known-bugs.txt if slow
+linux-ubuntu-lucid-amd64.deb:
+  description: Linux Ubuntu Lucid 10.04 (x86_64, 64 bit)
+linux-ubuntu-lucid-i386.deb:
+  description: Linux Ubuntu Lucid 10.04 (i386, 32 bit)
+linux-ubuntu-maverick-amd64.deb:
+  description: Linux Ubuntu Maverick 10.10 (x86_64, 64 bit)
+linux-ubuntu-maverick-i386.deb:
+  description: Linux Ubuntu Maverick 10.10 (i386, 32 bit)
+linux-ubuntu-natty-amd64.deb:
+  description: Linux Ubuntu Natty 11.04 (x86_64, 64 bit)
+linux-ubuntu-natty-i386.deb:
+  description: Linux Ubuntu Natty 11.04 (i386, 32 bit)
+linux-ubuntu-oneiric-amd64.deb:
+  description: Linux Ubuntu Oneiric 11.10 (x86_64, 64 bit)
+linux-ubuntu-oneiric-i386.deb:
+  description: Linux Ubuntu Oneiric 11.10 (i386, 32 bit)
+linux-ubuntu-precise-amd64.deb:
+  description: Linux Ubuntu Precise 12.04 (x86_64, 64 bit)
+linux-ubuntu-precise-i386.deb:
+  description: Linux Ubuntu Precise 12.04 (i386, 32 bit)
+linux-ubuntu-raring-amd64.deb:
+  description: Linux Ubuntu Raring 13.04 (x86_64, 64 bit)
+linux-ubuntu-raring-i386.deb:
+  description: Linux Ubuntu Raring 13.04 (i386, 32 bit)
+linux-ubuntu-trusty-amd64.deb:
+  description: Linux Ubuntu Trusty 14.04 (x86_64, 64 bit)
+linux-ubuntu-trusty-i386.deb:
+  description: Linux Ubuntu Trusty 14.04 (i386, 32 bit)
+linux-ubuntu-xenial-amd64.deb:
+  description: Linux Ubuntu Xenial 16.04 (x86_64, 64 bit)
+linux-ubuntu-xenial-i386.deb:
+  description: Linux Ubuntu Xenial 16.04 (i386, 32 bit)
+macosx-i686.zip:
+  description: Mac OS X 10.4-10.5 (Intel build)
+macosx-jaguar.dmg:
+  description: Mac OS X 10.2 (PowerPC binary)
+macosx-panther.dmg:
+  description: Mac OS X 10.3 (PowerPC binary)
+macosx-ppc.zip:
+  description: Mac OS X 10.3.9-10.5 (PowerPC build)
+macosx-universal.dmg:
+  description: Mac OS X 10.3.9-10.5 (universal binary)
+macosx-universal.sit:
+  description: Mac OS X 10.3.9-10.5 (universal binary)
+macosx-universal.zip:
+  description: Mac OS X 10.3.9-10.5 (universal build)
+macosx.dmg:
+  description: MacOS 10.12+ (Apple Disk Image)
+macosx.sit:
+  description: Mac OS X (very old)
+macosx.zip:
+  description: MacOS 10.12+ (zip archive)
+morphos.lha:
+  description: MorphOS (lha archive)
+os2.exe:
+  description: OS/2 (installer)
+os2.zip:
+  description: OS/2 (zip archive)
+OS2.zip:
+  description: OS/2 (zip archive)
+rhfc1.i386.rpm:
+  description: RedHat Fedora Core 1 (rpm)
+source.tar.bz2:
+  description: Sources (bzip2 archive)
+source.tar.gz:
+  description: Sources (gzip archive)
+source.tar.xz:
+  description: Sources (xz/lzma archive)
+source.zip:
+  description: Sources (zip archive)
+win.zip:
+  description: Headers/libraries to compile with MSVC for Windows
+windows-win32.exe:
+  description: Windows XP with SP3 / Vista / 7 / 8 / 10 (32bit) (installer)
+windows-win32.zip:
+  description: Windows XP with SP3 / Vista / 7 / 8 / 10 (32bit) (zip archive)
+windows-win64.exe:
+  description: Windows XP / Vista / 7 / 8 / 10 (64bit) (installer)
+windows-win64.zip:
+  description: Windows XP / Vista / 7 / 8 / 10 (64bit) (zip archive)
+windows-win9x.exe:
+  description: Windows 95 / 98 / ME / 2000 / XP without SP3 (installer)
+windows-win9x.zip:
+  description: Windows 95 / 98 / ME / 2000 / XP without SP3 (zip archive)
