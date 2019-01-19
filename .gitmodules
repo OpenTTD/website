@@ -1,0 +1,3 @@
+[submodule "thirdparty/ua-parser-js"]
+	path = thirdparty/ua-parser-js
+	url = https://github.com/faisalman/ua-parser-js
