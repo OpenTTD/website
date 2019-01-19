@@ -5,15 +5,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="Description" content="An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features." />
         <meta name="Keywords" content="Transport,Tycoon,Deluxe,TTDLX,TTD,OpenTTD,OTTD" />
-        <link rel="icon" href="{{ site.baseurl }}/static/favicon.ico" type="image/icon" />
-        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/base.css" type="text/css" />
-        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/page.css" type="text/css" />
-        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/index.css" type="text/css" />
+        <link rel="icon" href="{{ site.staticurl }}/favicon.ico" type="image/icon" />
+        <link rel="stylesheet" href="{{ site.staticurl }}/css/base.css" type="text/css" />
+        <link rel="stylesheet" href="{{ site.staticurl }}/css/page.css" type="text/css" />
+        <link rel="stylesheet" href="{{ site.staticurl }}/css/index.css" type="text/css" />
         {% for filename in layout.css %}
-        <link rel="stylesheet" href="{{ site.baseurl }}/static/css/{{ filename }}" type="text/css" />
+        <link rel="stylesheet" href="{{ site.staticurl }}/css/{{ filename }}" type="text/css" />
         {% endfor %}
         {% for filename in layout.js %}
-        <script type="text/javascript" src="{{ site.baseurl }}/static/js/{{ filename }}"></script>
+        <script type="text/javascript" src="{{ site.staticurl }}/js/{{ filename }}"></script>
         {% endfor %}
         {% feed_meta %}
         <title>OpenTTD {% if layout.section_title != nil %}| {{layout.section_title}}{% endif %} | {{ page.title }}</title>
@@ -40,7 +40,7 @@
             </div>
             <div id="header-logo">
                 <div id="openttd-logo">
-                    <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/static/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
+                    <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
                 </div>
             </div>
         </div>
