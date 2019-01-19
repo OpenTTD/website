@@ -5,6 +5,7 @@ css:
     - download.css
 js:
     - download.js
+    - ua-parser.js
 ---
 
 {% assign raw_type = page.id | split: "/" | slice: 2 | first %}
@@ -67,6 +68,6 @@ js:
             </ul>
         </div>
 
-        <script type="text/javascript">updateCombo(document.getElementById("download-data"));</script>
+        <script type="text/javascript">detectByUA(document.getElementById("download-combo-state"), "{{ page.base }}"); updateCombo(document.getElementById("download-data"));</script>
     </div>
 </div>

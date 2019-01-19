@@ -10,6 +10,9 @@ jobs:
     vmImage: 'ubuntu-16.04'
 
   steps:
+  - checkout: self
+    submodules: true
+
   # Only update the BuildNumber on 'master' (and not on a Pull Request)
   - script: |
       set -e

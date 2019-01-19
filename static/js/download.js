@@ -77,7 +77,7 @@ function makeCombo(base, level, base_name, prev_name, data_area, cur_state)
  * Update the comboboxes based on the current state (remove some, add some, etc).
  * @param changed_combo The combobox initiating the state change.
  */
-function updateCombo(changed_combo) 
+function updateCombo(changed_combo)
 {
 	var base =  changed_combo.id.replace(/-.*/, '');
 	var combo_area = document.getElementById(base + "-combo");
@@ -101,7 +101,7 @@ function updateCombo(changed_combo)
 	} else {
 		cur_state = changed_combo.value + "";
 	}
-	
+
 	/* Recreate the two base data containers */
 	var html = '';
 	html += '<input type="hidden" id="' + base + '-combo-state" value="' + cur_state + '" />';
@@ -109,7 +109,7 @@ function updateCombo(changed_combo)
 
 	var base_add = cur_state.replace(base_name, "").split("-");
 	var prev_name = "";
-	
+
 	/* Create as many combos as needed */
 	for (i = 0; i < base_add.length; i++) {
 		var tmp = base_add[i];
@@ -129,4 +129,48 @@ function updateCombo(changed_combo)
 			node.style.display = name.match(base_name) ? 'block' : 'none';
 		}
 	}
+}
+
+/**
+ * Detect based on UserAgent what the best state would be.
+ */
+function detectByUA(state, base_name)
+{
+	detected = UAParser();
+
+	switch (detected.os.name) {
+		case "Windows":
+			switch (detected.cpu.architecture) {
+				case undefined:
+				case "ia32":
+					if (detected.os.version == "95" || detected.os.version == "98") {
+						match = "windows-win9x";
+					} else {
+						match = "windows-win32";
+					}
+					break;
+				case "amd64": match = "windows-win64"; break;
+				default: match = "windows"; break;
+			}
+			break;
+
+		case "Mac OS": match = "macosx"; break;
+		case "BeOS": match = "beos"; break;
+		case "Morph OS": match = "morphos"; break;
+		case "Debian": match = "linux-debian"; break;
+		case "Ubuntu": match = "linux-ubuntu"; break;
+
+		case "CentOS":
+		case "Fedora":
+		case "Gentoo":
+		case "Mandriva":
+		case "Linux":
+		case "RedHat":
+		case "Slackware":
+			match = "linux"; break;
+
+		default: match = ""; break;
+	}
+
+	state.value = base_name + match;
 }
