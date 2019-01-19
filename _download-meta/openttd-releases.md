@@ -1,5 +1,5 @@
 ---
-folder: releases
+folder_old_infrastructure: releases
 ---
 
 For OpenTTD you can use the original Transport Tycoon Deluxe data files (you need to own a Transport Tycoon Deluxe CD).

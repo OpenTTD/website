@@ -1,3 +1,3 @@
 ---
-folder: extra/osie
+folder_old_infrastructure: extra/osie
 ---

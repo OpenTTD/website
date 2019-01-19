@@ -1,3 +1,3 @@
 ---
-folder: extra/grfcodec
+folder_old_infrastructure: extra/grfcodec
 ---

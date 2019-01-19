@@ -1,3 +1,3 @@
 ---
-folder: extra/nosound
+folder_old_infrastructure: extra/nosound
 ---

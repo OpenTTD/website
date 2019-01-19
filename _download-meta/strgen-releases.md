@@ -1,3 +1,3 @@
 ---
-folder: extra/strgen
+folder_old_infrastructure: extra/strgen
 ---
