@@ -1,3 +1,3 @@
 ---
-folder: extra/opengfx
+folder_old_infrastructure: extra/opengfx
 ---

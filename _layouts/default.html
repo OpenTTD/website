@@ -36,7 +36,7 @@
                 {% if latest_stable.date < latest_testing.date %}
                 <h5><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></h5>
                 {% endif %}
-                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ latest_nightly.version }})</a></h5>
+                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ latest_nightly.version | split: "-" | slice: 0 }})</a></h5>
             </div>
             <div id="header-logo">
                 <div id="openttd-logo">

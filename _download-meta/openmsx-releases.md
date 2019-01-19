@@ -1,3 +1,3 @@
 ---
-folder: extra/openmsx
+folder_old_infrastructure: extra/openmsx
 ---

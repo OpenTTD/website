@@ -1,3 +1,3 @@
 ---
-folder: extra/opensfx
+folder_old_infrastructure: extra/opensfx
 ---

@@ -1,3 +1,3 @@
 ---
-folder: extra/pngcodec
+folder_old_infrastructure: extra/pngcodec
 ---

@@ -1,3 +1,3 @@
 ---
-folder: extra/openttd-useful
+folder_old_infrastructure: extra/openttd-useful
 ---
