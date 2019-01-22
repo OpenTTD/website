@@ -192,7 +192,7 @@ async def main():
                 type,
                 type,
                 version,
-                "https://openttd.ams3.cdn.digitaloceanspaces.com",
+                "https://proxy.binaries.openttd.org",
                 latest=latest)
 
     await session.close()
