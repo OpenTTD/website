@@ -1,7 +1,10 @@
-trigger:
-- master
 pr:
   - master
+trigger:
+  branches:
+    include:
+      - refs/heads/master
+      - refs/tags/*
 
 jobs:
 - job: BuildImage
@@ -20,7 +23,7 @@ jobs:
       DATE=$(date +%Y%m%d-%H%M)
       echo "${VERSION}-${DATE}"
       echo "##vso[build.updatebuildnumber]${VERSION}-${DATE}"
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), contains(variables['Build.SourceBranch'], 'refs/tags/')))
     displayName: 'Use "git describe" as BuildNumber'
 
   - task: Docker@1
@@ -32,7 +35,7 @@ jobs:
 
   # Only publish when it triggered on 'master' (and not on a Pull Request)
   - task: Docker@1
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), contains(variables['Build.SourceBranch'], 'refs/tags/')))
     displayName: 'Publish image'
     inputs:
       containerregistrytype: 'Container Registry'
