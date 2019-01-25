@@ -29,7 +29,8 @@ permalink: /screenshots.html
         </div>
         <div class="section-item">
             <div class="content">
-                {% for screenshot in group.items %}
+                {% assign sorted_items = group.items | sort: "id" %}
+                {% for screenshot in sorted_items %}
                     <a href="{{ site.baseurl }}{{ screenshot.url }}">
                         {% assign stripped_content = screenshot.content | strip_html | strip_newlines %}
                         <img
