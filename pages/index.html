@@ -38,11 +38,11 @@ permalink: /index.html
             </div>
             <div id="index-right">
                 <div id="screenshot">
-                    {% assign latest_screenshot = site.screenshots | first %}
+                    {% assign random_screenshot = site.screenshots | sample %}
                     <div id="screenshot-image">
                         <a href="{{ site.baseurl }}/screenshots.html">
-                            {% assign stripped_content = latest_screenshot.content | strip_html | strip_newlines %}
-                            <img src="{{ site.baseurl }}{{ latest_screenshot.id }}_thumb.png"
+                            {% assign stripped_content = random_screenshot.content | strip_html | strip_newlines %}
+                            <img src="{{ site.baseurl }}{{ random_screenshot.id }}_thumb.png"
                                 alt="{{ stripped_content }}"
                                 title="{{ stripped_content | truncatewords: 5 }}"
                                 width="232"
@@ -51,7 +51,7 @@ permalink: /index.html
                         </a>
                     </div>
                     <div id="screenshot-content">
-                        {{ latest_screenshot.content }}
+                        {{ random_screenshot.content }}
                     </div>
                 </div>
             </div>
