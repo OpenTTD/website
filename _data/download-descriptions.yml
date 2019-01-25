@@ -34,8 +34,6 @@ docs-ai.tar.xz:
   description: Documentation for AI scripting (xz/lzma archive)
 docs-gs.tar.xz:
   description: Documentation for Game scripting (xz/lzma archive)
-docs-source.tar.xz:
-  description: Documentation of Source (xz/lzma archive)
 freebsd.tar.gz:
   description: FreeBSD Generic Binaries (i386, 32bit) (gzip archive)
 linux.i386.tar.gz:
