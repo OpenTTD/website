@@ -149,15 +149,17 @@ async def write_to_collection(type, version, manifest):
 async def handle_version(folder, type, version, host, on_old_infrastructure="false", latest=None):
     print(f"Adding {type}/{version} to downloads collection ..")
     manifest = await fetch_manifest(folder, version, host, on_old_infrastructure=on_old_infrastructure)
+
+    # Insert the version into the header; otherwise we don't know
+    # what version this was on the downloads page.
+    manifest = manifest.split("\n")
+    manifest.insert(1, f"version: {version}")
+    manifest = "\n".join(manifest)
+
     await write_to_collection(type, version, manifest)
 
     # If this is the current version, also copy the content to "latest"
     if version == latest:
-        # Insert the version into the header; otherwise we don't know
-        # what version this was on the downloads page.
-        manifest = manifest.split("\n")
-        manifest.insert(1, f"version: {version}")
-        manifest = "\n".join(manifest)
         await write_to_collection(type, "latest", manifest)
 
 
