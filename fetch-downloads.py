@@ -13,6 +13,8 @@ import asyncio
 import os
 import xmltodict
 
+from collections import defaultdict
+
 session = None
 
 mapping = {
@@ -24,8 +26,10 @@ mapping = {
 # Current supported types on the new infrastructure
 types = [
     "openttd-nightlies",
-    "openttd-pullrequests",
     "openttd-releases",
+]
+types_grouped_by_branch = [
+    "openttd-pullrequests",
 ]
 
 
@@ -196,6 +200,30 @@ async def main():
                 version,
                 "https://proxy.binaries.openttd.org",
                 latest=latest)
+
+    for type in types_grouped_by_branch:
+        version_grouped = defaultdict(list)
+        latest_grouped = defaultdict(str)
+        versions = await get_listing(type)
+
+        # Regroup the versions based on the branch (which is the second part in the name)
+        for version, data in versions.items():
+            (date, branch, tag) = version.split("-", 3)
+
+            version_grouped[branch].append((version, data))
+            if latest_grouped[branch] < date:
+                latest_grouped[branch] = version
+
+        # Now, based on the group, generate the files
+        for branch in version_grouped.keys():
+            for version, data in version_grouped[branch]:
+                os.makedirs(f"_downloads/{type}/{branch}", exist_ok=True)
+                await handle_version(
+                    type,
+                    f"{type}/{branch}",
+                    version,
+                    "https://proxy.binaries.openttd.org",
+                    latest=latest_grouped[branch])
 
     await session.close()
 
