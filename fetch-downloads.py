@@ -24,6 +24,8 @@ mapping = {
 # Current supported types on the new infrastructure
 types = [
     "openttd-nightlies",
+    "openttd-pullrequests",
+    "openttd-releases",
 ]
 
 
