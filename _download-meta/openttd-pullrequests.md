@@ -2,12 +2,18 @@
 folder_old_infrastructure: releases
 ---
 
-For OpenTTD you can use the original Transport Tycoon Deluxe data files (you need to own a Transport Tycoon Deluxe CD).
-There are also the free alternatives: [OpenGFX (graphics)](http://dev.openttdcoop.org/projects/opengfx), [OpenSFX (sound)](http://dev.openttdcoop.org/projects/opensfx), and [OpenMSX (music)](http://dev.openttdcoop.org/projects/openmsx).
-These can be installed automatically by the Windows and OS/2 installers.
-Please refer to the [readme](https://proxy.binaries.openttd.org/openttd-pullrequests/@@version@@/README.md) for more information.
 
-You can download the free alternatives here: [download OpenGFX](../opengfx-releases/latest.html), [download OpenSFX](../opensfx-releases/latest.html), and [download OpenMSX](../openmsx-releases/latest.html).
+OpenTTD requires a separate base graphics set to run, which can be downloaded through the installer (Windows) or on first run (Windows, Linux).
+In case you want to manually download and install it, some options are:
+* [OpenGFX (graphics)](../opengfx-releases/latest.html)
+* The Transport Tycoon Deluxe data files can be used as base graphics set. You must own a version of Transport Tycoon Deluxe; they cannot be downloaded.
+
+Sound and music sets are recommended (but not necessary).
+[OpenSFX (sound)](../opensfx-releases/latest.html), and [OpenMSX (music)](../openmsx-releases/latest.html) can be installed via the installer or - if you own the CD - also the Transport Tycoon Deluxe sound and music.
+
+Additional graphics, sound, and music sets can be downloaded via the ingame content download manager.
+
+Please refer to the [readme](https://proxy.binaries.openttd.org/openttd-pullrequests/@@version@@/README.md) for more information.
 
 **WARNING** - These binaries are built based on [Pull Request](https://github.com/OpenTTD/OpenTTD/pulls); the quality might vary, as the Pull Request might not be merge-ready.
 Savegames can be incompatible with other versions of OpenTTD and also with other versions of this Pull Request.
