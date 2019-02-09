@@ -24,6 +24,12 @@
             {% assign latest_testing = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" | last %}
             {% assign latest_nightly = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-nightlies/latest'" | last %}
 
+            {% if latest_nightly.version == latest_stable.version or latest_nightly.version == latest_testing.version %}
+            {% assign nightly_version = latest_nightly.version %}
+            {% else %}
+            {% assign nightly_version = latest_nightly.version | split: "-" | slice: 0 %}
+            {% endif %}
+
             <div id="header-left"></div>
             <div id="header-right"></div>
 
@@ -36,7 +42,7 @@
                 {% if latest_stable.date < latest_testing.date %}
                 <h5><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></h5>
                 {% endif %}
-                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ latest_nightly.version | split: "-" | slice: 0 }})</a></h5>
+                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ nightly_version }})</a></h5>
             </div>
             <div id="header-logo">
                 <div id="openttd-logo">
