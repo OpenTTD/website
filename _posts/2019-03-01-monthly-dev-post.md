@@ -49,5 +49,6 @@ So far the solution has been a low-tech `listing.txt`, but building REST APIs or
 ## Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
-These developer blog posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts) [TODO:link to prepared file for next month] before they are made public on the website.
+These Monlty Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-04-01-monthly-dev-post.md) before they are made public on the website.
 As soon as you are whitelisted as a contributor, it's as simple as editing the file on the webinterface.
+If you are not a contributor yet, drop by on [IRC](https://www.openttd.org/contact.html) to become one (make sure you have a GitHub account).
