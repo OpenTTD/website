@@ -17,13 +17,14 @@ Every month one of these post will be created, to tell you about the latest deve
 
 ## Infrastructure
 
-### Our first beta since GitHub migration
+### Our first (two?) beta since GitHub migration
 
-We had our first beta in February.
+We had our first (and second) beta in February.
 This was a test of the new infrastructure.
 [Azure-Pipelines](https://dev.azure.com/openttd/OpenTTD/_build) now generates our releases, which are published on the CDN of DigitalOcean.
 Our [main webpage](https://www.openttd.org) links correctly to the new infrastructure for this new beta.
-[Many issues](https://github.com/OpenTTD/website/compare/9858a4952a29535f6912d209dbbace64b6c625ca..48daaf209774131facbddee0f4afb679167c1880) were found and solved during this process.
+[Many](https://github.com/OpenTTD/website/compare/9858a4952a29535f6912d209dbbace64b6c625ca..48daaf209774131facbddee0f4afb679167c1880)  [issues](https://github.com/OpenTTD/OpenTTD/compare/5b74118ae77cd7c931fc833b174522b77cf00737..6e211908588ab5272336d0d2db3bbb4020f7004f) were found and solved during this process.
+A second beta was needed because of a [(network) game breaking bug](https://github.com/OpenTTD/OpenTTD/commit/0151fe998a999b48b67afa5b96d9a4cd72246455) found in beta1 immediately after release.
 
 ### Building Pull Request / Patch Packs
 
