@@ -35,8 +35,9 @@ If you are interested in building and/or publishing your own PatchPack, please [
 
 ### Migration to DigitalOcean
 
-Slowly we are migrating everything to the new infrastructure (Kubernetes on DigitalOcean).
-One of the biggest step so far, is using the DigitalOcean CDN.
+We are still on the slow process of migrating everything to [DigitalOcean](https://www.digitalocean.com).
+We make now use of their [managed Kubernetes cluster](https://www.digitalocean.com/products/kubernetes/), and switched this month to their [CDN](https://www.digitalocean.com/products/spaces/).
+This last change has been a huge step in the migration towards DigitalOcean.
 The latest downloads ([1.9.0-beta2](https://www.openttd.org/downloads/openttd-releases/testing.html) and [nightlies](https://www.openttd.org/downloads/openttd-nightlies/latest.html)) are now on the CDN.
 This should drasticly improve download speeds for most people, and increase availability in general.
 
