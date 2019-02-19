@@ -15,6 +15,8 @@ Every month one of these post will be created, to tell you about the latest deve
 
 ## NewGRF
 
+* something about feedback for OpenTTD#7000 and OpenTTD#7141
+
 ## Infrastructure
 
 ### Our first (two?) beta since GitHub migration
