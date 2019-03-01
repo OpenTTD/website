@@ -6,6 +6,7 @@ baseurl: ""
 staticurl: /static
 url: ""
 timezone: Etc/UTC
+excerpt_separator: <!-- more -->
 
 markdown: kramdown
 plugins:

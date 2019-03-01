@@ -12,7 +12,7 @@ pagination:
         <h3>Archived News</h3>
     </div>
     {% for post in paginator.posts %}
-        {% include post_macro.html %}
+        {% include post_macro.html excerpt="true" %}
     {% endfor %}
 
     <div class="right"><a href="{{ site.baseurl }}{{ paginator.next_page_path }}">More Archived News</a></div>

@@ -13,6 +13,14 @@
         </h5>
     </div>
     <div class="content">
+        {% if include.excerpt %}
+        {{ post.excerpt }}
+
+        {% if post.excerpt != post.content %}
+            <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+        {% endif %}
+        {% else %}
         {{ post.content }}
+        {% endif %}
     </div>
 </div>
