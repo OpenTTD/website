@@ -7,11 +7,22 @@ Welcome to our first Monthly Dev Post.
 Every month one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
 
 ## Development
-* road to next release (beta/RCs)
-  - regression bugs
 
-* a curated list of notable PRs
-  - Network version change
+We have been busy the past few months, and development activity has seen a significant increase since the move to GitHub last year.
+We are approaching our next release, and while this has never been a fixed date, we intend to keep our streak alive to release 1.9.0 on April 1st 2019.
+(There is currently a debate on whether we can keep that up, like we could accelerate our releases to give you new features more often)
+Currently we are on our third beta, and if all goes according to plan, a Release Candidate (RC) will follow soon.
+Please test these extensively, so we can make sure the final release will be as bug-free as possible
+
+### Highlights
+
+here are a few notable contributions that were merged into the master branch last month that will appear in the next release:
+* [Make ships stop in locks to move up/down instead of following the slope.](https://github.com/OpenTTD/OpenTTD/pull/7150)
+* [Add option to adjust font size separately from GUI size.](https://github.com/OpenTTD/OpenTTD/pull/7003)
+(this one has some particularly nasty bugs we're looking to squash)
+* [Allow town bridges over rails and one-way roads.](https://github.com/OpenTTD/OpenTTD/pull/7291)
+
+A more detailed [changelog](https://proxy.binaries.openttd.org/openttd-releases/1.9.0-beta3/changelog.txt) can be found [on the download page for our latest beta](https://www.openttd.org/downloads/openttd-releases/testing.html)
 
 ## NewGRF
 
@@ -51,7 +62,6 @@ This was a test of the new infrastructure.
 Our [main webpage](https://www.openttd.org) links correctly to the new infrastructure for this new beta.
 [Many](https://github.com/OpenTTD/website/compare/9858a4952a29535f6912d209dbbace64b6c625ca..48daaf209774131facbddee0f4afb679167c1880)  [issues](https://github.com/OpenTTD/OpenTTD/compare/5b74118ae77cd7c931fc833b174522b77cf00737..6e211908588ab5272336d0d2db3bbb4020f7004f) were found and solved during this process.
 A second beta was needed because of a [(network) game breaking bug](https://github.com/OpenTTD/OpenTTD/commit/0151fe998a999b48b67afa5b96d9a4cd72246455) found in beta1 immediately after release.
-Currently we are on our third beta, and if all goes according to plan, a Release Candidate (RC) will follow soon.
 
 ### Building Pull Request / Patch Packs
 
