@@ -10,25 +10,25 @@ Every month one of these post will be created, to tell you about the latest deve
 
 We have been busy the past few months, and development activity has seen a significant increase since the move to GitHub last year.
 We are approaching our next release, and while this has never been a fixed date, we intend to keep our streak alive to release 1.9.0 on April 1st 2019.
-(There is currently a debate on whether we can keep that up, like we could accelerate our releases to give you new features more often)
-Currently we are on our third beta, and if all goes according to plan, a Release Candidate (RC) will follow soon.
+(There is currently a debate on whether we can keep that up, we're currently expecting to accelerate our releases to give you new features more often)
+Currently we are on our third beta and, if all goes to plan, a Release Candidate (RC) will follow soon.
 Please test these extensively, so we can make sure the final release will be as bug-free as possible
 
 ### Highlights
 
-here are a few notable contributions that were merged into the master branch last month that will appear in the next release:
-* [Make ships stop in locks to move up/down instead of following the slope.](https://github.com/OpenTTD/OpenTTD/pull/7150)
-* [Add option to adjust font size separately from GUI size.](https://github.com/OpenTTD/OpenTTD/pull/7003)
+A few notable contributions that were merged into the master branch in the last month that will appear in the next release:
+* [Make ships stop in locks to move up/down instead of following the slope](https://github.com/OpenTTD/OpenTTD/pull/7150)
+* [Add option to adjust font size separately from GUI size](https://github.com/OpenTTD/OpenTTD/pull/7003)
 (this one has some particularly nasty bugs we're looking to squash)
-* [Allow town bridges over rails and one-way roads.](https://github.com/OpenTTD/OpenTTD/pull/7291) (this one has not made it into our beta yet)
+* [Allow town bridges over rails and one-way roads](https://github.com/OpenTTD/OpenTTD/pull/7291) (this one has not made it into our beta yet)
 
 A more detailed [changelog](https://proxy.binaries.openttd.org/openttd-releases/1.9.0-beta3/changelog.txt) can be found [on the download page for our latest beta](https://www.openttd.org/downloads/openttd-releases/testing.html)
 
 ## NewGRF
 
-The following things will not be part of the 1.9 release, however we announce them here because we want to get Feedback from NewGRF authors, before they are made final and put into the master branch
+The following things will not be part of the 1.9 release, however we announce them here because we want to get feedback from NewGRF authors, before they are made final and put into the master branch
 
-* The first one is additional information about Railtypes, covered in Pull Request [#7000](https://github.com/OpenTTD/OpenTTD/pull/7000), which aims at things like making dual mode vehicles feasible
+* The first one is additional information about railtypes, covered in Pull Request [#7000](https://github.com/OpenTTD/OpenTTD/pull/7000), which aims at things like making dual mode vehicles feasible
   - Var4A gets additional information about the railtype the vehicle is on, like speed limit and whether it has a catenary on top.
  
    This should allow for graphical changes like whether or not pantographs are raised. Ideally, you would not only be able to query the speed limit of the railtype, but a collection of all speed limits currently affecting the train (like bridges, curves, station approach, etc.) and whether the train has reached any of these. If you have ideas how to use this in a set, please tell us.
