@@ -10,6 +10,8 @@ Every month one of these post will be created, to tell you about the latest deve
 
 ### Highlights
 
+* Optimisation work, talk about the weird massive saves that have been tested with
+
 ## NewGRF
 
 ## Ponies
