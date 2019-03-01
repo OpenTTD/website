@@ -73,10 +73,10 @@ We are looking for people that use `finger.openttd.org`, and are interested in h
 So far the solution has been a low-tech `listing.txt`, but building REST APIs or others solutions are up for discussion!
 
 ## Ponies
-* features that are hold back until after next release?
-  - NRT?
 
-## Participate yourself
+A "pony" is a personal pet project of a developer or community member. This section will be used in the future to showcase a project in detail.
+
+### Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
 These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-04-01-monthly-dev-post.md) before they are made public on the website.
