@@ -15,7 +15,29 @@ Every month one of these post will be created, to tell you about the latest deve
 
 ## NewGRF
 
-* something about feedback for OpenTTD#7000 and OpenTTD#7141
+The following things will not be part of the 1.9 release, however we announce them here because we want to get Feedback from NewGRF authors, before they are made final and put into the master branch
+
+* The first one is additional information about Railtypes, covered in Pull Request [#7000](https://github.com/OpenTTD/OpenTTD/pull/7000), which aims at things like making dual mode vehicles feasible
+  - Var4A gets additional information about the railtype the vehicle is on, like speed limit and whether it has a catenary on top.
+ 
+   This should allow for graphical changes like whether or not pantographs are raised. Ideally, you would not only be able to query the speed limit of the railtype, but a collection of all speed limits currently affecting the train (like bridges, curves, station approach, etc.) and whether the train has reached any of these. If you have ideas how to use this in a set, please tell us.
+  - A new 60+ var is introduced that lets you query the "vehicle is powered" flag as if the vehicle is made for a different railtype
+  
+   With this, you can implement dual power vehicles without knowing all the railtypes present. just ask "if this were an ELRL vehicle, would this vehicle be powered?"
+  - On a more general level, introduce a new method to have global variables (in the 00-3F range for Varaction 2, or the 80-BF range for Action 7/9/D) with parameters (similar to variables in the 60-7F range)
+  - with this new method, a way in action D to detect whether two railtypes you listed in your railtype translation table were actually mapped to the same or different railtype in the game
+  
+   If for example a railtype GRF according to the [Standardized Railtype Scheme](https://newgrf-specs.tt-wiki.net/wiki/Standardized_Railtype_Scheme) is loaded, you can detect this way if different weight classes are modelled in the GRF, or if they are all mapped to the same basic railtype. Then you can set vehicle availability e.g. for heavier wagon loads accordingly, to avoid useless duplicate wagons.
+* The second one is a change to how vehicle introduction works, covered in Pull Request [#7141](https://github.com/OpenTTD/OpenTTD/pull/7141)
+  - In the current system, each vehicle gets its own lifespan (randomized introduction date, reliability curve, retirement date)
+  - with the proposed change, all vehicles that get introduced on the same "raw" introduction date get the same randomized values
+  
+  So if you e.g. have a 2-car EMU and a very similar 4-car EMU, you can put them on the same introduction date, and their prototypes will be offered at the same time, they will reach the same peak reliability, and they will go out of service at the same time.
+  Also, you can make all freight wagons of the same generation appear on the same date.
+  
+  If you want to introduce vehicles in a similar timeframe, but they don't need to share the same introduction date and reliability curve, then you can set their "raw" introduction dates very closely apart (in 1 day increments), and it will get different random values (the game will round the final introduction date up to the next full month, so moving the date by 1 day should have no notable difference)
+
+If you want to give feedback to these proposals, like ideas how to use these in a NewGRF, or further requests, or maybe you see a problem with these changes, please reply to the Issues on GitHub or on the [NewGRF Development Forum](https://www.tt-forums.net/viewtopic.php?f=26&t=84875)
 
 ## Infrastructure
 
