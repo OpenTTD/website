@@ -41,14 +41,17 @@ If you want to give feedback to these proposals, like ideas how to use these in 
 
 ## Infrastructure
 
-### Our first (two?) beta since GitHub migration
+Our infrastructure monkey probably had the hardest piece of work during the past few months, please give him a Banana when you happen to see him.
 
-We had our first (and second) beta in February.
+### Our first beta since GitHub migration
+
+We had our first (and second, and third) beta in February.
 This was a test of the new infrastructure.
 [Azure-Pipelines](https://dev.azure.com/openttd/OpenTTD/_build) now generates our releases, which are published on the CDN of DigitalOcean.
 Our [main webpage](https://www.openttd.org) links correctly to the new infrastructure for this new beta.
 [Many](https://github.com/OpenTTD/website/compare/9858a4952a29535f6912d209dbbace64b6c625ca..48daaf209774131facbddee0f4afb679167c1880)  [issues](https://github.com/OpenTTD/OpenTTD/compare/5b74118ae77cd7c931fc833b174522b77cf00737..6e211908588ab5272336d0d2db3bbb4020f7004f) were found and solved during this process.
 A second beta was needed because of a [(network) game breaking bug](https://github.com/OpenTTD/OpenTTD/commit/0151fe998a999b48b67afa5b96d9a4cd72246455) found in beta1 immediately after release.
+Currently we are on our third beta, and if all goes according to plan, a Release Candidate (RC) will follow soon.
 
 ### Building Pull Request / Patch Packs
 
@@ -62,7 +65,7 @@ If you are interested in building and/or publishing your own PatchPack, please [
 We are still on the slow process of migrating everything to [DigitalOcean](https://www.digitalocean.com).
 We make now use of their [managed Kubernetes cluster](https://www.digitalocean.com/products/kubernetes/), and switched this month to their [CDN](https://www.digitalocean.com/products/spaces/).
 This last change has been a huge step in the migration towards DigitalOcean.
-The latest downloads ([1.9.0-beta2](https://www.openttd.org/downloads/openttd-releases/testing.html) and [nightlies](https://www.openttd.org/downloads/openttd-nightlies/latest.html)) are now on the CDN.
+The latest downloads ([1.9.0-beta3](https://www.openttd.org/downloads/openttd-releases/testing.html) and [nightlies](https://www.openttd.org/downloads/openttd-nightlies/latest.html)) are now on the CDN.
 This should drasticly improve download speeds for most people, and increase availability in general.
 
 ### Finger / automated tools
