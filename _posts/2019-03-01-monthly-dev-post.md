@@ -1,6 +1,6 @@
 ---
 title: Monthly Dev Post of March 2019
-author: Many monkeys
+author: Eddi, LordAro & TrueBrain
 ---
 
 Welcome to our first Monthly Dev Post.
@@ -17,10 +17,10 @@ Please test these extensively, so we can make sure the final release will be as 
 ### Highlights
 
 There were many changes this month, but here are a few of the notable contributions that were merged into the master branch in the last month that will appear in 1.9.0:
-* [Make ships stop in locks to move up/down instead of following the slope](https://github.com/OpenTTD/OpenTTD/pull/7150)
-* [Add option to adjust font size separately from GUI size](https://github.com/OpenTTD/OpenTTD/pull/7003)
-(this one has some particularly nasty bugs we're looking to squash)
-* [Allow town bridges over rails and one-way roads](https://github.com/OpenTTD/OpenTTD/pull/7291) (this one has not made it into a beta yet)
+* [Make ships stop in locks to move up/down instead of following the slope](https://github.com/OpenTTD/OpenTTD/pull/7150) - realism! We genuinely think it looks better as well.
+* [Add option to adjust font size separately from GUI size](https://github.com/OpenTTD/OpenTTD/pull/7003) - we've seen some particularly nasty bugs revealed by this one that we're looking to squash.
+* [Allow town bridges over rails and one-way roads](https://github.com/OpenTTD/OpenTTD/pull/7291) - this one has not made it into a beta yet.
+* [Increase maximum number of orders to ~16.7 million](https://github.com/OpenTTD/OpenTTD/pull/7220) - it's rare that games managed to get to the previous limit, but was doable with lots of ship AIs (lots of buoys), and it turned out to be trivial to increase, so why not?
 
 A more detailed [changelog](https://proxy.binaries.openttd.org/openttd-releases/1.9.0-beta3/changelog.txt) can be found [on the download page for our latest beta](https://www.openttd.org/downloads/openttd-releases/testing.html)
 
