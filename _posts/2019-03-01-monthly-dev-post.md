@@ -26,7 +26,7 @@ A more detailed [changelog](https://proxy.binaries.openttd.org/openttd-releases/
 
 ## NewGRF
 
-The following things will not be part of the 1.9 release, however we announce them here because we want to get feedback from NewGRF authors, before they are made final and put into the master branch
+The following things will not be part of the 1.9 release, however we'd quite like to get feedback about it from NewGRF authors, so we're announcing it before the changes are made final and put into the master branch.
 
 * The first one is additional information about railtypes, covered in Pull Request [#7000](https://github.com/OpenTTD/OpenTTD/pull/7000), which aims at things like making dual mode vehicles feasible
   - Var4A gets additional information about the railtype the vehicle is on, like speed limit and whether it has a catenary on top.
