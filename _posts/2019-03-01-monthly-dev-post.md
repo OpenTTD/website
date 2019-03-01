@@ -28,7 +28,7 @@ The following things will not be part of the 1.9 release, however we announce th
   - with this new method, a way in action D to detect whether two railtypes you listed in your railtype translation table were actually mapped to the same or different railtype in the game
   
    If for example a railtype GRF according to the [Standardized Railtype Scheme](https://newgrf-specs.tt-wiki.net/wiki/Standardized_Railtype_Scheme) is loaded, you can detect this way if different weight classes are modelled in the GRF, or if they are all mapped to the same basic railtype. Then you can set vehicle availability e.g. for heavier wagon loads accordingly, to avoid useless duplicate wagons.
-* The second one is a change to how vehicle introduction works, covered in Pull Request [#7141](https://github.com/OpenTTD/OpenTTD/pull/7141)
+* The second one is a change to how vehicle introduction works, covered in Pull Request [#7147](https://github.com/OpenTTD/OpenTTD/pull/7147)
   - In the current system, each vehicle gets its own lifespan (randomized introduction date, reliability curve, retirement date)
   - with the proposed change, all vehicles that get introduced on the same "raw" introduction date get the same randomized values
   
