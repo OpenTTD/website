@@ -20,7 +20,7 @@ here are a few notable contributions that were merged into the master branch las
 * [Make ships stop in locks to move up/down instead of following the slope.](https://github.com/OpenTTD/OpenTTD/pull/7150)
 * [Add option to adjust font size separately from GUI size.](https://github.com/OpenTTD/OpenTTD/pull/7003)
 (this one has some particularly nasty bugs we're looking to squash)
-* [Allow town bridges over rails and one-way roads.](https://github.com/OpenTTD/OpenTTD/pull/7291)
+* [Allow town bridges over rails and one-way roads.](https://github.com/OpenTTD/OpenTTD/pull/7291) (this one has not made it into our beta yet)
 
 A more detailed [changelog](https://proxy.binaries.openttd.org/openttd-releases/1.9.0-beta3/changelog.txt) can be found [on the download page for our latest beta](https://www.openttd.org/downloads/openttd-releases/testing.html)
 
