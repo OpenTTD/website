@@ -4,7 +4,7 @@ author: Eddi, LordAro & TrueBrain
 ---
 
 Welcome to our first Monthly Dev Post.
-Every month one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
+Every month one of these posts will be created, to tell you about the latest developments in the world of OpenTTD.
 
 <!-- more -->
 
