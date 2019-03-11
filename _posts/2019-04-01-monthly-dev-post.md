@@ -12,7 +12,36 @@ Every month one of these post will be created, to tell you about the latest deve
 
 ### Highlights
 
-* Optimisation work, talk about the weird massive saves that have been tested with
+The 1.9 release branch had barely been made, before a ton of pending pull requests were merged.
+Several changes in queue were pretty much waiting on 1.9 being branched off from master, since they were rather high-risk, and merging them in to 1.9 could have introduced new bugs with too little time to discover and fix them.
+Several of these are talked about at length below, but here are some short ones.
+
+* Many performance improvements have been made, through the use of smarter algorithms and data structures.
+dP from the [CityMania](https://citymania.org/) community [provided a savegame](https://github.com/OpenTTD/OpenTTD/pull/7235#issuecomment-465280438) with slightly over 50,000 stations, which really brought the game to its knees, both loading and simulating it.
+The new fixes together improve performance of this pathological game massively.
+
+* Another big game used for testing is Wentbourne Transport, originally shared on TT-Forums, but unfortunately we can't find the original thread at the time of writing.
+Wentbourne is a real game, with a very large number of vehicles: 5499 road vehicles, 4833 trains, 2818 ships, and 749 aircraft.
+The pathfinding this this large number of vehicles makes even top-end modern CPUs sweat, and it typically runs at less than 10 fps.
+One of the new optimisations added is path caching for road vehicles, similar to the caching introduced for ships in 1.9, and this gives a significant boost to performance.
+
+* A new generic data structure has been added to the library, a [k-dimensional tree ](https://en.wikipedia.org/wiki/K-d_tree) for improving lookup performance of objects in 2D space, in particular "nearest object" and "all objects within rectangle".
+(It's not actually k-dimensional in OpenTTDs implementation, it's specialised to two homogenous dimensions.)
+This initially helps two cases:
+First, and most immediate, is finding the visible viewport signs, that is, station names, town names, player signs.
+The second is faster search for which town is local authority for a tile, this especially helps performance of many AIs.
+
+* SamuXarick helped find a particular edge case where world generation took unreasonably long time, and occasionally towns lost their bridges across waterways.
+When generating a huge map (4k square) with high number of towns, occasionally towns will end up never building any houses, so get zero population.
+These zero-population towns are deleted again during world generation, but it turns out that because bridges owned by towns do not store *which* towns owns them, the game has to search all towns for which is nearest and the potential owner.
+When the map is huge (16.8 million tiles) and there are around 10,000-15,000 towns, this search takes a long time.
+The fix for this was to look at the road tiles connecting to the bridge, and assume the town owning the roads also owns the bridge.
+
+* Everyone playing OpenTTD, and Transport Tycoon for that matter, have surely experienced stations inside towns eventually getting unmanageably many passengers.
+The central bus stop with 3000 passengers waiting is one classic example.
+The actual reason for this behaviour is that, when generating passengers, the population of a house is considered twice, one for chance of generating anything at all, and once for upper bound on amount to generate.
+A bit of statistics, or making a simulation, will show that the effect is quadratic growth in pax generation: A house with twice the population generates four times as many passengers.
+We're adding a setting to control how pax is generated, and offering a new default method, where a house twice the population only generates twice the amount.
 
 ### Fixing old exploits?
 
