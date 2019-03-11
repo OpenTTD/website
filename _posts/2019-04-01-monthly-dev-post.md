@@ -60,7 +60,7 @@ In fact, the catchment area was calculated from the station's bounding rectangle
 This is now changed, so the bus stop distant-joined to the airport only extends the catchment area in the 7x7 area immediately around it, and there may even be a gap between the total catchment area parts.
 As an added bonus, the fixed code is even faster than the old, through the magic of improved data structures.
 
-These changes/fixes can obviously be controversial, so please discuss and ask aobut them.
+These changes/fixes can obviously be controversial, so please discuss and ask about them.
 
 ### DOS support
 
