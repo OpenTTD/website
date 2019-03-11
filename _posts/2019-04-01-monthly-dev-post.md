@@ -18,9 +18,18 @@ Every month one of these post will be created, to tell you about the latest deve
 
 We have added two changes to the master (future 1.10) that can be described as fixes for old exploits.
 
-The first is a new optional feature: Prevent player stations from serving industries that have their own neutral stations. This for example prevents a player's train station next to an oil rig from receiving oil from the oil rig. To transport the oil from the oil rig, the player must instead send ships (or aircraft) to the oil rig, and would not be able to deliver passengers to the oil rig via train either. The default for this feature is the old behaviour, i.e. you have to opt-in to the more challenging gameplay.
+The first is a new optional feature:
+Prevent player stations from serving industries that have their own neutral stations.
+This for example prevents a player's train station next to an oil rig from receiving oil from the oil rig.
+To transport the oil from the oil rig, the player must instead send ships (or aircraft) to the oil rig, and would not be able to deliver passengers to the oil rig via train either.
+The default for this feature is the old behaviour, i.e. you have to opt-in to the more challenging gameplay.
 
-The second is not optional, as we have agreed to classify it as a bug fix: Changing the way catchment area works for "sparse" stations, i.e. stations with multiple parts, that don't form a single rectangle. Intuitively, the radius and shape of one station part's catchment area should not affect the size and shape of other station parts' catchment areas, but it did. In fact, the catchment area was calculated from the station's bounding rectangle, such that a single bus stop distant-joined to an airport could expand the catchment area massively. This is now changed, so the bus stop distant-joined to the airport only extends the catchment area in the 7x7 area immediately around it, and there may even be a gap between the total catchment area parts. As an added bonus, the fixed code is even faster than the old, through the magic of improved data structures.
+The second is not optional, as we have agreed to classify it as a bug fix:
+Changing the way catchment area works for "sparse" stations, i.e. stations with multiple parts, that don't form a single rectangle.
+Intuitively, the radius and shape of one station part's catchment area should not affect the size and shape of other station parts' catchment areas, but it did.
+In fact, the catchment area was calculated from the station's bounding rectangle, such that a single bus stop distant-joined to an airport could expand the catchment area massively.
+This is now changed, so the bus stop distant-joined to the airport only extends the catchment area in the 7x7 area immediately around it, and there may even be a gap between the total catchment area parts.
+As an added bonus, the fixed code is even faster than the old, through the magic of improved data structures.
 
 These changes/fixes can obviously be controversial, so please discuss and ask aobut them.
 
