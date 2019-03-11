@@ -48,9 +48,9 @@ Considering all these things together, we strongly wonder if having DOS support 
 So we ask you: would anyone mind of we drop DOS support, so we can use modern techniques to build OpenTTD?
 Let us know on the forum thread what you think!
 
-### MorphOS / AmigoOS / BeOS support
+### MorphOS / AmigaOS / BeOS support
 
-In 1.10 we will be dropping support for MorphOS and AmigoOS, as well as BeOS (you can use Haiku instead of BeOS).
+In 1.10 we will be dropping support for MorphOS and AmigaOS, as well as BeOS (you can use Haiku instead of BeOS).
 We did this as these targets weren't maintained, and were unlikely to work in their current state.
 As we are working towards dropping SDL1 in favour of SDL2, and these platforms have no official SDL2 support, that meant either using unofficial SDL2 libraries or dropping support for these targets.
 As we have no maintainer, nor anyone to test on these OSes, we decided to drop support for it.
