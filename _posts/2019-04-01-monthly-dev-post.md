@@ -87,7 +87,15 @@ This doesn't mean we don't love any of these targets.
 If you feel up to it, and can maintain those targets for a longer period, we would love to see a Pull Request reintroducing them.
 You can simply revert the patch that removed the code, and work from there.
 
-## NewGRF
+## DLCs
+
+We are happy to announce that we will be switching to a new business model with our BaNaNaS service,
+that has brought to you all kinds of user-generated mods such as Basesets And NewGRFs And NoAIs And Scripts
+
+### DaBaNaNaS
+
+We will from now on be offering paid DLCs from selected community members.
+Our first such paid DLC will offer you cosmetic changes to your manager face, such as earrings.
 
 ### Tools
 
