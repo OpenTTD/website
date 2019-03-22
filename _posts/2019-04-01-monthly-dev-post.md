@@ -91,11 +91,15 @@ You can simply revert the patch that removed the code, and work from there.
 
 ### Tools
 
-NML gained support for 16 cargoes which was added to OpenTTD earlier. For nml projects it means that they need to update the code for the production callback. Check FIRS code for an example. Existing projects which do not want to make a change will need to use nml versions from the 0.4 branch which will continue to receive updates for the time being.
+NML gained support for 16 cargoes which was added to OpenTTD earlier.
+For nml projects it means that they need to update the code for the production callback.
+Check FIRS code for an example.
+Existing projects which do not want to make a change will need to use nml versions from the 0.4 branch which will continue to receive updates for the time being.
 
 ### Basesets
 
-The basesets [OpenGFX](https://github.com/OpenTTD/OpenGFX), [OpenSFX](https://github.com/OpenTTD/OpenSFX) and [OpenMSX](https://github.com/OpenTTD/OpenMSX) are now hosted under the umbrella of the OpenTTD group. OpenGFX got a new release (0.5.5) which contains the new GUI sprites for group liveries and lots of translation updates.
+The basesets [OpenGFX](https://github.com/OpenTTD/OpenGFX), [OpenSFX](https://github.com/OpenTTD/OpenSFX) and [OpenMSX](https://github.com/OpenTTD/OpenMSX) are now hosted under the umbrella of the OpenTTD group.
+OpenGFX got a new release (0.5.5) which contains the new GUI sprites for group liveries and lots of translation updates.
 
 ## Ponies
 
