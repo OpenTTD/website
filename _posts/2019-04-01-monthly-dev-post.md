@@ -62,19 +62,35 @@ As an added bonus, the fixed code is even faster than the old, through the magic
 
 These changes/fixes can obviously be controversial, so please discuss and ask about them.
 
+### CMake support
+
+Over the last few weeks, we have been working on switching our build system to CMake.
+This unifies all build systems into a single one; no more `./configure`, MSVC projects, and others.
+This also removes supporting both `awk` and `vbs` scripts, which were doing the same thing.
+As CMake also supports (via CPack) releasing NSIS (Windows Installer), Debian, RPM, and more, we will also be switching to that.
+
+This gave us a great oppurtinity to clean up some old and weird quirks in the file structure and build system.
+For example, the build folder is no longer in-source.
+
+With support for CMake nearing completion, we are asking for your help.
+Please considering testing [this PullRequest](https://github.com/OpenTTD/OpenTTD/pull/7270), and let us know if everything is still working as you expect.
+It should support all OSes we support and should auto-detect all libraries.
+Please let us know if there are any issues or if you have additional suggestions.
+Your feedback will be greatly appreciated!
+
 ### DOS support
 
 Years ago someone added DOS as a target, just because we could.
 It had some serious drawbacks: no threads, no network, different video-driver (allegro instead of SDL).
-This created some huge technical debt.
-We have tons of places where we have to keep in mind that network might also not exist (and DOS is the only one without network support).
-We have special glue to handle threads; and the compiler doesn't follow std::thread (C++11), so we can't switch to that.
-Additionally, we are working towards CMake support.
-DJGPP (the compiler we use to create DOS binaries) doesn't have support for that.
-Last month we created some test-binaries to see the current state of DOS.
-Turns out, the performance is not good (<1fps).
+This created some huge technical debt:
+- We have tons of places where we have to keep in mind that network might also not exist (and DOS is the only one without network support).
+- We have special glue to handle threads; and the compiler doesn't follow std::thread (C++11), so we can't switch to that.
+- DJGPP (the compiler we use to create DOS binaries) doesn't have support for CMake (to which we are switching).
+- Last month we created some test-binaries to see the current state of DOS; turns out, the performance is not good (<1fps).
+
 Considering all these things together, we strongly wondered if having DOS support is worth it.
-Finally, especially with the introduction of std::thread, we decided against it.
+In the end, especially with the introduction of std::thread, we decided against it.
+
 This doesn't mean we don't love DOS..
 If you feel up to it, and can maintain DOS for a longer period, we would love to see a Pull Request reintroducing support for it.
 You can simply revert the patch that removed the code, and work from there.
@@ -85,6 +101,7 @@ In 1.10 we will be dropping support for MorphOS and AmigaOS, as well as BeOS (yo
 We did this as these targets weren't maintained, and were unlikely to work in their current state.
 As we are working towards dropping SDL1 in favour of SDL2, and these platforms have no official SDL2 support, that meant either using unofficial SDL2 libraries or dropping support for these targets.
 As we have no maintainer, nor anyone to test on these OSes, we decided to drop support for it.
+
 This doesn't mean we don't love any of these targets.
 If you feel up to it, and can maintain those targets for a longer period, we would love to see a Pull Request reintroducing for them.
 You can simply revert the patch that removed the code, and work from there.
