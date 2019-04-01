@@ -111,9 +111,9 @@ You can simply revert the patch that removed the code, and work from there.
 ### Tools
 
 NML gained support for 16 cargoes which was added to OpenTTD earlier.
-For nml projects it means that they need to update the code for the production callback.
-Check FIRS code for an example.
-Existing projects which do not want to make a change will need to use nml versions from the 0.4 branch which will continue to receive updates for the time being.
+For NML projects it means that they need to update the code for the production callback.
+Check [FIRS](https://dev.openttdcoop.org/projects/firs/repository) for an example.
+Existing projects which do not want to make a change will need to use NML versions from the 0.4 branch which will continue to receive updates for the time being.
 
 ### Basesets
 
@@ -124,12 +124,14 @@ OpenGFX got a new release (0.5.5) which contains the new GUI sprites for group l
 
 A "pony" is a personal pet project of a developer or community member. This section will be used in the future to showcase a project in detail.
 
+### OpenTTD in a browser
+
 For today's showcase, our community member Milek7 has had another go at bringing OpenTTD to the browser using Emscripten:
  - Check it out [here](https://milek7.pl/openttd-wasm/)
  - The changes to the source code this needed are listed [here](https://gist.github.com/Milek7/391554b342d301a3ddb18a9d0a6435a1)
  - And there is also a version [with music](https://milek7.pl/openttd-wasm-music/)
 
- ### Participate yourself
+### Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
 These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-05-01-monthly-dev-post.md) before they are made public on the website.
