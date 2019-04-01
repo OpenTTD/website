@@ -108,10 +108,6 @@ You can simply revert the patch that removed the code, and work from there.
 
 ## Extensions & Tools
 
-### NewGRFs
-
-We will from now on be offering paid DLCs from selected community members. BaNaNas has been extended as to allow paid content. The main game will remain free and we will only allow paid content for cosmetic changes. So our first such paid DLC will offer you cosmetic changes to your manager face, such as earrings.
-
 ### Tools
 
 NML gained support for 16 cargoes which was added to OpenTTD earlier.
