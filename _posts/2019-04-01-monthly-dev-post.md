@@ -124,6 +124,11 @@ OpenGFX got a new release (0.5.5) which contains the new GUI sprites for group l
 
 A "pony" is a personal pet project of a developer or community member. This section will be used in the future to showcase a project in detail.
 
+For today's showcase, our community member Milek7 has had another go at bringing OpenTTD to the browser using Emscripten:
+ - Check it out [here](https://milek7.pl/openttd-wasm/)
+ - The changes to the source code this needed are listed [here](https://gist.github.com/Milek7/391554b342d301a3ddb18a9d0a6435a1)
+ - And there is also a version [with music](https://milek7.pl/openttd-wasm-music/)
+
  ### Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
