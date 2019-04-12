@@ -16,11 +16,11 @@
         <script type="text/javascript" src="{{ site.staticurl }}/js/{{ filename }}"></script>
         {% endfor %}
         {% feed_meta %}
-        <title>OpenTTD {% if layout.section_title != nil %}| {{layout.section_title}}{% endif %} | {{ page.title }}</title>
+        <title>OpenTTD{% if layout.section_title != nil %} | {{layout.section_title}}{% endif %} | {{ page.title }}</title>
     </head>
     <body>
-        <div id="header">
-            {% assign latest_stable = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" | last %}
+        <header>
+            {% assign latest_stable = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" |  last %}
             {% assign latest_testing = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/testing'" | last %}
             {% assign latest_nightly = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-nightlies/latest'" | last %}
 
@@ -30,67 +30,59 @@
             {% assign nightly_version = latest_nightly.version | split: "-" | slice: 0 %}
             {% endif %}
 
-            <div id="header-left"></div>
-            <div id="header-right"></div>
-
-            {% if latest_stable.date < latest_testing.date %}
-            <div id="download-fast-3">
-            {% else %}
-            <div id="download-fast-2">
-            {% endif %}
-                <h5><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></h5>
+            <div id="header-download">
+                <p><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></p>
                 {% if latest_stable.date < latest_testing.date %}
-                <h5><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></h5>
+                <p><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></p>
                 {% endif %}
-                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ nightly_version }})</a></h5>
+                <p><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ nightly_version }})</a></p>
             </div>
-            <div id="header-logo">
-                <div id="openttd-logo">
-                    <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
-                </div>
+            <div id="openttd-logo">
+                <a href="{{ site.baseurl }}/">
+                    <img src="{{ site.staticurl }}/img/layout/openttd-64.gif" />
+                    <img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" />
+                </a>
             </div>
-        </div>
-        <div id="navigation">
-            <div id="navigation-left"></div>
-            <div id="navigation-right"></div>
-            <ul id="navigation-bar">
-                <li class="{% if page.active_nav == 'home' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/">Home</a>
-                </li>
-                <li class="{% if page.active_nav == 'about' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/about.html">About</a>
-                </li>
-                <li><a href="https://wiki.openttd.org/">Manual</a></li>
-                <li class="{% if page.active_nav == 'screenshots' or layout.active_nav == 'screenshots' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/screenshots.html">Screenshots</a>
-                </li>
-                <li><a href="https://servers.openttd.org">Servers</a></li>
-                <li class="{% if page.active_nav == 'development' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/development.html">Development</a>
-                </li>
-                <li><a href="https://forum.openttd.org/">Forum</a></li>
-                <li><a href="https://wiki.openttd.org/Community">Community</a></li>
-                <li class="{% if page.active_nav == 'contact' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
-                </li>
-                <li class="{% if page.active_nav == 'donate' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/donate.html">Donate</a>
-                </li>
-            </ul>
-        </div>
-        <div id="content-main">
+            <nav>
+                <ul id="navigation-bar">
+                    <li class="{% if page.active_nav == 'home' %}selected{% endif %}">
+                        <a href="{{ site.baseurl }}/">Home</a>
+                    </li>
+                    <li class="{% if page.active_nav == 'about' %}selected{% endif %}">
+                        <a href="{{ site.baseurl }}/about.html">About</a>
+                    </li>
+                    <li><a href="https://wiki.openttd.org/">Manual</a></li>
+                    <li class="{% if page.active_nav == 'screenshots' or layout.active_nav == 'screenshots' %}selected{% endif %}">
+                        <a href="{{ site.baseurl }}/screenshots.html">Screenshots</a>
+                    </li>
+                    <li><a href="https://servers.openttd.org">Servers</a></li>
+                    <li class="{% if page.active_nav == 'development' %}selected{% endif %}">
+                        <a href="{{ site.baseurl }}/development.html">Development</a>
+                    </li>
+                    <li><a href="https://forum.openttd.org/">Forum</a></li>
+                    <li><a href="https://wiki.openttd.org/Community">Community</a></li>
+                    <li class="{% if page.active_nav == 'contact' %}selected{% endif %}">
+                        <a href="{{ site.baseurl }}/contact.html">Contact</a>
+                    </li>
+                    <li class="{% if page.active_nav == 'donate' %}selected{% endif %}">
+                        <a href="{{ site.baseurl }}/donate.html">Donate</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
             {{ content }}
-            <hr id="hr-clear" />
-            <div id="content-bottom">
-                <div id="content-bottom-links">
-                    <a href="{{ site.baseurl }}/policy.html">Privacy Policy</a> |
-                    <a href="https://account.openttd.org/en/login">Login</a> |
-                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
-                </div>
-                <div id="content-bottom-copyright">
-                    Copyright &copy; 2005-{{ site.time | date: '%Y' }} OpenTTD Team
-                </div>
-            </div>
-        </div>
+            <hr />
+            <footer>
+                <span id="footer-links">
+                      <a href="{{ site.baseurl }}/policy.html">Privacy Policy</a> |
+                      <a href="https://account.openttd.org/en/login">Login</a> |
+                      <a href="{{ site.baseurl }}/contact.html">Contact</a>
+                </span>
+                <span id="footer-copyright">
+                      Copyright &copy; 2005-{{ site.time | date: '%Y' }} OpenTTD Team
+                </span>
+            </footer>
+        </main>
     </body>
 </html>

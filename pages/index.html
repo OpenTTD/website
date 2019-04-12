@@ -5,66 +5,59 @@ active_nav: home
 permalink: /index.html
 ---
 
-<div id="content-left">
-    <div id="content-right">
-        <div id="content">
-            <div id="index-banner">
-                <div id="openttd-banner-left-{{ "now" | date: "%u" }}">
-                    <div id="openttd-banner-right"></div>
-                    <div id="banner-links">
-                        <ul>
-                            {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/latest'" | last %}
-                            <li id="banner-download"> <a href="{{ site.baseurl }}{{ latest_stable.url }}">
-                                <span class="h3">Download&nbsp;OpenTTD</span>
-                                <span class="h5">Latest version: {{ latest_stable.version }}</span>
-                                </a>
-                            </li>
-                            <li id="banner-wiki"> <a href="https://wiki.openttd.org/">
-                                <span class="h3">Learn&nbsp;how&nbsp;to&nbsp;play</span>
-                                <span class="h5">Read our wiki for help</span>
-                                </a>
-                            </li>
-                            <li id="banner-forum"> <a href="https://forum.openttd.org/">
-                                <span class="h3">Visit&nbsp;our&nbsp;community</span>
-                                <span class="h5">Join us on the forums</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="openttd-banner">
-                        <div id="openttd-text">OpenTTD is an open source simulation game based upon Transport Tycoon Deluxe</div>
-                    </div>
-                </div>
-            </div>
-            <div id="index-right">
-                <div id="screenshot">
-                    {% assign random_screenshot = site.screenshots | sample %}
-                    <div id="screenshot-image">
-                        <a href="{{ site.baseurl }}/screenshots.html">
-                            {% assign stripped_content = random_screenshot.content | strip_html | strip_newlines %}
-                            <img src="{{ site.baseurl }}{{ random_screenshot.id }}_thumb.png"
-                                alt="{{ stripped_content }}"
-                                title="{{ stripped_content | truncatewords: 5 }}"
-                                width="232"
-                                height="178"
-                                />
-                        </a>
-                    </div>
-                    <div id="screenshot-content">
-                        {{ random_screenshot.content }}
-                    </div>
-                </div>
-            </div>
-            <div id="section">
-                <div class="section-header">
-                    <div class="section-icon"></div>
-                    <h3>Recent News</h3>
-                </div>
-                {% for post in site.posts limit: 5 %}
-                    {% include post_macro.html excerpt="true" %}
-                {% endfor %}
-                <div class="right"><a href="{{ site.baseurl }}/news/page/2/">Archived News</a></div>
-            </div>
+<div id="index-banner">
+  <div id="openttd-banner-left-{{ "now" | date: "%u" }}">
+        <div id="openttd-banner-right"></div>
+        <div id="banner-links">
+            <ul>
+                {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/latest'" | last %}
+                <li id="banner-download"> <a href="{{ site.baseurl }}{{ latest_stable.url }}">
+                    <span class="h3">Download&nbsp;OpenTTD</span>
+                    <span class="h5">Latest version: {{ latest_stable.version }}</span>
+                    </a>
+                </li>
+                <li id="banner-wiki"> <a href="https://wiki.openttd.org/">
+                    <span class="h3">Learn&nbsp;how&nbsp;to&nbsp;play</span>
+                    <span class="h5">Read our wiki for help</span>
+                    </a>
+                </li>
+                <li id="banner-forum"> <a href="https://forum.openttd.org/">
+                    <span class="h3">Visit&nbsp;our&nbsp;community</span>
+                    <span class="h5">Join us on the forums</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="openttd-banner">
+            <div id="openttd-text">OpenTTD is an open source simulation game based upon Transport Tycoon Deluxe</div>
         </div>
     </div>
+</div>
+<div id="index-right">
+    <div id="screenshot">
+        {% assign random_screenshot = site.screenshots | sample %}
+        <div id="screenshot-image">
+            <a href="{{ site.baseurl }}/screenshots.html">
+                {% assign stripped_content = random_screenshot.content | strip_html | strip_newlines %}
+                <img src="{{ site.baseurl }}{{ random_screenshot.id }}_thumb.png"
+                    alt="{{ stripped_content }}"
+                    title="{{ stripped_content | truncatewords: 5 }}"
+                    width="232"
+                    height="178"
+                    />
+            </a>
+        </div>
+        <div id="screenshot-content">
+            {{ random_screenshot.content }}
+        </div>
+    </div>
+</div>
+<div id="section">
+    <div class="section-header">
+        <h1>Recent News</h1>
+    </div>
+    {% for post in site.posts limit: 5 %}
+        {% include post_macro.html excerpt="true" %}
+    {% endfor %}
+    <div class="right"><a href="{{ site.baseurl }}/news/page/2/">Archived News</a></div>
 </div>

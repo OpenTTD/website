@@ -1,18 +1,8 @@
-<div class="section-item">
-    <div class="title">
-        <h3>
-            <a href="{{ base }}{{ post.url }}">{{ post.title }}</a>
-        </h3>
-    </div>
-    <div class="date">
-        <h5>{{ post.date | date: "%Y-%m-%d" }}</h5>
-    </div>
-    <div class="user">
-        <h5>
-            Posted by {{ post.author }}
-        </h5>
-    </div>
-    <div class="content">
+<section>
+    <h3 class="section-title" style="float: left"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+    <h4 class="section-date">{{ post.date | date: "%Y-%m-%d" }}</h4>
+    <h5 class="section-author">Posted by {{ post.author }}</h5>
+    <div class="section-content">
         {% if include.excerpt %}
         {{ post.excerpt }}
 
@@ -23,4 +13,4 @@
         {{ post.content }}
         {% endif %}
     </div>
-</div>
+</section>

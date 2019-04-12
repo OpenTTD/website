@@ -1,73 +1,48 @@
-
-#section, #section-full {
-	text-align: left;
-}
 #section {
-	width: 500px;
+	max-width: 500px;
 }
-#section-full {
-	width: 770px;
-}
-.section-header {
-	background: url("../img/layout/section-bg.png") no-repeat;
-	color: #365800;
+
+.section-header h1 {
 	line-height: 38px;
-	height: 38px;
-	padding: 0px 0px 0px 10px;
-	text-align: left;
-	width: 500px;
-}
-.section-icon {
-	background: url("../img/layout/section-news.gif") no-repeat;
-	float: left;
-	height: 28px;
-	margin-top: 5px;
-	padding-right: 6px;
-	width: 28px;
-}
-.section-header h3 {
+	background-image: url('../img/layout/section-news.gif'), url('../img/layout/section-bg.png');
+	background-repeat: no-repeat, no-repeat;
+	background-position: 4px, left;
+	padding-left: 34px;
+
 	font-size: 18px;
-	margin-right: 20px;
-	text-decoration: none;
+	color: #365800;
+	font-weight: normal;
 }
 
-.section-item {
-	padding-top: 10px;
+.section-title a {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }
-.section-item .title {
-	font-size: 16px;
-	float: left;
-	padding-top: 5px;
+
+.section-title {
+	margin-top: 0px;
 }
-.section-item .title h3, .section-list li .header, .section-item .title a {
-	color: #000000;
-	font-size: 18px;
-	font-weight: bold;
-	text-decoration: none;
-}
-.section-item .date {
+.section-date {
+	margin: 0px;
 	text-align: right;
+	font-size: 12px;
+	font-weight: normal;
 }
-.section-item .user {
+.section-author {
+	margin-top: 0px;
+	margin-bottom: 6px;
 	text-align: right;
-	padding-bottom: 5px;
+	font-size: 12px;
+	font-weight: normal;
 }
-.section-item .content {
-	border-top: 1px solid #EEEEEE;
-	font-size: 14px;
+
+.section-content {
+	border-top: 1px solid #EEE;
 	padding: 5px 15px 30px 15px;
+
 	text-align: justify;
+	font-size: 14px;
 }
 
-.section-item hr {
-	width: 500px;
-}
-
-.section-list {
-	list-style-type: none;
-}
-
-.right {
-	float: right;
-	margin-bottom: 20px;
-}

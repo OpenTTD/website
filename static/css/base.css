@@ -1,264 +1,126 @@
-body {
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
-}
 html {
-	background: url("../img/layout/background.png") repeat;
+	background-color: #AB9C7D;
 	color: black;
 	font-family: "Trebuchet MS", Arial, Verdana, Sans-Serif;
 	font-size: 12px;
 }
-select {
-	color: black;
-}
-img {
-	border: 0px;
-}
-a {
-	color: #DD6000;
-}
-hr {
-	background: url("../img/layout/hr.png") repeat-x;
-	border: none;
-	height: 2px;
-}
-h3, .h3 {
-	font-weight: normal;
-	font-size: 16px;
-	margin: 0px;
-	text-decoration: underline;
-}
-h4, .h4 {
-	font-weight: normal;
-	font-size: 14px;
-	margin: 0px;
-}
-h5, .h5 {
-	font-weight: normal;
-	font-size: 12px;
-	margin: 0px;
+
+body {
+	width: 785px;
+	margin: auto auto;
 }
 
-.nowrap {
+header {
 	overflow: hidden;
-	white-space: nowrap;
+	margin-bottom: 20px;
 
-	/* The following elements are not part of CSS2, but are required for some
-	 *  (broken) browsers who do not understand the former definitions. */
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
+	background-color: #333;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0px 0px 3px 2px #444;
+	color: #DDDDDD;
 }
 
-#languages {
-	background: url("../img/layout/languages-bg.png") repeat-x;
-	height: 22px;
-	margin: 0px auto;
-	width: 800px;
+#openttd-logo {
+	margin: 9px;
+	margin-right: 20px;
+	text-align: right;
 }
-#languages a {
-	color: #CCCCCC;
-	font-size: 10px;
+#openttd-logo a {
+	text-decoration: none;
 }
-#languages img {
-	height: 12px;
-	padding-top: 2px;
-	width: 18px;
+
+nav {
+	text-align: center;
+	background-color: #444;
 }
-#languages-left {
-	background: url("../img/layout/languages-bg-left.png") no-repeat;
-	float: left;
-	height: 22px;
-	width: 15px;
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	padding: 0px;
+	margin: auto 5px;
+	list-style: none;
+
+	min-height: 32px;
 }
-#languages-right {
-	background: url("../img/layout/languages-bg-right.png") no-repeat;
+
+nav ul li {
+	flex-grow: 1;
+	line-height: 32px;
+}
+
+nav ul li a {
+	display: block;
+
+	text-decoration: none;
+	color: #DDD;
+}
+
+.selected a {
+	background: linear-gradient(#FCD085, #FEB439);
+	color: #444;
+}
+
+main {
+	padding: 0.1px; /* Prevents margin collapse */
+	margin-bottom: 20px;
+
+	background-color: white;
+	border-radius: 5px 5px;
+	box-shadow: 0px 0px 3px 2px #444;
+}
+
+main > * {
+	margin: 5px;
+}
+
+footer {
+	padding: 10px;
+}
+
+#footer-links a {
+	color: #DD6600;
+}
+
+#footer-copyright {
 	float: right;
-	height: 22px;
-	width: 15px;
-}
-#languages-content {
-	float: left;
-	height: 18px;
-	padding-top: 2px;
-	width: 763px;
 }
 
-#header {
-	background: url("../img/layout/header-bg.png") repeat;
-	height: 90px;
-	margin: 0px auto;
-	width: 800px;
-}
-#header-left {
-	background: url("../img/layout/header-bg-left.png") repeat-y;
-	float: left;
-	height: 90px;
-	width: 15px;
-}
-#header-right {
-	background: url("../img/layout/header-bg-right.png") repeat-y;
-	float: right;
-	height: 90px;
-	width: 15px;
-}
-
-#download-fast-1, #download-fast-2, #download-fast-3 {
+#header-download {
 	background: url("../img/layout/download-package.gif") 12px 50% no-repeat, rgba(85, 87, 89, 0.4);
 	border: 0 solid;
 	border-radius: 6px;
 	float: left;
-	line-height: 12px;
 	margin: 22px 0px 0px 10px;
 	padding: 9px 12px 9px 45px;
 	text-align: left;
 }
-#download-fast-1 h5 a, #download-fast-2 h5 a, #download-fast-3 h5 a {
+
+#header-download p {
+	margin: 0px;
+}
+
+#header-download p a {
 	color: #CCCCCC;
 	font-size: 11px;
 	text-decoration: none;
 }
-#download-fast-1 h5 a:hover, #download-fast-2 h5 a:hover, #download-fast-3 h5 a:hover {
+#header-download p a:hover {
 	color: #999999;
 }
 
-#header-logo {
-	float: right;
-	width: 400px;
+hr {
+	background-color: #EEE;
+	height: 1px;
+	border: none;
 }
 
-#ovh-header {
-	float: right;
-	height: 90px;
-	line-height: 11px;
-	margin-top: -2px;
-	margin-right: -6px;
-	padding: 0px;
-	width: 90px;
-}
-#openttd-logo {
-	background: url("../img/layout/openttd-64.gif") no-repeat;
-	background-position: left center;
-	float: right;
-	height: 75px;
-	margin-top: 6px;
-	width: 250px;
-}
-#openttd-logo-ipv6 {
-	background: url("../img/layout/openttd-64-ipv6.gif") no-repeat;
-	background-position: left center;
-	float: right;
-	height: 75px;
-	margin-top: 5px;
-	width: 250px;
-}
-#openttd-logo-text {
-	height: 29px;
-	margin: 36px 0px 0px 77px;
-	width: 151px;
-}
-#openttd-logo-text-noai {
-	height: 29px;
-	margin: 15px 0px 0px 75px;
-	width: 151px;
-}
-#openttd-logo-text-bananas {
-	height: 29px;
-	margin: 18px 0px 0px 75px;
-	width: 151px;
-}
-#openttd-logo-text-security {
-	height: 29px;
-	margin: 18px 0px 0px 75px;
-	width: 151px;
-}
-#openttd-logo-text-binaries {
-	height: 29px;
-	margin: 36px 0px 0px 77px;
-	width: 151px;
-}
-#openttd-logo-text-translator {
-	height: 29px;
-	margin: 28px 0px 0px 75px;
-	width: 151px;
+a {
+	color: #DD6000;
 }
 
-#navigation {
-	background: url("../img/layout/navigation-bg.png") repeat-x;
-	height: auto !important;
-	height: 32px;
-	margin: 0px auto;
-	min-height: 32px;
-	overflow: hidden;
-	width: 800px;
-}
-#navigation-left {
-	background: url("../img/layout/navigation-bg-left.png") no-repeat;
-	float: left;
-	height: 32px;
-	width: 15px;
-}
-#navigation-right {
-	background: url("../img/layout/navigation-bg-right.png") no-repeat;
-	float: right;
-	height: 32px;
-	width: 15px;
-}
-#navigation-bar {
-	float: left;
-	margin: 0px;
-	padding: 0px;
-}
-#navigation-bar li {
-	font-size: 12px;
-	float: left;
-	line-height: 32px;
-	list-style-type: none;
-}
-#navigation-bar li a {
-	color: #DDDDDD;
-	display: block;
-	padding: 0px 14px 0px 14px;
-	text-decoration: none;
-}
-#navigation-bar li a:hover {
-	background: url("../img/layout/navigation-bg-hover.png") repeat-x;
-	color: #444444;
-}
-#navigation-bar li.selected {
-	background: url("../img/layout/navigation-bg-selected.png") repeat-x;
-}
-#navigation-bar li.selected a {
-	color: #444444;
-}
-
-#content-main {
-	background-color: white;
-	margin: 12px auto;
-	width: 776px;
-	padding: 7px;
-	margin-bottom: 36px;
-	border-radius: 5px;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
-}
-#content-bottom {
-    overflow: hidden;
-	padding-bottom: 6px;
-}
-#content-bottom-links {
-	float: left;
-	font-size: 11px;
-	padding: 7px 5px 0px 5px;
-}
-#content-bottom-copyright {
-	float: right;
-	font-size: 11px;
-	padding: 7px 5px 0px 5px;
-}
-#hr-clear {
-	clear: both;
-}
-
-.mono {
-	font-family: 'Courier New', monospace;
+.right {
+	text-align: right;
 }
