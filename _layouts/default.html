@@ -29,9 +29,6 @@
             {% assign nightly_version = latest_nightly.version | split: "-" | slice: 0 %}
             {% endif %}
 
-            <div id="header-left"></div>
-            <div id="header-right"></div>
-
             {% if latest_stable.date < latest_testing.date %}
             <div id="download-fast-3">
             {% else %}
