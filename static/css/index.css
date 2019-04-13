@@ -84,7 +84,7 @@
 }
 #screenshot-image {
 	background-color: #FCB030;
-	padding: 6px 0px 0px 0px;
+	padding: 6px;
 	height: 184px;
 }
 #screenshot-image img {
@@ -92,7 +92,7 @@
 }
 #screenshot-content {
 	background-color: #FEE7C0;
-	padding: 10px 10px 10px 10px;
+	padding: 6px;
 	text-align: left;
 }
 #donate {
