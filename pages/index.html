@@ -6,8 +6,7 @@ permalink: /index.html
 ---
 
 <div id="index-banner">
-  <div id="openttd-banner-left-{{ "now" | date: "%u" }}">
-        <div id="openttd-banner-right"></div>
+    <div id="openttd-banner-left-{{ "now" | date: "%u" }}">
         <div id="banner-links">
             <ul>
                 {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/latest'" | last %}

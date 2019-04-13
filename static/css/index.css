@@ -1,8 +1,7 @@
 
 #index-banner {
-	background: url("../img/layout/openttd-index.png") repeat-x;
-	height: auto !important;
-	height: 183px;
+	border-radius: 6px;
+	background: #383A3C;
 	margin-bottom: 10px;
 	min-height: 183px;
 }
@@ -30,12 +29,6 @@
 #openttd-banner-left-3, #openttd-banner-left-6 {
 	background: url("../img/layout/frontpage-teaser-3.jpg") no-repeat;
 	height: 183px;
-}
-#openttd-banner-right {
-	background: url("../img/layout/openttd-index-right.png") no-repeat;
-	float: right;
-	height: 183px;
-	width: 15px;
 }
 
 #banner-links {
