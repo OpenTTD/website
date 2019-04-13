@@ -42,34 +42,20 @@
                 </div>
             </div>
         </header>
-        <div id="navigation">
-            <div id="navigation-left"></div>
-            <div id="navigation-right"></div>
-            <ul id="navigation-bar">
-                <li class="{% if page.active_nav == 'home' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/">Home</a>
-                </li>
-                <li class="{% if page.active_nav == 'about' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/about.html">About</a>
-                </li>
+        <nav id="navigation-bar">
+            <ul>
+                <li><a{% if page.active_nav != 'home' %} href="{{ site.baseurl }}/"{% endif %}>Home</a></li>
+                <li><a{% if page.active_nav != 'about' %} href="{{ site.baseurl }}/about.html"{% endif %}>About</a></li>
                 <li><a href="https://wiki.openttd.org/">Manual</a></li>
-                <li class="{% if page.active_nav == 'screenshots' or layout.active_nav == 'screenshots' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/screenshots.html">Screenshots</a>
-                </li>
+                <li><a{% if page.active_nav != 'screenshots' or layout.active_nav == 'screenshots' %} href="{{ site.baseurl }}/screenshots.html"{% endif %}>Screenshots</a></li>
                 <li><a href="https://servers.openttd.org">Servers</a></li>
-                <li class="{% if page.active_nav == 'development' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/development.html">Development</a>
-                </li>
+                <li><a{% if page.active_nav != 'development' %} href="{{ site.baseurl }}/development.html"{% endif %}>Development</a></li>
                 <li><a href="https://forum.openttd.org/">Forum</a></li>
                 <li><a href="https://wiki.openttd.org/Community">Community</a></li>
-                <li class="{% if page.active_nav == 'contact' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
-                </li>
-                <li class="{% if page.active_nav == 'donate' %}selected{% endif %}">
-                    <a href="{{ site.baseurl }}/donate.html">Donate</a>
-                </li>
+                <li><a{% if page.active_nav != 'contact' %} href="{{ site.baseurl }}/contact.html"{% endif %}>Contact</a></li>
+                <li><a{% if page.active_nav != 'donate' %} href="{{ site.baseurl }}/donate.html"{% endif %}>Donate</a></li>
             </ul>
-        </div>
+        </nav>
         <div id="content-main">
             {{ content }}
             <hr id="hr-clear" />
