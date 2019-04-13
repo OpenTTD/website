@@ -18,7 +18,7 @@
         <title>OpenTTD{% if layout.section_title != nil %} | {{layout.section_title}}{% endif %} | {{ page.title }}</title>
     </head>
     <body>
-        <div id="header">
+        <header id="header">
             {% assign latest_stable = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" | last %}
             {% assign latest_testing = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/testing'" | last %}
             {% assign latest_nightly = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-nightlies/latest'" | last %}
@@ -48,7 +48,7 @@
                     <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
                 </div>
             </div>
-        </div>
+        </header>
         <div id="navigation">
             <div id="navigation-left"></div>
             <div id="navigation-right"></div>
