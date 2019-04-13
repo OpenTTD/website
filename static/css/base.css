@@ -104,13 +104,13 @@ h5, .h5 {
 }
 
 #download-fast-1, #download-fast-2, #download-fast-3 {
-	background: url("../img/layout/download-package.gif") 16px 7px no-repeat, rgba(85, 87, 89, 0.4);
+	background: url("../img/layout/download-package.gif") 12px 50% no-repeat, rgba(85, 87, 89, 0.4);
 	border: 0 solid;
 	border-radius: 6px;
 	float: left;
 	line-height: 12px;
 	margin: 22px 0px 0px 10px;
-	padding: 3px 16px 9px 50px;
+	padding: 5px 12px 5px 45px;
 	text-align: left;
 }
 #download-fast-1 {
