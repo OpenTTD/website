@@ -1,13 +1,12 @@
-body {
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
-}
 html {
-	background: url("../img/layout/background.png") repeat;
+	background: #ab9c7d;
 	color: black;
 	font-family: "Trebuchet MS", Arial, Verdana, Sans-Serif;
 	font-size: 12px;
+}
+body {
+	width: 785px;
+	margin: auto auto;
 }
 select {
 	color: black;
@@ -84,7 +83,7 @@ h5, .h5 {
 	width: 763px;
 }
 
-#header {
+body > header {
 	background: url("../img/layout/header-bg.png") repeat;
 	height: 90px;
 	margin: 0px auto;
@@ -183,7 +182,7 @@ h5, .h5 {
 	width: 151px;
 }
 
-#navigation {
+body > nav {
 	background: url("../img/layout/navigation-bg.png") repeat-x;
 	height: auto !important;
 	height: 32px;
@@ -232,18 +231,22 @@ h5, .h5 {
 	color: #444444;
 }
 
-#content-main {
+main {
 	background-color: white;
 	margin: 12px auto;
 	width: 776px;
 	padding: 7px;
-	margin-bottom: 36px;
 	border-radius: 5px;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
 }
-#content-bottom {
-    overflow: hidden;
-	padding-bottom: 6px;
+body > footer {
+	background-color: white;
+	margin: 0 auto 36px auto;
+	width: 776px;
+	padding: 7px 7px 6px 7px;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
 }
 #content-bottom-links {
 	float: left;

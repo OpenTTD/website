@@ -18,7 +18,7 @@
         <title>OpenTTD{% if layout.section_title != nil %} | {{layout.section_title}}{% endif %} | {{ page.title }}</title>
     </head>
     <body>
-        <div id="header">
+        <header>
             {% assign latest_stable = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/latest'" | last %}
             {% assign latest_testing = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-releases/testing'" | last %}
             {% assign latest_nightly = site.downloads | where_exp: "download", "download.id == '/downloads/openttd-nightlies/latest'" | last %}
@@ -48,8 +48,8 @@
                     <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
                 </div>
             </div>
-        </div>
-        <div id="navigation">
+        </header>
+        <nav>
             <div id="navigation-left"></div>
             <div id="navigation-right"></div>
             <ul id="navigation-bar">
@@ -76,20 +76,19 @@
                     <a href="{{ site.baseurl }}/donate.html">Donate</a>
                 </li>
             </ul>
-        </div>
-        <div id="content-main">
+        </nav>
+        <main>
             {{ content }}
-            <hr id="hr-clear" />
-            <div id="content-bottom">
-                <div id="content-bottom-links">
-                    <a href="{{ site.baseurl }}/policy.html">Privacy Policy</a> |
-                    <a href="https://account.openttd.org/en/login">Login</a> |
-                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
-                </div>
-                <div id="content-bottom-copyright">
-                    Copyright &copy; 2005-{{ site.time | date: '%Y' }} OpenTTD Team
-                </div>
+        </main>
+        <footer>
+            <div id="content-bottom-links">
+                <a href="{{ site.baseurl }}/policy.html">Privacy Policy</a> |
+                <a href="https://account.openttd.org/en/login">Login</a> |
+                <a href="{{ site.baseurl }}/contact.html">Contact</a>
             </div>
-        </div>
+             <div id="content-bottom-copyright">
+                    Copyright &copy; 2005-{{ site.time | date: '%Y' }} OpenTTD Team
+            </div>
+        </footer>
     </body>
 </html>

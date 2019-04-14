@@ -106,7 +106,7 @@ article > .content {
 	list-style-type: none;
 }
 
-.right {
-	float: right;
+.further-link {
 	margin-bottom: 20px;
+	text-align: center;
 }
