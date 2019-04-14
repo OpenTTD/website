@@ -59,6 +59,33 @@
 	text-align: justify;
 }
 
+article {
+	margin-top: 10px;
+}
+article > header {
+	border-bottom: 1px dotted #d8d8d8;
+}
+article > header h3, article > header h3 a {
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+}
+article > header h3 a:focus, article > header h3 a:hover {
+	color: #DD6000;
+	text-decoration: underline;
+}
+article > header p {
+	margin: 5px 0;
+	color: #282828;
+}
+article > .content {
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 14px;
+	padding: 5px 15px 30px 15px;
+	text-align: justify;
+}
+
 .section-item hr {
 	width: 500px;
 }

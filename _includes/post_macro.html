@@ -1,26 +1,20 @@
-<div class="section-item">
-    <div class="title">
-        <h3>
-            <a href="{{ base }}{{ post.url }}">{{ post.title }}</a>
-        </h3>
-    </div>
-    <div class="date">
-        <h5>{{ post.date | date: "%Y-%m-%d" }}</h5>
-    </div>
-    <div class="user">
-        <h5>
-            Posted by {{ post.author }}
-        </h5>
-    </div>
+<article>
+    <header>
+        <h3><a href="{{ base }}{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="blog-item-metadata">
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            <span class="user">Posted by {{ post.author }}</span>
+        </p>
+    </header>
     <div class="content">
         {% if include.excerpt %}
         {{ post.excerpt }}
 
         {% if post.excerpt != post.content %}
-            <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+            <p><a href="{{ site.baseurl }}{{ post.url }}">Read more</a></p>
         {% endif %}
         {% else %}
         {{ post.content }}
         {% endif %}
     </div>
-</div>
+</article>
