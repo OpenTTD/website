@@ -15,7 +15,7 @@ Every month one of these post will be created, to tell you about the latest deve
 Development last month focused mostly on internal code changes and cleanup.
 Some of the user-visible changes are highlighted below.
 
-* Some isses were found in the 1.9 release and thus the [1.9.1 update](https://www.openttd.org/news/2019/04/08/openttd-1-9-1.html) was born.
+* Some issues were found in the 1.9 release and thus the [1.9.1 update](https://www.openttd.org/news/2019/04/08/openttd-1-9-1.html) was born.
 
 * A feature to show the coverage area of built stations and the result of adding a station part was added.
 This meshes with the changes how the coverage area is defined that we talked about the the last dev post.
