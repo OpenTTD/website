@@ -17,10 +17,10 @@ Some of the user-visible changes are highlighted below.
 
 * Some isses were found in the 1.9 release and thus the [1.9.1 update](https://www.openttd.org/news/2019/04/08/openttd-1-9-1.html) was born.
 
-* A feature to to show the coverage area of built stations and the result of adding a station part was added.
-This meshes with the changes how the coverage area is defined that we taked about the the last dev post.
+* A feature to show the coverage area of built stations and the result of adding a station part was added.
+This meshes with the changes how the coverage area is defined that we talked about the the last dev post.
 
-* After a long, winding journey and several nearly-complete rewrites, NewRoadTypes (NRT) was finally merged.
+* After a long, winding journey and several nearly-complete rewrites, NotRoadTypes (NRT) was finally merged.
 NRT allows NewGRFs to define new road and tram types, similar to how it was already possible to define new rail types.
 
 ### Code modernization
