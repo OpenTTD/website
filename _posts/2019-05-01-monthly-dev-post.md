@@ -6,6 +6,8 @@ author: People
 Welcome to our Monthly Dev Post of May 2019.
 Every month one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
 
+In this issue: NotRoadTypes, code modernization, and some smaller things.
+
 <!-- more -->
 
 ## Development
