@@ -22,6 +22,8 @@ This meshes with the changes how the coverage area is defined that we talked abo
 
 * After a long, winding journey and several nearly-complete rewrites, NotRoadTypes (NRT) was finally merged.
 NRT allows NewGRFs to define new road and tram types, similar to how it was already possible to define new rail types.
+If you want to try it, there are some basic NewGRFs available, like for example [Unspooled](https://www.tt-forums.net/viewtopic.php?f=26&t=75986) or [Docklands](https://www.tt-forums.net/viewtopic.php?f=67&t=75941).
+Please keep in mind that these NewGRFs aren't full-fledged sets yet but showcase some of the possible features.
 
 ### Code modernization
 
