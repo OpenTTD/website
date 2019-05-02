@@ -31,7 +31,7 @@ The quest to remove home-grown algorithms and data stuctures in favour of using 
 Last month, the switch to C++11 threading functions was done, as already hinted at in the last dev post.
 Several specialized data types that were used in saveload code could be removed by using the new features of typed enumerations.
 We removed our home-grown variants of sorting algorithms and arrays and replaced them by std::sort and std::vector/std::array.
-This process is expected to continue; less custom code means fewer possible bugs (STL issues aside) and automatic performance improvements whenever compiler or library venders improve their tools, which lets us focus more on the game code.
+This process is expected to continue; less custom code means fewer possible bugs (STL issues aside) and automatic performance improvements whenever compiler or library vendors improve their tools, which lets us focus more on the game code.
 
 ### Participate yourself
 
