@@ -6,19 +6,24 @@ author: People
 Welcome to our Monthly Dev Post of June 2019.
 Every month one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
 
-In this issue: Stuff.
+June has been a quiet month for changes in OpenTTD master, but there are a couple of nice development things to talk about, and as always, translations have been added and improved.  Thanks translators!
 
 <!-- more -->
 
 ## Development
 
-### Highlights
+There is one big new feature: Peter1138 has finished multiple-docks-per-station.  This is now merged to master and will show up in nightly builds (soon, if not already).  Players are no longer restricted to just one dock per station.  This is a great feature, which continues the recent theme of improving ship transport. Find out more about it here: https://github.com/OpenTTD/OpenTTD/pull/7380
 
-## Extensions & Tools
+Three new currencies have also been added: New Taiwan Dollar (NTD), Chinese Renminbi (CNY) and Hong Kong Dollar (HKD).
 
-## Ponies
+As usual a couple of bugs have been fixed
+* https://github.com/OpenTTD/OpenTTD/commit/6396ec05fe9ce865a8642231bdb75b45cfb19627
+* https://github.com/OpenTTD/OpenTTD/commit/846fc8fe097689ef2fa1498708b3244fb4ad84ac
 
-A "pony" is a personal pet project of a developer or community member. This section will be used in the future to showcase a project in detail.
+Finally some other bugs and performance issues have had some attention, including
+* possible framerate issues on Mac systems
+* other possible performance issue
+* an interesting bug where OpenTTD crashes when opening the industry directory window if a newgrf industry has 5 or more output cargos
 
 ### Participate yourself
 
