@@ -1,12 +1,14 @@
 ---
-title: Monthly Dev Post of June 2019
+title: Monthly Dev Post of June/July 2019
 author: People
 ---
 
-Welcome to our Monthly Dev Post of June 2019.
-Every month one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
+Welcome to our Monthly Dev Post of June/July 2019.
+Every month (ahem) one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
 
-June has been a quiet month for changes in OpenTTD master, but there are a couple of nice development things to talk about, and as always, translations have been added and improved.  Thanks translators!
+June and July have been a quiet months for changes in OpenTTD master, but there are a couple of nice development things to talk about, and as always, translations have been added and improved.  Thanks translators!
+
+In this issue: Multi-docks and some tids and bits.
 
 <!-- more -->
 
@@ -16,9 +18,7 @@ There is one big new feature: Peter1138 has finished multiple-docks-per-station.
 
 Three new currencies have also been added: New Taiwan Dollar (NTD), Chinese Renminbi (CNY) and Hong Kong Dollar (HKD).
 
-As usual a couple of bugs have been fixed
-* https://github.com/OpenTTD/OpenTTD/commit/6396ec05fe9ce865a8642231bdb75b45cfb19627
-* https://github.com/OpenTTD/OpenTTD/commit/846fc8fe097689ef2fa1498708b3244fb4ad84ac
+As usual a couple of bugs have been fixed, notably some improvements to music playback on Windows and a crash using the sprite aligner ([#7609](https://github.com/OpenTTD/OpenTTD/issues/7609)).
 
 Finally some other bugs and performance issues have had some attention, including
 * possible framerate issues on Mac systems
@@ -28,6 +28,6 @@ Finally some other bugs and performance issues have had some attention, includin
 ### Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
-These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-07-01-monthly-dev-post.md) before they are made public on the website.
+These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-08-01-monthly-dev-post.md) before they are made public on the website.
 As soon as you are whitelisted as a contributor, it's as simple as editing the file in the web interface.
 If you are not a contributor yet, drop by on [IRC](https://www.openttd.org/contact.html) to become one (make sure you have a GitHub account).
