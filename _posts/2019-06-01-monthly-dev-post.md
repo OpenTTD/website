@@ -14,7 +14,11 @@ In this issue: Multi-docks and some tids and bits.
 
 ## Development
 
-There is one big new feature: Peter1138 has finished multiple-docks-per-station.  This is now merged to master and will show up in nightly builds (soon, if not already).  Players are no longer restricted to just one dock per station.  This is a great feature, which continues the recent theme of improving ship transport. Find out more about it here: https://github.com/OpenTTD/OpenTTD/pull/7380
+### Master highlights
+There is one big new feature in the master branch: Peter1138 has finished multiple-docks-per-station.  
+This is now merged to master and will show up in nightly builds (soon, if not already).
+Players are no longer restricted to just one dock per station.
+This is a great feature, which continues the recent theme of improving ship transport. Find out more about it here: https://github.com/OpenTTD/OpenTTD/pull/7380
 
 Three new currencies have also been added: New Taiwan Dollar (NTD), Chinese Renminbi (CNY) and Hong Kong Dollar (HKD).
 
@@ -25,7 +29,13 @@ Finally some other bugs and performance issues have had some attention, includin
 * other possible performance issue
 * an interesting bug where OpenTTD crashes when opening the industry directory window if a newgrf industry has 5 or more output cargos
 
-### Participate yourself
+### Maintenance mayhem
+
+The current stable branch also received some love with the relase of the [1.9.2 update](https://www.openttd.org/news/2019/07/08/openttd-1-9-2.html).
+
+Besides the usual bugfixes, it contains one user visible change: A newly-installed OpenTTD will now default to showing internet server instead of LAN servers in the multiplayer lobby window.
+
+## Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
 These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-08-01-monthly-dev-post.md) before they are made public on the website.
