@@ -116,7 +116,7 @@ Files are usually only split if they would contain a sufficient amount of code, 
 And with that said, we are going to conclude this very first installment of the Source Code Entrails series.
 We hope this has helped you at least a bit with finding your way through the OpenTTD source code files, even if we've neither talked about all the files that don't fit into the name scheme nor have taken a look inside one of these files yet.
 
-Stay tune for further installments where we are going the explore the various areas of the game in more detail.
+Stay tuned for further installments where we are going the explore the various areas of the game in more detail.
 
 ### Closing Remarks
 
