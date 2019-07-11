@@ -48,6 +48,7 @@ The `src` folder alone contains 1314 files, and is accompanied by a plenthora of
 To make it less daunting to get started with realising your idea, we will explore various parts of the OpenTTD source code and try to build some kind of index to the code.
 We are going to assume that you have seen source code before and have some familiarity with the C++ language.
 There are thousands of introductory tutorials on programming in general and specific to C++ on the internet, thus we don't think it would make sense to replicate them all here.
+Also, If you've never compiled OpenTTD before, we've got [general tips](https://github.com/OpenTTD/OpenTTD/blob/master/README.md#70-compiling) and some specific to [Windows](https://github.com/OpenTTD/OpenTTD/blob/master/docs/Readme_Windows_MSVC.md).
 
 This is planed to be a multi-part series, to be continued as time permits.
 
@@ -82,7 +83,7 @@ Many files are named after the following schema: `<group>_<suffix>.<extension>`.
 The `<group>` part was already explained above.
 The `<suffix>` tells you something about the contents of the file without having to open it inside an editor and can be viewed as a kind of *file type*.
 The `<extension>` part is for the benefit of the C++ compiler and denotes if the file is a source code file that is passed to the compiler (`.cpp`) or a header file (`.h`) that is included in other source code files.
-There's also the hybrid of a header file containing source code (marked `.hpp`), which is has to be this way due to how C++ templates work.
+There's also the hybrid of a header file containing source code (marked `.hpp`) for C++ template implementations, as they have to be included everywhere they are used.
 
 Let's use the `station` group as an example, as it contains almost all of the common *file types* you can find in the source code.
 * __`station.cpp`__: The most obviously named file, but the one with the least defined contents.
