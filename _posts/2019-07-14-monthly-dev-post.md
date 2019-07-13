@@ -18,7 +18,7 @@ In this issue: Multi-docks, some tids and bits and the start of an exciting new 
 There is one big new feature in the master branch: Peter1138 has finished multiple-docks-per-station.  
 This is now merged to master and will show up in nightly builds (soon, if not already).
 Players are no longer restricted to just one dock per station.
-This is a great feature, which continues the recent theme of improving ship transport. Find out more about it here: https://github.com/OpenTTD/OpenTTD/pull/7380
+This is a great feature, which continues the recent theme of improving ship transport. Find out more about it at the [pull request page](https://github.com/OpenTTD/OpenTTD/pull/7380).
 
 Three new currencies have also been added: New Taiwan Dollar (NTD), Chinese Renminbi (CNY) and Hong Kong Dollar (HKD).
 
