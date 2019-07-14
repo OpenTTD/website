@@ -86,30 +86,53 @@ The `<extension>` part is for the benefit of the C++ compiler and denotes if the
 There's also the hybrid of a header file containing source code (marked `.hpp`) for C++ template implementations, as they have to be included everywhere they are used.
 
 Let's use the `station` group as an example, as it contains almost all of the common *file types* you can find in the source code.
-* __`station.cpp`__: The most obviously named file, but the one with the least defined contents.
+
+__`station.cpp`__
+: The most obviously named file, but the one with the least defined contents.
 The file contains the source code for all the station functionality that does not match any of the files described below.
 It is a catch-all for everything without a better place.
-* __`station_cmd.cpp`__: One of the most interesting file types in the OpenTTD source code.
+
+__`station_cmd.cpp`__
+: One of the most interesting file types in the OpenTTD source code.
 Command handlers are the foundations of the user interaction with the game.
 In this case, they for example encode the logic that determines where and if a station can be built, what happens when a vehicle stops at a station or how a station should be drawn on the screen.
-* __`station_gui.cpp`__: This source file forms the second part of the user interaction by providing the windows visible on screen related to stations.
+
+__`station_gui.cpp`__
+: This source file forms the second part of the user interaction by providing the windows visible on screen related to stations.
 These are e.g. the station window itself, the station building window or the station list window.
-* __`saveload/station_sl.cpp`__: A final source code file hides in a sub-folder.
+
+__`saveload/station_sl.cpp`__
+: A final source code file hides in a sub-folder.
 The folder name already gives a hint, and this file indeed contains everything that is needed to read and write information about stations to and from savegame files.
-* __`station_base.h`__: The first header file.
+
+__`station_base.h`__
+: The first header file.
 The data for a station is kept in a C++ class, like for many of the other game objects.
 The base header contains the declaration of this class, which encapsulates and manages most of the information about a station, like for example the owner, the location or the name.
-* __`station_type.h`__: While many other parts of the game need to know about stations, not all parts need to know about the innards of the station class.
+
+__`station_type.h`__
+: While many other parts of the game need to know about stations, not all parts need to know about the innards of the station class.
 To speed up compilation, basic type definitions about stations, like for example the type for station IDs or an enumeration of possible station types, are split into this separate header file.
-* __`station_func.h`__: This file has the same reason of existance as the previous header and contains function prototypes related to stations.
-* __`station_map.h`__: The second main header file related to stations.
+
+__`station_func.h`__
+: This file has the same reason of existance as the previous header and contains function prototypes related to stations.
+
+__`station_map.h`__
+: The second main header file related to stations.
 Stations are objects that occupy space on the game map and as such need to store some information in the *map array*.
 This header file contains all the code related to storing and retriving this information.
-* __`station_gui.h`__: Type and class declarations for the user interface code are contained in this file.
-* __`widgets/station_widget.h`__: This header is part of the user interface code.
+
+__`station_gui.h`__
+: Type and class declarations for the user interface code are contained in this file.
+
+__`widgets/station_widget.h`__
+: This header is part of the user interface code.
 It is split from the `gui` header to facilitate processing by automated build scripts.
-* __`table/station_land.h`__: The final header file isn't a header in the classical sense.
+
+__`table/station_land.h`__
+: The final header file isn't a header in the classical sense.
 It is included by the code that draws the stations on the screen and was split purely to ease code navigation.
+
 
 Not all file groups have all the different files just described, but if a *file type* is present, it's usage is generally like described.
 Files are usually only split if they would contain a sufficient amount of code, there's no advantage of splitting one or two code lines into a separate file.
