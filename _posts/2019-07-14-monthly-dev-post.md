@@ -44,15 +44,15 @@ In fact, there's a whole [sub-forum](https://www.tt-forums.net/viewforum.php?f=3
 Every so often, "I want to make this thing but I don't know how" comes up.
 
 And indeed, looking at the [source code](https://github.com/OpenTTD/OpenTTD.git) of OpenTTD for the first time can be a daunting task.
-The `src` folder alone contains 1314 files, and is accompanied by a plenthora of other ancilliary files.
+The `src` folder alone contains 1314 files, and is accompanied by a plethora of other ancillary files.
 To make it less daunting to get started with realising your idea, we will explore various parts of the OpenTTD source code and try to build some kind of index to the code.
 We are going to assume that you have seen source code before and have some familiarity with the C++ language.
 There are thousands of introductory tutorials on programming in general and specific to C++ on the internet, thus we don't think it would make sense to replicate them all here.
-Also, If you've never compiled OpenTTD before, we've got [general tips](https://github.com/OpenTTD/OpenTTD/blob/master/README.md#70-compiling) and some specific to [Windows](https://github.com/OpenTTD/OpenTTD/blob/master/docs/Readme_Windows_MSVC.md).
+Also, If you've never compiled OpenTTD before, we've got [general tips](https://github.com/OpenTTD/OpenTTD/blob/master/README.md#70-compiling) and some specific to [Windows](https://github.com/OpenTTD/OpenTTD/blob/master/docs/Readme_Windows_MSVC.md), along with detailed notes on our [wiki](https://wiki.openttd.org/Compiling).
 
 This is planned to be a multi-part series, to be continued as time permits.
 
-Inspiration for this comes from an interesting treaty by a fellow called MaiZure: [Decoded: OpenTTD](http://www.maizure.org/projects/decoded-openttd/index.html).
+Inspiration for this comes from an interesting treaty by MaiZure: [Decoded: OpenTTD](http://www.maizure.org/projects/decoded-openttd/index.html).
 It's a nice read if you are interested in the technical innards of the game and already somewhat familiar with the source code.
 Unfortunately, if you are not, the parts MaiZure focuses on aren't the parts you'll predominantly need to be able to write your first working code patch.
 Even if you read it again and again, you will know all about how memory pools manage memory in OpenTTD, but still have no idea where to look to make all trains run backwards.
@@ -65,9 +65,9 @@ We are focusing on the `src` folder for now and will ignore all the other files 
 
 Inside this folder you'll find a lot of files and some more folders.
 Some of the names speak for themselves, but don't let yourself be fooled by some of the others.
-Contrary to what the name might imply, the `game` folder is not the most important folder at all, but only contains code for running GameScripts; all the important game logic is contained somewhere else.
+Contrary to what the name might imply, the `game` folder is not the most important folder at all, but only contains code for running GameScripts; all the important game logic is contained elsewhere.
 The `core` folder is a similar beast, supplying some low-level scaffolding, but not some mystical nugget controlling all objects in the game.
-This should in no way imply that this is superflous code; the scaffolding is essential part of almost all parts of the game.
+This should in no way imply that this is superfluous code; the scaffolding is essential part of almost all parts of the game.
 But unless you are planning to rewrite whole swaths of the game, it is quite unlikely you'll find any need to change these foundations.
 
 Indeed, most of the interesting files are the ones directly in the `src` folder.
@@ -115,7 +115,7 @@ __`station_type.h`__
 To speed up compilation, basic type definitions about stations, like for example the type for station IDs or an enumeration of possible station types, are split into this separate header file.
 
 __`station_func.h`__
-: This file has the same reason of existance as the previous header and contains function prototypes related to stations.
+: This file exists for the same reason as the previous header and contains function prototypes related to stations.
 
 __`station_map.h`__
 : The second main header file related to stations.
@@ -154,6 +154,6 @@ If you are interested in contributing content for a topic, drop us a line.
 ## Participate yourself
 
 Do you have an interesting Project you are currently working on in relation to OpenTTD?
-These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/tree/monthly-dev-post/_posts/2019-08-01-monthly-dev-post.md) before they are made public on the website.
+These Monthly Dev Posts are prepared in a branch on our [GitHub website project](https://github.com/OpenTTD/website/pulls) before they are made public on the website.
 As soon as you are whitelisted as a contributor, it's as simple as editing the file in the web interface.
 If you are not a contributor yet, drop by on [IRC](https://www.openttd.org/contact.html) to become one (make sure you have a GitHub account).
