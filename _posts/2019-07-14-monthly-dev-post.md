@@ -50,11 +50,11 @@ We are going to assume that you have seen source code before and have some famil
 There are thousands of introductory tutorials on programming in general and specific to C++ on the internet, thus we don't think it would make sense to replicate them all here.
 Also, If you've never compiled OpenTTD before, we've got [general tips](https://github.com/OpenTTD/OpenTTD/blob/master/README.md#70-compiling) and some specific to [Windows](https://github.com/OpenTTD/OpenTTD/blob/master/docs/Readme_Windows_MSVC.md).
 
-This is planed to be a multi-part series, to be continued as time permits.
+This is planned to be a multi-part series, to be continued as time permits.
 
 Inspiration for this comes from an interesting treaty by a fellow called MaiZure: [Decoded: OpenTTD](http://www.maizure.org/projects/decoded-openttd/index.html).
 It's a nice read if you are interested in the technical innards of the game and already somewhat familiar with the source code.
-Unfortunately, if you are not, the parts MaiZure focuses on aren't the parts you'll predominantely need to be able to write your first working code patch.
+Unfortunately, if you are not, the parts MaiZure focuses on aren't the parts you'll predominantly need to be able to write your first working code patch.
 Even if you read it again and again, you will know all about how memory pools manage memory in OpenTTD, but still have no idea where to look to make all trains run backwards.
 Thus the idea of writing a similar exploration of OpenTTD, but more focused on practical things for the patch writer, was born.
 
