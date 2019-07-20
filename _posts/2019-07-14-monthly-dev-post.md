@@ -31,7 +31,7 @@ Finally some other bugs and performance issues have had some attention, includin
 
 ### Maintenance mayhem
 
-The current stable branch also received some love with the relase of the [1.9.2 update](https://www.openttd.org/news/2019/07/08/openttd-1-9-2.html).
+The current stable branch also received some love with the release of the [1.9.2 update](https://www.openttd.org/news/2019/07/08/openttd-1-9-2.html).
 
 Besides the usual bugfixes, it contains one user visible change: A newly-installed OpenTTD will now default to showing internet server instead of LAN servers in the multiplayer lobby window.
 
