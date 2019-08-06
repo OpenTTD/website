@@ -6,7 +6,7 @@ author: People
 Welcome to our Monthly Dev Post of June/July 2019.
 Every month (ahem) one of these post will be created, to tell you about the latest developments in the world of OpenTTD.
 
-June and July have been a quiet months for changes in OpenTTD master, but there are a couple of nice development things to talk about, and as always, translations have been added and improved.  Thanks translators!
+June and July have been quiet months for changes in OpenTTD master, but there are a couple of nice development things to talk about, and as always, translations have been added and improved.  Thanks translators!
 
 In this issue: Multi-docks, some tids and bits and the start of an exciting new series: Source Code Entrails!
 
