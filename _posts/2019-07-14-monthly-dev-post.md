@@ -120,7 +120,7 @@ __`station_func.h`__
 __`station_map.h`__
 : The second main header file related to stations.
 Stations are objects that occupy space on the game map and as such need to store some information in the *map array*.
-This header file contains all the code related to storing and retriving this information.
+This header file contains all the code related to storing and retrieving this information.
 
 __`station_gui.h`__
 : Type and class declarations for the user interface code are contained in this file.
