@@ -1,6 +1,6 @@
 ---
 title: Monthly Dev Post October 2019
-author: alberth
+author: People
 ---
 
 Welcome to our Dev Post for October 2019.
