@@ -20,7 +20,7 @@ Meanwhile [OpenTTD 1.10.0 is being prepared](https://github.com/OpenTTD/OpenTTD/
 
 ### Updated SDL driver to SDL2.
 
-[http://www.libsdl.org/](Simple DirectMedia Layer) is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+[http://www.libsdl.org](Simple DirectMedia Layer) is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
 
 [Pull request #7086](https://github.com/OpenTTD/OpenTTD/pull/7086) updates to SDL2, which has been a long-sought upgrade.  This aids future compatibility.  It may also improve performance on some systems, but results on that are inconclusive at the moment.
 
