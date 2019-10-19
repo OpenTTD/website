@@ -69,3 +69,7 @@ These Monthly Dev Posts are prepared in a branch on our [GitHub website project]
 As soon as you are whitelisted as a contributor, it's as simple as editing the file in the web interface.
 
 If you are not a contributor yet, drop by on [IRC](https://www.openttd.org/contact.html) to become one (make sure you have a GitHub account).
+
+## Thanks and goodbye
+
+Finally, to all contributors, bug reporters, translators, play-testers, and those who donate money or infrastructure to help make OpenTTD what it is: **thanks!**
