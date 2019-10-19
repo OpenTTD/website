@@ -15,6 +15,13 @@ Every month (ahem) one of these post will be created, to tell you about the late
 OpenTTD [1.9.3 update](https://www.openttd.org/news/2019/09/16/openttd-1-9-3.html) was released in September.
 
 This wrapped up a bunch of bug fixes and and performance improvements, thanks to all contributors.
+Sadly we also added one new bug, and forgot to backport the fix for another, though not on purpose!
+
+1. If you have a station where the tile below the sign is not part of the station, you can't make an order to that station.
+The workaround is to force the station sign to move, or to (temporarily) build a tile for the station below the sign again.
+
+2. An AI can cause a crash if it attempts to measure distance between a waypoint and something else, with aircraft.
+See tickets [#7593](https://github.com/OpenTTD/OpenTTD/issues/7593) and [#7766](https://github.com/OpenTTD/OpenTTD/issues/7766).
 
 Meanwhile [OpenTTD 1.10.0 is being prepared](https://github.com/OpenTTD/OpenTTD/pull/7726).  No release date is known yet, but find it here when it's announced :)
 
