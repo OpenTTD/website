@@ -40,7 +40,7 @@ There are quite a few interesting experiments underway.  These may or may not ge
 
 Nielsmh is working on an improved approach to newgrf industry layouts, which might enable larger industry layouts to be constructed, whilst also offering newgrf authors an easy way to include more variety in industry layouts.
 
-Michicc has an experimental OpenGL video driver in [PR #7744](https://github.com/OpenTTD/OpenTTD/pull/7744)
+Michicc has an experimental OpenGL video driver in [PR #7744](https://github.com/OpenTTD/OpenTTD/pull/7744).
 
 Peter1138 has a patch for newgrf docks, unless he's lost it :)
 
