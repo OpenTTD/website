@@ -1,5 +1,5 @@
 ---
-title: Monthly Dev Post October 2019
+title: Monthly Dev Post of October 2019
 author: People
 ---
 
