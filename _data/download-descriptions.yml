@@ -48,6 +48,10 @@ linux-generic-amd64.zip:
   description: Linux Generic Binaries (x86_64, 64bit) (zip archive)
 amd64.tar.gz:
   description: Linux Generic Binaries (x86_64, 64bit)
+linux-debian-buster-amd64.deb:
+  description: Linux Debian Buster (x86_64, 64bit)
+linux-debian-buster-i386.deb:
+  description: Linux Debian Buster (i386, 32bit)
 linux-debian-etch-amd64.deb:
   description: Linux Debian Etch (x86_64, 64bit)
 linux-debian-etch-i386.deb:
