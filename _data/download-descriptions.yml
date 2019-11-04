@@ -48,32 +48,60 @@ linux-generic-amd64.zip:
   description: Linux Generic Binaries (x86_64, 64bit) (zip archive)
 amd64.tar.gz:
   description: Linux Generic Binaries (x86_64, 64bit)
+linux-debian-buster-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Buster (x86_64, 64bit)
 linux-debian-buster-amd64.deb:
   description: Linux Debian Buster (x86_64, 64bit)
+linux-debian-buster-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Buster (i386, 32bit)
 linux-debian-buster-i386.deb:
   description: Linux Debian Buster (i386, 32bit)
+linux-debian-etch-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Etch (x86_64, 64bit)
 linux-debian-etch-amd64.deb:
   description: Linux Debian Etch (x86_64, 64bit)
+linux-debian-etch-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Etch (i386, 32bit)
 linux-debian-etch-i386.deb:
   description: Linux Debian Etch (i386, 32bit)
+linux-debian-jessie-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Jessie (x86_64, 64bit)
 linux-debian-jessie-amd64.deb:
   description: Linux Debian Jessie (x86_64, 64bit)
+linux-debian-jessie-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Jessie (i386, 32bit)
 linux-debian-jessie-i386.deb:
   description: Linux Debian Jessie (i386, 32bit)
+linux-debian-lenny-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Lenny (x86_64, 64bit)
 linux-debian-lenny-amd64.deb:
   description: Linux Debian Lenny (x86_64, 64bit)
+linux-debian-lenny-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Lenny (i386, 32bit)
 linux-debian-lenny-i386.deb:
   description: Linux Debian Lenny (i386, 32bit)
+linux-debian-stretch-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Stretch (x86_64, 64bit)
 linux-debian-stretch-amd64.deb:
   description: Linux Debian Stretch (x86_64, 64bit)
+linux-debian-stretch-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Stretch (i386, 32bit)
 linux-debian-stretch-i386.deb:
   description: Linux Debian Stretch (i386, 32bit)
+linux-debian-squeeze-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Squeeze (x86_64, 64bit)
 linux-debian-squeeze-amd64.deb:
   description: Linux Debian Squeeze (x86_64, 64bit)
+linux-debian-squeeze-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Squeeze (i386, 32bit)
 linux-debian-squeeze-i386.deb:
   description: Linux Debian Squeeze (i386, 32bit)
+linux-debian-wheezy-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Wheezy (x86_64, 64bit)
 linux-debian-wheezy-amd64.deb:
   description: Linux Debian Wheezy (x86_64, 64bit)
+linux-debian-wheezy-i386-dbg.deb:
+  description: Debug Symbols for Linux Debian Wheezy (i386, 32bit)
 linux-debian-wheezy-i386.deb:
   description: Linux Debian Wheezy (i386, 32bit)
 linux-generic-i686.tar.bz2:
@@ -84,44 +112,84 @@ linux-generic-i686.tar.xz:
   description: Linux Generic Binaries (i686, 32bit) (xz/lzma archive)
 linux-generic-i686.zip:
   description: Linux Generic Binaries (i686, 32bit) (zip archive)
+linux-ubuntu-bionic-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Bionic 18.04 (x86_64, 64 bit)
 linux-ubuntu-bionic-amd64.deb:
   description: Linux Ubuntu Bionic 18.04 (x86_64, 64 bit)
+linux-ubuntu-bionic-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Bionic 18.04 (i386, 32 bit)
 linux-ubuntu-bionic-i386.deb:
   description: Linux Ubuntu Bionic 18.04 (i386, 32 bit)
+linux-ubuntu-karmic-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Karmic 9.10 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64.deb:
   description: Linux Ubuntu Karmic 9.10 (x86_64, 64 bit); check known-bugs.txt if slow
+linux-ubuntu-karmic-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Karmic 9.10 (i386, 32 bit)
 linux-ubuntu-karmic-i386.deb:
   description: Linux Ubuntu Karmic 9.10 (i386, 32 bit); check known-bugs.txt if slow
+linux-ubuntu-lucid-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Lucid 10.04 (x86_64, 64 bit)
 linux-ubuntu-lucid-amd64.deb:
   description: Linux Ubuntu Lucid 10.04 (x86_64, 64 bit)
+linux-ubuntu-lucid-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Lucid 10.04 (i386, 32 bit)
 linux-ubuntu-lucid-i386.deb:
   description: Linux Ubuntu Lucid 10.04 (i386, 32 bit)
+linux-ubuntu-maverick-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Maverick 10.10 (x86_64, 64 bit)
 linux-ubuntu-maverick-amd64.deb:
   description: Linux Ubuntu Maverick 10.10 (x86_64, 64 bit)
+linux-ubuntu-maverick-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Maverick 10.10 (i386, 32 bit)
 linux-ubuntu-maverick-i386.deb:
   description: Linux Ubuntu Maverick 10.10 (i386, 32 bit)
+linux-ubuntu-natty-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Natty 11.04 (x86_64, 64 bit)
 linux-ubuntu-natty-amd64.deb:
   description: Linux Ubuntu Natty 11.04 (x86_64, 64 bit)
+linux-ubuntu-natty-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Natty 11.04 (i386, 32 bit)
 linux-ubuntu-natty-i386.deb:
   description: Linux Ubuntu Natty 11.04 (i386, 32 bit)
+linux-ubuntu-oneiric-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Oneiric 11.10 (x86_64, 64 bit)
 linux-ubuntu-oneiric-amd64.deb:
   description: Linux Ubuntu Oneiric 11.10 (x86_64, 64 bit)
+linux-ubuntu-oneiric-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Oneiric 11.10 (i386, 32 bit)
 linux-ubuntu-oneiric-i386.deb:
   description: Linux Ubuntu Oneiric 11.10 (i386, 32 bit)
+linux-ubuntu-precise-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Precise 12.04 (x86_64, 64 bit)
 linux-ubuntu-precise-amd64.deb:
   description: Linux Ubuntu Precise 12.04 (x86_64, 64 bit)
+linux-ubuntu-precise-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Precise 12.04 (i386, 32 bit)
 linux-ubuntu-precise-i386.deb:
   description: Linux Ubuntu Precise 12.04 (i386, 32 bit)
+linux-ubuntu-raring-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Raring 13.04 (x86_64, 64 bit)
 linux-ubuntu-raring-amd64.deb:
   description: Linux Ubuntu Raring 13.04 (x86_64, 64 bit)
+linux-ubuntu-raring-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Raring 13.04 (i386, 32 bit)
 linux-ubuntu-raring-i386.deb:
   description: Linux Ubuntu Raring 13.04 (i386, 32 bit)
+linux-ubuntu-trusty-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Trusty 14.04 (x86_64, 64 bit)
 linux-ubuntu-trusty-amd64.deb:
   description: Linux Ubuntu Trusty 14.04 (x86_64, 64 bit)
+linux-ubuntu-trusty-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Trusty 14.04 (i386, 32 bit)
 linux-ubuntu-trusty-i386.deb:
   description: Linux Ubuntu Trusty 14.04 (i386, 32 bit)
+linux-ubuntu-xenial-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Xenial 16.04 (x86_64, 64 bit)
 linux-ubuntu-xenial-amd64.deb:
   description: Linux Ubuntu Xenial 16.04 (x86_64, 64 bit)
+linux-ubuntu-xenial-i386-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Xenial 16.04 (i386, 32 bit)
 linux-ubuntu-xenial-i386.deb:
   description: Linux Ubuntu Xenial 16.04 (i386, 32 bit)
 macosx-i686.zip:
@@ -166,10 +234,14 @@ win.zip:
   description: Headers/libraries to compile with MSVC for Windows
 windows-win32.exe:
   description: Windows XP with SP3 / Vista / 7 / 8 / 10 (32bit) (installer)
+windows-win32.pdb.xz:
+  description: Debug Symbols for Windows (32bit) (xz/lzma archive)
 windows-win32.zip:
   description: Windows XP with SP3 / Vista / 7 / 8 / 10 (32bit) (zip archive)
 windows-win64.exe:
   description: Windows XP / Vista / 7 / 8 / 10 (64bit) (installer)
+windows-win64.pdb.xz:
+  description: Debug Symbols for Windows (64bit) (xz/lzma archive)
 windows-win64.zip:
   description: Windows XP / Vista / 7 / 8 / 10 (64bit) (zip archive)
 windows-win9x.exe:
