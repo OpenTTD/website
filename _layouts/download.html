@@ -76,4 +76,36 @@ js:
 
         <script type="text/javascript">detectByUA(document.getElementById("download-combo-state"), "{{ page.base }}"); updateCombo(document.getElementById("download-data"));</script>
     </div>
+    {% if page.dev_files %}
+    <div class="section-header">
+        <div class="section-icon"></div>
+        <h3>Developer Files</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>These files are not required to play, and do not add anything to the game. They can be useful for programmers who want to diagnose crash bugs.</p>
+
+            <ul id="dev_download-data">
+                {% for file in page.dev_files %}
+                {% assign extension = file.id | replace: page.base, "" %}
+                {% assign description = site.data.download-descriptions[extension].description %}
+                {% unless description %}
+                    {% assign description = "Unknown Filetype" %}
+                {% endunless %}
+
+                <li id="{{ file.id }}">
+                    <div class="filename"><a href="{{ page.host }}/{{ folder }}/{{ version }}/{{ file.id }}">{{ description }}</a></div>
+                    <div class="filesize">[ {{ file.size | string_of_size }} ]</div>
+                    <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[ <a href="#" onclick="return false;">Checksums</a> ]</div>
+                    <div class="checksums" id="checksum-{{ file.id }}">
+                        md5sum&nbsp;&nbsp;&nbsp;: {{ file.md5sum }}<br />
+                        sha1sum&nbsp;&nbsp;: {{ file.sha1sum }}<br />
+                        sha256sum: {{ file.sha256sum }}<br />
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
 </div>
