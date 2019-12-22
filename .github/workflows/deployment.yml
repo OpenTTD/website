@@ -1,0 +1,74 @@
+name: Deployment
+
+on:
+  deployment:
+
+jobs:
+  deploy_to_aws:
+    name: Deploy to AWS
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deployment in progress
+      uses: actions/github-script@0.3.0
+      with:
+        github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
+        previews: flash,ant-man
+        script: |
+          github.repos.createDeploymentStatus({
+            owner: context.payload.repository.owner.login,
+            repo: context.payload.repository.name,
+            deployment_id: context.payload.deployment.id,
+            state: "in_progress",
+            description: "Deployment of ${{ github.event.deployment.payload.version }} to ${{ github.event.deployment.environment }} started",
+          })
+
+    - name: Deploy on AWS
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        if [ "${{ github.event.deployment.environment }}" = "production" ]; then
+          STACK="Live-Production-Website"
+          PARAMETER="/Live/Version/Production/Website"
+        else
+          STACK="Live-Staging-Website"
+          PARAMETER="/Live/Version/Staging/Website"
+        fi
+
+        aws ssm put-parameter --region ${AWS_REGION} --name ${PARAMETER} --type String --overwrite --value "@${{ github.event.deployment.payload.tag }}" --description "${{ github.event.deployment.payload.version }} on ${{ github.event.deployment.payload.date }}"
+        aws cloudformation update-stack --region ${AWS_REGION} --stack-name ${STACK} --use-previous-template
+
+        echo "Waiting for deployment to finish .. (normally ~3 minutes)"
+        aws cloudformation wait stack-update-complete --region ${AWS_REGION} --stack-name ${STACK}
+
+    - if: success()
+      name: Deployment successful
+      uses: actions/github-script@0.3.0
+      with:
+        github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
+        previews: flash,ant-man
+        script: |
+          github.repos.createDeploymentStatus({
+            owner: context.payload.repository.owner.login,
+            repo: context.payload.repository.name,
+            deployment_id: context.payload.deployment.id,
+            state: "success",
+            description: "Successfully deployed ${{ github.event.deployment.payload.version }} on ${{ github.event.deployment.environment }}",
+            environment_url: "https://www.staging.openttd.org/"
+          })
+
+    - if: failure() || cancelled()
+      name: Deployment failed
+      uses: actions/github-script@0.3.0
+      with:
+        github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
+        previews: flash,ant-man
+        script: |
+          github.repos.createDeploymentStatus({
+            owner: context.payload.repository.owner.login,
+            repo: context.payload.repository.name,
+            deployment_id: context.payload.deployment.id,
+            state: "failure",
+          })
