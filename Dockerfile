@@ -53,4 +53,5 @@ RUN mkdir /html \
 # Copy the HTML and serve it via nginx
 FROM nginx:alpine
 COPY --from=html /html/ /usr/share/nginx/html/
+RUN sed -i 's/access_log/# access_log/g' /etc/nginx/nginx.conf
 COPY nginx.default.conf /etc/nginx/conf.d/default.conf
