@@ -53,7 +53,7 @@ async def get_old_download_folders():
 
     folders = {}
     for version in versions:
-        (version, date, folder) = version.split('\t', 2)
+        (version, date, folder) = version.split("\t", 2)
 
         # Do not process custom entries
         if folder.startswith("custom/"):
@@ -92,20 +92,20 @@ async def get_old_versions_of_folder(folder):
     listing = await download(f"https://binaries.openttd.org/{folder}/index.xml")
     listing = xmltodict.parse(listing.decode())
 
-    entries = listing['params']['param']['value']['struct']['member']
+    entries = listing["params"]["param"]["value"]["struct"]["member"]
     if not isinstance(entries, list):
         entries = [entries]
 
     versions = []
     for entry in entries:
         # Check if this is a directory
-        for value in entry['value']['struct']['member']:
-            if value['name'] == 'type' and value['value']['string'] == 'directory':
+        for value in entry["value"]["struct"]["member"]:
+            if value["name"] == "type" and value["value"]["string"] == "directory":
                 break
         else:
             continue
 
-        versions.append(entry['name'])
+        versions.append(entry["name"])
 
     return versions
 
