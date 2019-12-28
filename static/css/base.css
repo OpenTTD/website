@@ -83,22 +83,13 @@ h5, .h5 {
 }
 
 body > header {
-	background: url("../img/layout/header-bg.png") repeat;
 	height: 90px;
 	margin: 0px auto;
 	width: 800px;
-}
-#header-left {
-	background: url("../img/layout/header-bg-left.png") repeat-y;
-	float: left;
-	height: 90px;
-	width: 15px;
-}
-#header-right {
-	background: url("../img/layout/header-bg-right.png") repeat-y;
-	float: right;
-	height: 90px;
-	width: 15px;
+	box-shadow: 0px 0px 5px #000000;
+	/* Stripes! */
+	background-image: linear-gradient(0deg, #323536 50%, #3c3e40 50%, #3c3e40 100%);
+	background-size: 2px 2px;
 }
 
 #download-fast {
@@ -182,25 +173,14 @@ body > header {
 }
 
 body > nav {
-	background: url("../img/layout/navigation-bg.png") repeat-x;
-	height: auto !important;
+	background: #555555;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 0px 0px 5px #000000;
 	height: 32px;
 	margin: 0px auto;
 	min-height: 32px;
 	overflow: hidden;
 	width: 800px;
-}
-#navigation-left {
-	background: url("../img/layout/navigation-bg-left.png") no-repeat;
-	float: left;
-	height: 32px;
-	width: 15px;
-}
-#navigation-right {
-	background: url("../img/layout/navigation-bg-right.png") no-repeat;
-	float: right;
-	height: 32px;
-	width: 15px;
 }
 #navigation-bar {
 	display: flex;
@@ -221,11 +201,11 @@ body > nav {
 	text-align: center;
 }
 #navigation-bar li a:hover {
-	background: url("../img/layout/navigation-bg-hover.png") repeat-x;
+	background: linear-gradient(#C4C4C4, #A5A5A5);
 	color: #444444;
 }
 #navigation-bar li.selected {
-	background: url("../img/layout/navigation-bg-selected.png") repeat-x;
+	background: linear-gradient(#FCD085, #FFB23F);
 }
 #navigation-bar li.selected a {
 	color: #444444;
