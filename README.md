@@ -1,7 +1,13 @@
 # OpenTTD's website
 
-[![Build Status](https://dev.azure.com/openttd/OpenTTD/_apis/build/status/website?branchName=master)](https://dev.azure.com/openttd/OpenTTD/_build/latest?definitionId=6?branchName=master)
-[![Deployment Status](https://vsrm.dev.azure.com/openttd/_apis/public/Release/badge/8da578ca-c6cf-47b8-b489-d54a7b188de8/2/2)](https://dev.azure.com/openttd/OpenTTD/_release?view=mine&definitionId=2)
+[![GitHub License](https://img.shields.io/github/license/OpenTTD/website)](https://github.com/OpenTTD/website/blob/master/LICENSE)
+[![GitHub Tag](https://img.shields.io/github/v/tag/OpenTTD/website?include_prereleases&label=stable)](https://github.com/OpenTTD/website/releases)
+[![GitHub commits since latest release](https://img.shields.io/github/commits-since/OpenTTD/website/latest/master)](https://github.com/OpenTTD/website/commits/master)
+
+[![GitHub Workflow Status (Testing)](https://img.shields.io/github/workflow/status/OpenTTD/website/Testing/master?label=master)](https://github.com/OpenTTD/website/actions?query=workflow%3ATesting)
+[![GitHub Workflow Status (Publish Image)](https://img.shields.io/github/workflow/status/OpenTTD/website/Publish%20image?label=publish)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Publish+image%22)
+[![GitHub Workflow Status (Deployments)](https://img.shields.io/github/workflow/status/OpenTTD/website/Deployment?label=deployment)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Deployment%22)
+
 
 This is the main website for OpenTTD, as can be seen on [https://www.openttd.org/](https://www.openttd.org/).
 'master' is always deployed on [staging](https://www.staging.openttd.org/).
