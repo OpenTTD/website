@@ -101,7 +101,7 @@ body > header {
 	width: 15px;
 }
 
-#download-fast-1, #download-fast-2, #download-fast-3 {
+#download-fast {
 	background: url("../img/layout/download-package.gif") 12px 50% no-repeat, rgba(85, 87, 89, 0.4);
 	border: 0 solid;
 	border-radius: 6px;
@@ -111,12 +111,12 @@ body > header {
 	padding: 9px 12px 9px 45px;
 	text-align: left;
 }
-#download-fast-1 h5 a, #download-fast-2 h5 a, #download-fast-3 h5 a {
+#download-fast h5 a {
 	color: #CCCCCC;
 	font-size: 11px;
 	text-decoration: none;
 }
-#download-fast-1 h5 a:hover, #download-fast-2 h5 a:hover, #download-fast-3 h5 a:hover {
+#download-fast h5 a:hover {
 	color: #999999;
 }
 

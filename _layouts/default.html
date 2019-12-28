@@ -32,11 +32,7 @@
             <div id="header-left"></div>
             <div id="header-right"></div>
 
-            {% if latest_stable.date < latest_testing.date %}
-            <div id="download-fast-3">
-            {% else %}
-            <div id="download-fast-2">
-            {% endif %}
+            <div id="download-fast">
                 <h5><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></h5>
                 {% if latest_stable.date < latest_testing.date %}
                 <h5><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></h5>
