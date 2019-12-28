@@ -69,6 +69,10 @@ jobs:
         echo "::set-output name=ref::${REF}"
         echo "Ref: ${REF}"
 
+        SHA="$(git rev-parse --verify ${REF})"
+        echo "::set-output name=sha::${SHA}"
+        echo "Sha: ${SHA}"
+
         if [ "${REF}" = "refs/heads/master" ]; then
           ENVIRONMENT="staging"
           TAG="development"
@@ -130,7 +134,7 @@ jobs:
           github.repos.createDeployment({
             owner: context.payload.repository.owner.login,
             repo: context.payload.repository.name,
-            ref: "${{ steps.vars.outputs.ref }}",
+            ref: "${{ steps.vars.outputs.sha }}",
             auto_merge: false,
             environment: "${{ steps.vars.outputs.environment }}",
             required_contexts: [],
