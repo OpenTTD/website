@@ -29,9 +29,6 @@
             {% assign nightly_version = latest_nightly.version | split: "-" | slice: 0 %}
             {% endif %}
 
-            <div id="header-left"></div>
-            <div id="header-right"></div>
-
             <div id="download-fast">
                 <h5><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></h5>
                 {% if latest_stable.date < latest_testing.date %}
@@ -46,8 +43,6 @@
             </div>
         </header>
         <nav>
-            <div id="navigation-left"></div>
-            <div id="navigation-right"></div>
             <ul id="navigation-bar">
                 <li class="{% if page.active_nav == 'home' %}selected{% endif %}">
                     <a href="{{ site.baseurl }}/">Home</a>
