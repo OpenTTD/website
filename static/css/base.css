@@ -48,40 +48,6 @@ h5, .h5 {
 	-o-text-overflow: ellipsis;
 }
 
-#languages {
-	background: url("../img/layout/languages-bg.png") repeat-x;
-	height: 22px;
-	margin: 0px auto;
-	width: 800px;
-}
-#languages a {
-	color: #CCCCCC;
-	font-size: 10px;
-}
-#languages img {
-	height: 12px;
-	padding-top: 2px;
-	width: 18px;
-}
-#languages-left {
-	background: url("../img/layout/languages-bg-left.png") no-repeat;
-	float: left;
-	height: 22px;
-	width: 15px;
-}
-#languages-right {
-	background: url("../img/layout/languages-bg-right.png") no-repeat;
-	float: right;
-	height: 22px;
-	width: 15px;
-}
-#languages-content {
-	float: left;
-	height: 18px;
-	padding-top: 2px;
-	width: 763px;
-}
-
 body > header {
 	height: 90px;
 	margin: 0px auto;
@@ -116,15 +82,6 @@ body > header {
 	width: 400px;
 }
 
-#ovh-header {
-	float: right;
-	height: 90px;
-	line-height: 11px;
-	margin-top: -2px;
-	margin-right: -6px;
-	padding: 0px;
-	width: 90px;
-}
 #openttd-logo {
 	background: url("../img/layout/openttd-64.gif") no-repeat;
 	background-position: left center;
