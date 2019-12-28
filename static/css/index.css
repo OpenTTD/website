@@ -93,6 +93,7 @@
 	background-color: #FCB030;
 	padding: 6px 0px 0px 0px;
 	height: 184px;
+	text-align: center;
 }
 #screenshot-image img {
 	border: 1px solid #FFFFFF;
@@ -100,7 +101,6 @@
 #screenshot-content {
 	background-color: #FEE7C0;
 	padding: 10px 10px 10px 10px;
-	text-align: left;
 }
 #donate {
 	background: url("../img/layout/section-donate-bg.png") repeat;
