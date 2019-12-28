@@ -23,6 +23,7 @@ exclude:
   - nginx.default.conf
   - requirements.base
   - requirements.txt
+  - vendor
 
 defaults:
   - scope:
