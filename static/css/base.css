@@ -203,21 +203,22 @@ body > nav {
 	width: 15px;
 }
 #navigation-bar {
-	float: left;
+	display: flex;
 	margin: 0px;
 	padding: 0px;
 }
 #navigation-bar li {
 	font-size: 12px;
-	float: left;
+	flex-grow: 1;
 	line-height: 32px;
 	list-style-type: none;
 }
 #navigation-bar li a {
 	color: #DDDDDD;
 	display: block;
-	padding: 0px 14px 0px 14px;
+	padding: 0px 3px 0px 3px;
 	text-decoration: none;
+	text-align: center;
 }
 #navigation-bar li a:hover {
 	background: url("../img/layout/navigation-bg-hover.png") repeat-x;
