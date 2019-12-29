@@ -46,7 +46,7 @@ js:
         <div class="content">
             <p>Latest release in {{ page.name }} is {{ version }}, released on {{ page.date | date: "%Y-%m-%d %H:%M" }} UTC.</p>
 
-            <div class="changelog">[ <a href="{{ page.host }}/{{ folder }}/{{ version }}/changelog.txt">Changelog</a> ]</div>
+            <div class="changelog">[&nbsp;<a href="{{ page.host }}/{{ folder }}/{{ version }}/changelog.txt">Changelog</a>&nbsp;]</div>
             <div id="download-combo">
                 <input type="hidden" id="download-combo-state" value="" />
                 <input type="hidden" id="download-base-name" value="{{ page.base }}" />
@@ -62,8 +62,8 @@ js:
 
                 <li id="{{ file.id }}">
                     <div class="filename"><a href="{{ page.host }}/{{ folder }}/{{ version }}/{{ file.id }}">{{ description }}</a></div>
-                    <div class="filesize">[ {{ file.size | string_of_size }} ]</div>
-                    <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[ <a href="#" onclick="return false;">Checksums</a> ]</div>
+                    <div class="filesize">[&nbsp;{{ file.size | string_of_size }}&nbsp;]</div>
+                    <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[&nbsp;<a href="#" onclick="return false;">Checksums</a>&nbsp;]</div>
                     <div class="checksums" id="checksum-{{ file.id }}">
                         md5sum&nbsp;&nbsp;&nbsp;: {{ file.md5sum }}<br />
                         sha1sum&nbsp;&nbsp;: {{ file.sha1sum }}<br />
@@ -95,8 +95,8 @@ js:
 
                 <li id="{{ file.id }}">
                     <div class="filename"><a href="{{ page.host }}/{{ folder }}/{{ version }}/{{ file.id }}">{{ description }}</a></div>
-                    <div class="filesize">[ {{ file.size | string_of_size }} ]</div>
-                    <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[ <a href="#" onclick="return false;">Checksums</a> ]</div>
+                    <div class="filesize">[&nbsp;{{ file.size | string_of_size }}&nbsp;]</div>
+                    <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[&nbsp;<a href="#" onclick="return false;">Checksums</a>&nbsp;]</div>
                     <div class="checksums" id="checksum-{{ file.id }}">
                         md5sum&nbsp;&nbsp;&nbsp;: {{ file.md5sum }}<br />
                         sha1sum&nbsp;&nbsp;: {{ file.sha1sum }}<br />
