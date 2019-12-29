@@ -60,7 +60,7 @@
 	padding-top: 5px;
 	text-decoration: none;
 }
-#banner-links ul li a:hover {
+#banner-links ul li a:focus, #banner-links ul li a:hover {
 	color: #999999;
 }
 #banner-links .h3 {

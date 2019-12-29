@@ -79,7 +79,7 @@ body > header {
 	font-size: 11px;
 	text-decoration: none;
 }
-#download-fast h5 a:hover {
+#download-fast h5 a:focus, #download-fast h5 a:hover {
 	color: #999999;
 }
 
@@ -162,7 +162,7 @@ body > nav {
 	text-decoration: none;
 	text-align: center;
 }
-#navigation-bar li a:hover {
+#navigation-bar li a:focus, #navigation-bar li a:hover {
 	background: linear-gradient(#C4C4C4, #A5A5A5);
 	color: #444444;
 }
