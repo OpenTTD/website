@@ -19,6 +19,9 @@ img {
 a {
 	color: #DD6000;
 }
+a:focus, a:hover {
+	color: #BB4000;
+}
 hr {
 	background: url("../img/layout/hr.png") repeat-x;
 	border: none;
