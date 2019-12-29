@@ -1,6 +1,7 @@
 
 .section-item ul li {
 	clear: both;
+	list-style-type: none;
 }
 
 .section-item .changelog {
