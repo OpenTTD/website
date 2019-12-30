@@ -10,7 +10,7 @@
 	color: #365800;
 	line-height: 38px;
 	height: 38px;
-	padding: 0px 0px 0px 10px;
+	padding: 0 10px;
 	text-align: left;
 	border-radius: 4px;
 }
@@ -24,8 +24,8 @@
 }
 .section-header h3 {
 	font-size: 18px;
-	margin-right: 20px;
 	text-decoration: none;
+	padding: 0 0 0 32px;
 }
 
 .section-item {
