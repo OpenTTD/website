@@ -87,20 +87,29 @@
 	width: 246px;
 }
 #screenshot {
+	margin: 0;       /* it's necessary to bring the margin to 0 because figure brings its own huge margin in most browsers */
 	font-size: 11px;
 }
 #screenshot-image {
+	display: block;
 	background-color: #FCB030;
-	padding: 6px 0px 0px 0px;
-	height: 184px;
+	padding: 6px;
 	text-align: center;
 }
 #screenshot-image img {
+	display: block;
+	margin: auto;
 	border: 1px solid #FFFFFF;
+	width: 100%;
+	height: auto;
 }
-#screenshot-content {
+#screenshot figcaption {
 	background-color: #FEE7C0;
 	padding: 10px 10px 10px 10px;
+	padding: 6px;
+}
+#screenshot figcaption > * {
+	margin: 0;
 }
 #donate {
 	background: url("../img/layout/section-donate-bg.png") repeat;

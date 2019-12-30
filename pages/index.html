@@ -37,23 +37,21 @@ permalink: /index.html
                 </div>
             </div>
             <div id="index-right">
-                <div id="screenshot">
+                <figure id="screenshot">
                     {% assign random_screenshot = site.screenshots | sample %}
-                    <div id="screenshot-image">
-                        <a href="{{ site.baseurl }}/screenshots.html">
-                            {% assign stripped_content = random_screenshot.content | strip_html | strip_newlines %}
-                            <img src="{{ site.baseurl }}{{ random_screenshot.id }}_thumb.png"
-                                alt="{{ stripped_content }}"
-                                title="{{ stripped_content | truncatewords: 5 }}"
-                                width="232"
-                                height="178"
-                                />
-                        </a>
-                    </div>
-                    <div id="screenshot-content">
+                    <a href="{{ site.baseurl }}/screenshots.html" id="screenshot-image">
+                        {% assign stripped_content = random_screenshot.content | strip_html | strip_newlines %}
+                        <img src="{{ site.baseurl }}{{ random_screenshot.id }}_thumb.png"
+                            alt=""
+                            title="{{ stripped_content | truncatewords: 5 }}"
+                            width="232"
+                            height="178"
+                            />
+                    </a>
+                    <figcaption>
                         {{ random_screenshot.content }}
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div id="section">
                 <div class="section-header">
