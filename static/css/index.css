@@ -93,26 +93,3 @@
 #screenshot figcaption > * {
 	margin: 0;
 }
-#donate {
-	background: url("../img/layout/section-donate-bg.png") repeat;
-	border: 1px solid #EFCBCB;
-	margin: 10px 0px 10px 0px;
-}
-#donate a {
-	display: block;
-	margin: 0px 10px 10px 10px;
-	text-decoration: none;
-	text-align: justify;
-}
-#donate-text {
-	color: #000000;
-}
-#donate-header {
-	background: url("../img/layout/section-donate.png") no-repeat;
-	color: #B30000;
-	display: block;
-	height: 45px;
-	margin: 5px;
-	padding: 5px 0px 0px 50px;
-	text-align: left;
-}
