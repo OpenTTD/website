@@ -14,15 +14,8 @@
 	text-align: left;
 	border-radius: 4px;
 }
-.section-icon {
-	background: url("../img/layout/section-news.gif") no-repeat;
-	float: left;
-	height: 28px;
-	margin-top: 5px;
-	padding-right: 6px;
-	width: 28px;
-}
 .section-header h3 {
+	background: url("../img/layout/section-news.gif") left center no-repeat;
 	font-size: 18px;
 	text-decoration: none;
 	padding: 0 0 0 32px;
