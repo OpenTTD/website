@@ -1,63 +1,51 @@
 
-#index-banner {
-	background: url("../img/layout/openttd-index.png") repeat-x;
-	height: auto !important;
-	height: 183px;
+.index-banner {
+	align-items: center;
+	border-radius: 6px;
+	display: flex;
+	height: 185px;
+	justify-content: space-around;
 	margin-bottom: 10px;
-	min-height: 183px;
-}
-#openttd-banner {
-	background: url("../img/layout/openttd-128.gif") no-repeat;
-	background-position: left center;
-	color: #FFFFFF;
-	font-size: 24px;
-	float: right;
-	height: 181px;
-	width: 520px;
+	overflow: hidden;
 }
 #openttd-text {
-	margin: 43px 0px 0px 130px;
-	text-align: left;
+	color: #FFFFFF;
+	font-size: 24px;
+	max-width: 350px;
 }
-#openttd-banner-left-1, #openttd-banner-left-4, #openttd-banner-left-7 {
-	background: url("../img/layout/frontpage-teaser-1.jpg") no-repeat;
-	height: 183px;
+#openttd-banner-left-1 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/1.png") no-repeat;
 }
-#openttd-banner-left-2, #openttd-banner-left-5 {
-	background: url("../img/layout/frontpage-teaser-2.jpg") no-repeat;
-	height: 183px;
+#openttd-banner-left-2 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/2.png") no-repeat;
 }
-#openttd-banner-left-3, #openttd-banner-left-6 {
-	background: url("../img/layout/frontpage-teaser-3.jpg") no-repeat;
-	height: 183px;
+#openttd-banner-left-3 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/3.png") no-repeat;
 }
-#openttd-banner-right {
-	background: url("../img/layout/openttd-index-right.png") no-repeat;
-	float: right;
-	height: 183px;
-	width: 15px;
+#openttd-banner-left-4 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/4.png") no-repeat;
+}
+#openttd-banner-left-5 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/5.png") no-repeat;
+}
+#openttd-banner-left-6 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/6.png") no-repeat;
+}
+#openttd-banner-left-7 {
+	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/7.png") no-repeat;
 }
 
 #banner-links {
 	color: #CCCCCC;
-	float: right;
-	font-size: 11px;
-	height: 183px;
-	text-align: left;
-	width: 210px;
-}
-#banner-links ul {
-	margin: 10px 0px 0px 0px;
-	padding: 0px;
+	width: 33%;
 }
 #banner-links ul li {
 	list-style-type: none;
 }
 #banner-links ul li a {
 	color: #FFFFFF;
-	display: block;
-	height: 50px;
-	padding-top: 5px;
+	display: flex;
+	flex-direction: row;
 	text-decoration: none;
 }
 #banner-links ul li a:focus, #banner-links ul li a:hover {
@@ -65,21 +53,15 @@
 }
 #banner-links .h3 {
 	font-size: 14px;
-	margin-left: 55px;
 }
 #banner-links .h5 {
-	font-size: 11px;
-	margin-left: 55px;
 	color: #CCCCCC;
+	font-size: 11px;
 }
-#banner-download {
-	background: url("../img/layout/index-download.gif") no-repeat;
-}
-#banner-wiki {
-	background: url("../img/layout/index-wiki.gif") no-repeat;
-}
-#banner-forum {
-	background: url("../img/layout/index-forum.gif") no-repeat;
+#banner-links .banner-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #index-right {
