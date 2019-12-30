@@ -7,7 +7,6 @@ permalink: /screenshots.html
 
 <div id="section-full">
     <div class="section-header">
-        <div class="section-icon"></div>
         <h3>OpenTTD showcase</h3>
     </div>
     <div class="section-item">
@@ -20,7 +19,6 @@ permalink: /screenshots.html
     {% assign groups_sorted = groups | sort: "name" | reverse %}
     {% for group in groups_sorted %}
         <div class="section-header">
-            <div class="section-icon"></div>
             {% if group.name == "special" %}
                 <h3>Special screenshots</h3>
             {% else %}
