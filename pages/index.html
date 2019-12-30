@@ -6,32 +6,40 @@ permalink: /index.html
 ---
 
 <div id="content">
-    <div id="index-banner">
-        <div id="openttd-banner-left-{{ "now" | date: "%u" }}">
-            <div id="openttd-banner-right"></div>
-            <div id="banner-links">
-                <ul>
-                    {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/latest'" | last %}
-                    <li id="banner-download"> <a href="{{ site.baseurl }}{{ latest_stable.url }}">
-                        <span class="h3">Download&nbsp;OpenTTD</span>
-                        <span class="h5">Latest version: {{ latest_stable.version }}</span>
-                        </a>
-                    </li>
-                    <li id="banner-wiki"> <a href="https://wiki.openttd.org/">
-                        <span class="h3">Learn&nbsp;how&nbsp;to&nbsp;play</span>
-                        <span class="h5">Read our wiki for help</span>
-                        </a>
-                    </li>
-                    <li id="banner-forum"> <a href="https://forum.openttd.org/">
-                        <span class="h3">Visit&nbsp;our&nbsp;community</span>
-                        <span class="h5">Join us on the forums</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="openttd-banner">
-                <div id="openttd-text">OpenTTD is an open source simulation game based upon Transport Tycoon Deluxe</div>
-            </div>
+    <div id="openttd-banner-left-{{ "now" | date: "%u" }}" class="index-banner">
+        <img id="openttd-banner" src="{{ site.staticurl }}/img/layout/openttd-128.gif" />
+        <div id="openttd-text">OpenTTD is an open source simulation game based upon Transport Tycoon Deluxe</div>
+        <div id="banner-links">
+            <ul>
+                {% assign latest_stable = site.downloads | where_exp: "download", "download.id contains '/downloads/openttd-releases/latest'" | last %}
+                <li id="banner-download">
+                    <a href="{{ site.baseurl }}{{ latest_stable.url }}">
+                        <img src="{{ site.staticurl }}/img/layout/index-download.gif" />
+                        <div class="banner-text">
+                            <div class="h3">Download OpenTTD</div>
+                            <div class="h5">Latest version: {{ latest_stable.version }}</div>
+                        </div>
+                    </a>
+                </li>
+                <li id="banner-wiki">
+                    <a href="https://wiki.openttd.org/">
+                        <img src="{{ site.staticurl }}/img/layout/index-wiki.gif" />
+                        <div class="banner-text">
+                        <div class="h3">Learn how to play</div>
+                        <div class="h5">Read our wiki for help</div>
+                        </div>
+                    </a>
+                </li>
+                <li id="banner-forum">
+                    <a href="https://forum.openttd.org/">
+                        <img src="{{ site.staticurl }}/img/layout/index-forum.gif" />
+                        <div class="banner-text">
+                        <div class="h3">Visit our community</div>
+                        <div class="h5">Join us on the forums</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     <div id="index-right">
