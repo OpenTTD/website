@@ -5,10 +5,10 @@
 	display: flex;
 	height: 185px;
 	justify-content: space-between;
-	padding-left: 30px;
-	padding-right: 30px;
 	margin-bottom: 10px;
 	overflow: hidden;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 #openttd-text {
 	color: #FFFFFF;
