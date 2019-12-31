@@ -11,7 +11,10 @@
 #openttd-text {
 	color: #FFFFFF;
 	font-size: 24px;
-	max-width: 350px;
+	width: calc(100% - 33% - 128px - 30px - 15px);
+}
+#openttd-banner {
+	margin: 0 15px 0 30px;
 }
 #openttd-banner-left-1 {
 	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/1.png") no-repeat;
