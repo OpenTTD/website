@@ -4,14 +4,16 @@
 	border-radius: 6px;
 	display: flex;
 	height: 185px;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin-bottom: 10px;
 	overflow: hidden;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 #openttd-text {
 	color: #FFFFFF;
 	font-size: 24px;
-	max-width: 350px;
+	width: 350px;
 }
 #openttd-banner-left-1 {
 	background: linear-gradient(to right, #00000000 0%, #333333 75%), url("../img/teaser/1.png") no-repeat;
@@ -37,7 +39,6 @@
 
 #banner-links {
 	color: #CCCCCC;
-	width: 33%;
 }
 #banner-links ul li {
 	list-style-type: none;
