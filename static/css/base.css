@@ -59,8 +59,8 @@ body > * {
 }
 
 body > header {
-	height: 90px;
 	margin: 0px auto;
+	padding: 6px 10px 10px 10px;
 	box-shadow: 0px 0px 5px #000000;
 	/* Stripes! */
 	background-image: repeating-linear-gradient(to bottom, #323536 0, #323536 1px, #3c3e40 1px, #3c3e40 2px);
@@ -94,9 +94,7 @@ body > header {
 #openttd-logo {
 	background: url("../img/layout/openttd-64.gif") no-repeat;
 	background-position: left center;
-	float: right;
-	height: 75px;
-	margin-top: 6px;
+	height: 68px;
 	width: 250px;
 }
 #openttd-logo-text {
