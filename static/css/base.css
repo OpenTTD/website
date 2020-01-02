@@ -63,8 +63,7 @@ body > header {
 	margin: 0px auto;
 	box-shadow: 0px 0px 5px #000000;
 	/* Stripes! */
-	background-image: linear-gradient(0deg, #323536 50%, #3c3e40 50%, #3c3e40 100%);
-	background-size: 2px 2px;
+	background-image: repeating-linear-gradient(to bottom, #323536 0, #323536 1px, #3c3e40 1px, #3c3e40 2px);
 }
 
 #download-fast {
