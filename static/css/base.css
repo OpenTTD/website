@@ -92,8 +92,7 @@ body > header {
 }
 
 #openttd-logo {
-	background: url("../img/layout/openttd-64.gif") no-repeat;
-	background-position: left center;
+	background: url("../img/layout/openttd-64.gif") no-repeat left bottom 2px;
 	height: 68px;
 	width: 250px;
 }
