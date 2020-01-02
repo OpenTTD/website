@@ -29,13 +29,13 @@
             {% assign nightly_version = latest_nightly.version | split: "-" | slice: 0 %}
             {% endif %}
 
-            <div id="download-fast">
-                <h5><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></h5>
+            <ul id="download-fast">
+                <li><a href="{{ site.baseurl }}{{ latest_stable.url }}">Download stable ({{ latest_stable.version }})</a></li>
                 {% if latest_stable.date < latest_testing.date %}
-                <h5><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></h5>
+                <li><a href="{{ site.baseurl }}{{ latest_testing.url }}">Download testing ({{ latest_testing.version }})</a></li>
                 {% endif %}
-                <h5><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ nightly_version }})</a></h5>
-            </div>
+                <li><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ nightly_version }})</a></li>
+            </ul>
             <div id="openttd-logo">
                 <div id="openttd-logo-text"><a href="{{ site.baseurl }}"><img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
             </div>
