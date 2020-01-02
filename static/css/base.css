@@ -95,36 +95,31 @@ body > header {
 	background: url("../img/layout/openttd-64.gif") no-repeat left bottom 2px;
 	height: 68px;
 	width: 250px;
+	position: relative;
 }
-#openttd-logo-text {
-	height: 29px;
-	margin: 36px 0px 0px 77px;
-	width: 151px;
+#openttd-logo-text,
+#openttd-logo-text img,
+#openttd-logo-text-noai,
+#openttd-logo-text-noai img,
+#openttd-logo-text-bananas,
+#openttd-logo-text-bananas img,
+#openttd-logo-text-security,
+#openttd-logo-text-security img,
+#openttd-logo-text-binaries,
+#openttd-logo-text-binaries img,
+#openttd-logo-text-translator,
+#openttd-logo-text-translator img {
+	display: block;
 }
-#openttd-logo-text-noai {
-	height: 29px;
-	margin: 15px 0px 0px 75px;
-	width: 151px;
-}
-#openttd-logo-text-bananas {
-	height: 29px;
-	margin: 18px 0px 0px 75px;
-	width: 151px;
-}
-#openttd-logo-text-security {
-	height: 29px;
-	margin: 18px 0px 0px 75px;
-	width: 151px;
-}
-#openttd-logo-text-binaries {
-	height: 29px;
-	margin: 36px 0px 0px 77px;
-	width: 151px;
-}
+#openttd-logo-text,
+#openttd-logo-text-noai,
+#openttd-logo-text-bananas,
+#openttd-logo-text-security,
+#openttd-logo-text-binaries,
 #openttd-logo-text-translator {
-	height: 29px;
-	margin: 28px 0px 0px 75px;
-	width: 151px;
+	position: absolute;
+	bottom: 4px;
+	left: 78px;
 }
 
 body > nav {
