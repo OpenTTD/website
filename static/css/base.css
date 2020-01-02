@@ -87,10 +87,6 @@ body > header {
 	color: #999999;
 }
 
-#header-logo {
-	width: 400px;
-}
-
 #openttd-logo {
 	background: url("../img/layout/openttd-64.gif") no-repeat;
 	background-position: left center;
