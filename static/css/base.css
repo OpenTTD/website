@@ -64,13 +64,15 @@ body > header {
 	box-shadow: 0px 0px 5px #000000;
 	/* Stripes! */
 	background-image: repeating-linear-gradient(to bottom, #323536 0, #323536 1px, #3c3e40 1px, #3c3e40 2px);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 #download-fast {
 	background: url("../img/layout/download-package.gif") 12px 50% no-repeat, rgba(85, 87, 89, 0.4);
 	border: 0 solid;
 	border-radius: 6px;
-	float: left;
 	line-height: 12px;
 	margin: 22px 0px 0px 10px;
 	padding: 9px 12px 9px 45px;
@@ -86,7 +88,6 @@ body > header {
 }
 
 #header-logo {
-	float: right;
 	width: 400px;
 }
 
