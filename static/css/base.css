@@ -99,14 +99,6 @@ body > header {
 	margin-top: 6px;
 	width: 250px;
 }
-#openttd-logo-ipv6 {
-	background: url("../img/layout/openttd-64-ipv6.gif") no-repeat;
-	background-position: left center;
-	float: right;
-	height: 75px;
-	margin-top: 5px;
-	width: 250px;
-}
 #openttd-logo-text {
 	height: 29px;
 	margin: 36px 0px 0px 77px;
