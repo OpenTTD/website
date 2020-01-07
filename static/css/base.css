@@ -75,11 +75,8 @@ body > header {
 	border-radius: 6px;
 	list-style: none;
 	margin: 0;
-	padding: 3px 10px 3px 45px;
+	padding: 6px 10px 6px 45px;
 	text-align: left;
-}
-#download-fast li:not(:last-child) {
-	margin: 0 0 2px 0;
 }
 #download-fast a {
 	color: #ccc;
