@@ -8,6 +8,9 @@
 [![GitHub Workflow Status (Publish Image)](https://img.shields.io/github/workflow/status/OpenTTD/website/Publish%20image?label=publish)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Publish+image%22)
 [![GitHub Workflow Status (Deployments)](https://img.shields.io/github/workflow/status/OpenTTD/website/Deployment?label=deployment)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Deployment%22)
 
+[![GitHub deployments (Staging)](https://img.shields.io/github/deployments/OpenTTD/website/staging?label=staging)](https://github.com/OpenTTD/website/deployments)
+[![GitHub deployments (Production)](https://img.shields.io/github/deployments/OpenTTD/website/production?label=production)](https://github.com/OpenTTD/website/deployments)
+
 
 This is the main website for OpenTTD, as can be seen on [https://www.openttd.org/](https://www.openttd.org/).
 'master' is always deployed on [staging](https://www.staging.openttd.org/).
