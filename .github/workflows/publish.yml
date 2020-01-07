@@ -45,14 +45,6 @@ jobs:
         echo "::set-output name=name::${GITHUB_REPOSITORY_LC}"
         echo "Name: ${GITHUB_REPOSITORY_LC}"
 
-        VERSION=$(git describe --tags)
-        echo "::set-output name=version::${VERSION}"
-        echo "Version: ${VERSION}"
-
-        DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-        echo "::set-output name=date::${DATE}"
-        echo "Date: ${DATE}"
-
         if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
           if [ "${{ github.event.action }}" = "publish_latest_tag" ]; then
             REF="refs/tags/$(git describe $(git rev-list --tags --max-count=1) --tags)"
@@ -68,6 +60,14 @@ jobs:
         fi
         echo "::set-output name=ref::${REF}"
         echo "Ref: ${REF}"
+
+        VERSION=$(git describe --tags)
+        echo "::set-output name=version::${VERSION}"
+        echo "Version: ${VERSION}"
+
+        DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+        echo "::set-output name=date::${DATE}"
+        echo "Date: ${DATE}"
 
         SHA="$(git rev-parse --verify ${REF})"
         echo "::set-output name=sha::${SHA}"
