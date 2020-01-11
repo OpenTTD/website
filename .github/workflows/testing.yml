@@ -14,10 +14,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Checkout submodules
-      shell: bash
-      run: |
-        AUTH_HEADER="$(git config --local --get http.https://github.com/.extraheader)"
-        git submodule sync --recursive
-        git -c "http.extraheader=${AUTH_HEADER}" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      uses: openttd/actions/checkout@v1
     - name: Build
       run: docker build .
