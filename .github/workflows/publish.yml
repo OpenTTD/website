@@ -24,7 +24,7 @@ jobs:
 
     - if: github.event_name == 'repository_dispatch'
       name: Repository dispatch
-      uses: openttd/actions/dispatch@v1
+      uses: openttd/actions/checkout-dispatch@v1
 
     - name: Checkout tags and submodules
       uses: openttd/actions/checkout@v1
