@@ -1,7 +1,7 @@
 # This is a multi-stage Docker build
 
 # Create the downloads collection
-FROM python:3.6-alpine as collection
+FROM python:3.8-slim as collection
 
 WORKDIR /source/
 
