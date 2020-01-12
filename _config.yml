@@ -15,7 +15,6 @@ plugins:
   - jekyll-paginate-v2
 
 exclude:
-  - azure-pipelines.yml
   - Dockerfile
   - fetch-downloads.py
   - Gemfile
