@@ -22,15 +22,13 @@ This is a [Jekyll](https://jekyllrb.com/) website, and is served by nginx as a s
 ### Populating _downloads
 
 By default `_downloads` is empty, so when building the website locally there is no latest stable/nightly.
-This can be resolved by running `fetch-downloads.py`.
+This can be resolved by running `fetch_downloads`.
 This script will download the latest available binaries, and populate `_downloads`.
 
-`fetch-downloads.py` is a Python3.6+ application, and will make ~400 HTTP connections to various of OpenTTD-related servers.
-
 ```bash
-python3 -m venv venv
-venv/bin/pip install -r requirements.txt
-venv/bin/python fetch-downloads.py
+python3 -m venv .env
+.env/bin/pip install -r requirements.txt
+.env/bin/python -m fetch_downloads
 ```
 
 ### Running a local server

@@ -24,7 +24,7 @@ There were many changes this month, but here are a few of the notable contributi
 * [Allow town bridges over rails and one-way roads](https://github.com/OpenTTD/OpenTTD/pull/7291) - this one has not made it into a beta yet.
 * [Increase maximum number of orders to ~16.7 million](https://github.com/OpenTTD/OpenTTD/pull/7220) - it's rare that games managed to get to the previous limit, but was doable with lots of ship AIs (lots of buoys), and it turned out to be trivial to increase, so why not?
 
-A more detailed [changelog](https://proxy.binaries.openttd.org/openttd-releases/1.9.0-beta3/changelog.txt) can be found [on the download page for our latest beta](https://www.openttd.org/downloads/openttd-releases/testing.html)
+A more detailed [changelog](https://cdn.openttd.org/openttd-releases/1.9.0-beta3/changelog.txt) can be found [on the download page for our latest beta](https://www.openttd.org/downloads/openttd-releases/testing.html)
 
 ## NewGRF
 

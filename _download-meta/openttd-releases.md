@@ -1,5 +1,4 @@
 ---
-folder_old_infrastructure: releases
 ---
 
 OpenTTD requires a separate base graphics set to run, which can be downloaded through the installer (Windows) or on first run (Windows, Linux).
@@ -12,4 +11,4 @@ Sound and music sets are recommended (but not necessary).
 
 Additional graphics, sound, and music sets can be downloaded via the ingame content download manager.
 
-Please refer to the [readme](https://proxy.binaries.openttd.org/openttd-releases/@@version@@/README.md) for more information.
+Please refer to the [readme](https://cdn.openttd.org/@@folder@@/README.md) for more information.

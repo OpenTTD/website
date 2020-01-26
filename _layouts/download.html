@@ -11,17 +11,7 @@ js:
 {% assign raw_type = page.id | split: "/" | slice: 2 | first %}
 {% assign type = raw_type | prepend: "/download-meta/" %}
 {% assign meta = site.download-meta | where: "id", type | first %}
-{% unless page.version %}
-{% assign version = page.id | split: "/" | last %}
-{% else %}
-{% assign version = page.version %}
-{% endunless %}
-
-{% if page.on_old_infrastructure %}
-{% assign folder = meta.folder_old_infrastructure %}
-{% else %}
-{% assign folder = raw_type %}
-{% endif %}
+{% assign folder = page.version | prepend: "/" | prepend: page.folder %}
 
 {% unless meta.id %}
     {{ "No download-meta entry found for " | append: raw_type | raise_error }}
@@ -33,7 +23,7 @@ js:
     </div>
     <div class="section-item">
         <div class="content">
-            {{ meta.content | markdownify | replace: "@@version@@", version }}
+            {{ meta.content | markdownify | replace: "@@folder@@", folder }}
             <p>For all binaries officially released by us we publish the MD5, SHA1, and SHA256 checksums. You can use these checksums to check whether the file you downloaded has been modified. All three checksums should match the file you downloaded; if this is not the case it means that either the file didn't come from us or that it got broken during transport. Either way it might possibly contain dangerous modifications and the file should therefore not be trusted!</p>
         </div>
     </div>
@@ -42,9 +32,9 @@ js:
     </div>
     <div class="section-item">
         <div class="content">
-            <p>Latest release in {{ page.name }} is {{ version }}, released on {{ page.date | date: "%Y-%m-%d %H:%M" }} UTC.</p>
+            <p>Latest {{ page.name }} release in {{ page.category }} is {{ page.version }}, released on {{ page.date | date: "%Y-%m-%d %H:%M" }} UTC.</p>
 
-            <div class="changelog">[&nbsp;<a href="{{ page.host }}/{{ folder }}/{{ version }}/changelog.txt">Changelog</a>&nbsp;]</div>
+            <div class="changelog">[&nbsp;<a href="https://cdn.openttd.org/{{ folder }}/changelog.txt">Changelog</a>&nbsp;]</div>
             <div id="download-combo">
                 <input type="hidden" id="download-combo-state" value="" />
                 <input type="hidden" id="download-base-name" value="{{ page.base }}" />
@@ -59,7 +49,7 @@ js:
                 {% endunless %}
 
                 <li id="{{ file.id }}">
-                    <div class="filename"><a href="{{ page.host }}/{{ folder }}/{{ version }}/{{ file.id }}">{{ description }}</a></div>
+                    <div class="filename"><a href="https://cdn.openttd.org/{{ folder }}/{{ file.id }}">{{ description }}</a></div>
                     <div class="filesize">[&nbsp;{{ file.size | string_of_size }}&nbsp;]</div>
                     <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[&nbsp;<a href="#" onclick="return false;">Checksums</a>&nbsp;]</div>
                     <div class="checksums" id="checksum-{{ file.id }}">
@@ -91,7 +81,7 @@ js:
                 {% endunless %}
 
                 <li id="{{ file.id }}">
-                    <div class="filename"><a href="{{ page.host }}/{{ folder }}/{{ version }}/{{ file.id }}">{{ description }}</a></div>
+                    <div class="filename"><a href="https://cdn.openttd.org/{{ folder }}/{{ file.id }}">{{ description }}</a></div>
                     <div class="filesize">[&nbsp;{{ file.size | string_of_size }}&nbsp;]</div>
                     <div class="checksums-dropdown" onclick="toggleChecksum(this, 'checksum-{{ file.id }}')">[&nbsp;<a href="#" onclick="return false;">Checksums</a>&nbsp;]</div>
                     <div class="checksums" id="checksum-{{ file.id }}">
