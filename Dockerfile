@@ -48,7 +48,7 @@ COPY . /source/
 COPY --from=collection /source/_downloads /source/_downloads
 
 RUN mkdir /html \
-    && jekyll build --strict_front_matter -s /source -d /html
+    && JEKYLL_ENV=production jekyll build --strict_front_matter -s /source -d /html
 
 # Copy the HTML and serve it via nginx
 FROM nginx:alpine
