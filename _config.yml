@@ -22,6 +22,7 @@ exclude:
   - nginx.default.conf
   - requirements.base
   - requirements.txt
+  - thirdparty
   - vendor
 
 defaults:

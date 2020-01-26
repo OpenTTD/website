@@ -39,16 +39,14 @@ If you do not want to run a server, but just build the current site, replace `se
 
 Under `_site` Jekyll will put the compiled result in both `serve` and `build`.
 
-#### Installing Jekyll locally
-
 - Follow [jekyll installation](https://jekyllrb.com/docs/installation/)
 - Run `bundle install`
-- Run `jekyll serve`
+- Run `JEKYLL_ENV=production jekyll serve`
 
-#### Running via Docker
+### Running via Docker
 
 ```bash
-docker run --rm -v "$(pwd)":/srv/jekyll -it -p 127.0.0.1:4000:4000 jekyll/jekyll jekyll serve
+docker run --rm -v "$(pwd)":/srv/jekyll -it -p 127.0.0.1:4000:4000 -e JEKYLL_ENV=production jekyll/jekyll jekyll serve
 ```
 
 ## Docker image
@@ -83,6 +81,13 @@ After tagging, it will move to [production](https://www.openttd.org/).
 
 No problem.
 Add yourself to _people, and follow the same as the above 'new blog post' section.
+
+### I get an error about ua-parser.js while building
+
+Please set `JEKYLL_ENV` to `production`.
+Without this, the symlink `ua-parser.js` is copied, instead of following it.
+With `production` it does the right thing.
+To recover, remove `_site/static/js/ua-parser.js` manually.
 
 ### What is this download-descriptions.yml
 
