@@ -12,12 +12,8 @@ RUN pip freeze 2>/dev/null | grep -v "deployer" > requirements.installed \
         && diff -u requirements.txt requirements.installed 1>&2 \
         || ( echo "!! ERROR !! requirements.txt defined different packages or versions for installation" \
                 && exit 1 ) 1>&2
-RUN pip install flake8
 
-COPY .flake8 .flake8
-RUN flake8 fetch-downloads.py
-
-RUN python fetch-downloads.py
+RUN python -m fetch_downloads
 
 # Build the HTML from the source
 FROM alpine as html
