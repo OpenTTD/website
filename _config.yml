@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   An open source simulator based on the classic game Transport Tycoon Deluxe. It attempts to mimic the original game as closely as possible while extending it with new features.
 baseurl: ""
 staticurl: /static
-url: ""
+url: "https://www.openttd.org/"
 timezone: Etc/UTC
 excerpt_separator: <!-- more -->
 future: true
