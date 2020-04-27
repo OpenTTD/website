@@ -7,7 +7,7 @@ Today we say goodbye to an old friend.
 BaNaNaS v1 has been running since early 2007.
 It has served millions and millions of files.
 Over 5000 content entries were created.
-Daily over 20000 unique users make use of the service.
+Over 20000 unique users used the service *daily*.
 It is what makes OpenTTD truly unique: an ever expanding set of possible additions to the game.
 And today we say goodbye.
 
