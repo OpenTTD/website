@@ -42,7 +42,7 @@ Especially on the Web Frontend site we could use some help!
 Or if you want to look at the database:
 * [BaNaNaS](https://github.com/OpenTTD/BaNaNaS)
 
-The idea for BaNaNaS v1.5 was created in mid-February 2020; shortly after, development started.
+The idea for BaNaNaS v1.5 was created in mid-February 2020; development started soon after.
 It is hundreds of lines of code.
 It took several weekends of building.
 Having a day-job really doesn't help.
