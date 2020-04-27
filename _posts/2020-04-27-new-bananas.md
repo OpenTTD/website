@@ -29,6 +29,7 @@ It should seriously be a Quality-of-Life improvement for content authors.
 Interested in more information?
 Want to run your own BaNaNaS for your private client?
 Want to help out with new functionalities?
+Especially on the Web Frontend site we could use some help!
 * [BaNaNaS API](https://github.com/OpenTTD/bananas-api)
 * [BaNaNaS Server](https://github.com/OpenTTD/bananas-server)
 * [BaNaNaS Web Frontend](https://github.com/OpenTTD/bananas-frontend-web)
