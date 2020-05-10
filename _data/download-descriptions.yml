@@ -120,6 +120,10 @@ linux-ubuntu-bionic-i386-dbg.deb:
   description: Debug Symbols for Linux Ubuntu Bionic 18.04 (i386, 32 bit)
 linux-ubuntu-bionic-i386.deb:
   description: Linux Ubuntu Bionic 18.04 (i386, 32 bit)
+linux-ubuntu-focal-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Focal 20.04 (x86_64, 64 bit)
+linux-ubuntu-focal-amd64.deb:
+  description: Linux Ubuntu Focal 20.04 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64-dbg.deb:
   description: Debug Symbols for Linux Ubuntu Karmic 9.10 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64.deb:
