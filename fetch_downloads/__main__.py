@@ -26,7 +26,7 @@ async def download(url):
 
 
 async def get_versions():
-    latest_raw = await download(f"https://cdn.openttd.org/latest.yaml")
+    latest_raw = await download("https://cdn.openttd.org/latest.yaml")
     latest = yaml.safe_load(latest_raw)
     return latest["latest"]
 
