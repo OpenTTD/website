@@ -8,10 +8,10 @@ WORKDIR /source/
 COPY . /source/
 RUN pip install -r requirements.txt
 # Validate that what was installed was what was expected
-RUN pip freeze 2>/dev/null | grep -v "deployer" > requirements.installed \
-        && diff -u requirements.txt requirements.installed 1>&2 \
-        || ( echo "!! ERROR !! requirements.txt defined different packages or versions for installation" \
-                && exit 1 ) 1>&2
+RUN pip freeze 2>/dev/null > requirements.installed \
+    && diff -u --strip-trailing-cr requirements.txt requirements.installed 1>&2 \
+    || ( echo "!! ERROR !! requirements.txt defined different packages or versions for installation" \
+        && exit 1 ) 1>&2
 
 RUN python -m fetch_downloads
 
@@ -25,6 +25,7 @@ COPY Gemfile Gemfile.lock /source/
 
 RUN apk --no-cache add \
         build-base \
+        libstdc++ \
         ruby \
         ruby-bigdecimal \
         ruby-dev \
@@ -32,8 +33,6 @@ RUN apk --no-cache add \
         ruby-rdoc \
     && echo "gem: --no-ri --no-rdoc --no-document" > ~/.gemrc \
     && gem update --system \
-    && gem install http_parser.rb -v 0.6.0 -- --use-system-libraries \
-    && gem install safe_yaml -v 1.0.4 -- --use-system-libraries \
     && bundle update --bundler \
     && bundle install \
     && apk --no-cache del \
