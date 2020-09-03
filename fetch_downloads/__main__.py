@@ -78,7 +78,10 @@ async def main():
                 local_folder = "openttd-nightlies"
 
             await handle_version(
-                folder=version["folder"], local_folder=local_folder, version=version["version"], name=name,
+                folder=version["folder"],
+                local_folder=local_folder,
+                version=version["version"],
+                name=name,
             )
 
     await session.close()
