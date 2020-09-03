@@ -1,10 +1,8 @@
 aiohttp==3.6.2
 async-timeout==3.0.1
-attrs==19.3.0
+attrs==20.1.0
 chardet==3.0.4
-idna==2.8
-idna-ssl==1.1.0
-multidict==4.7.4
-PyYAML==5.3
-typing-extensions==3.7.4.1
-yarl==1.4.2
+idna==2.10
+multidict==4.7.6
+PyYAML==5.3.1
+yarl==1.5.1

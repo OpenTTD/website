@@ -1,4 +1,6 @@
-_site
+__pycache__/
+_site/
+_downloads/**
+*.pyc
 .sass-cache
 .jekyll-metadata
-_downloads/**
