@@ -17,13 +17,10 @@ plugins:
 exclude:
   - Dockerfile
   - fetch-downloads.py
-  - Gemfile
-  - Gemfile.lock
   - nginx.default.conf
   - requirements.base
   - requirements.txt
   - thirdparty
-  - vendor
 
 defaults:
   - scope:
