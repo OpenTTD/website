@@ -1,0 +1,40 @@
+---
+layout: default
+active_nav: security
+section_title: Security
+---
+
+<div id="section-full">
+    <div class="section-header">
+        <h3>{{ page.name }} (vulnerable {{ page.first_vulnerable }} - fixed {{ page.first_fixed }})</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>Short description: {{ page.description }}</p>
+            <p><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name={{ page.name }}" target="_blank">Official {{ page.name }} entry at cve.mitre.org.</a></p>
+            <p>Related bug reports:</p>
+            <ul>
+                {% if page.related_bugs != "" %}
+                    {% for related_bug in page.related_bugs %}
+                    <li><a href="https://github.com/OpenTTD/OpenTTD/issues/{{ related_bug }}" target="_blank">GitHub Issue #{{ related_bug }}</a></li>
+                    {% endfor %}
+                {% else %}
+                    <li>There are no related bugs.</li>
+                {% endif %}
+            </ul>
+            <p>Related commits:</p>
+            <ul>
+                {% for related_commit in page.related_commits %}
+                <li><a href="https://github.com/OpenTTD/OpenTTD/commit/{{ related_commit }}" target="_blank">{{ related_commit }}</a></li>
+                {% endfor %}
+            </ul>
+            <p>Patches: (sometimes more fuzz is needed to apply them)</p>
+            <ul>
+                {% for patch in page.patches %}
+                <li><a href="{{ site.baseurl }}{{ page.id }}/{{ patch.file }}" target="_blank">{{ patch.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <p>{{ page.content }}</p>
+        </div>
+    </div>
+</div>

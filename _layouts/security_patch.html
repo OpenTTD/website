@@ -1,0 +1,8 @@
+{% assign security = site.security | where: "name", page.cve | first %}Subject: fix for vulnerability {{ security.name }} for OpenTTD {{ page.first_version }} - {{ page.last_version }} ({{ security.description }})
+From: OpenTTD developer team <info@openttd.org>
+Origin: backport,{% for related_commit in security.related_commits %} https://github.com/OpenTTD/OpenTTD/commit/{{ related_commit }}{% endfor %}
+Bug:{% for related_bug in security.related_bugs %} https://github.com/OpenTTD/OpenTTD/issues/{{ related_bug }}{% endfor %}
+
+{{ security.content | strip_html }}
+
+{{ page.content }}
