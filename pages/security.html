@@ -1,0 +1,46 @@
+---
+layout: default
+title: Security
+active_nav: security
+permalink: /security.html
+css:
+    - vuln.css
+---
+
+<div id="section-full">
+    <div class="section-header">
+        <h3>Security tracker</h3>
+    </div>
+    <div class="section-item">
+        <div class="content">
+            <p>
+                This page lists all known vulnerabilities of OpenTTD with an explanation and patches for vulnerable versions.
+            </p>
+            <p>
+                The list given here is by no means a full list of vulnerabilities.
+                Many vulnerabilities might have been fixed without us being aware of it being a vulnerability in the first place.
+                The list does contain all vulnerabilities that have a CVE number.
+            </p>
+            <p>
+                Even though we provide some patches for older versions, we advise to use newer versions of OpenTTD.
+            </p>
+            <table id="vuln-table">
+                <tr>
+                    <th class="name">name</th>
+                    <th class="description">description</th>
+                    <th class="first_vuln">first vulnerable</th>
+                    <th class="first_fixed">first fixed</th>
+                </tr>
+            {% assign security_reverse = site.security | where_exp: "item", "item.name" | reverse %}
+            {% for security in security_reverse %}
+                <tr class="{% cycle 'odd', 'even' %}">
+                    <td><a href="{{ site.baseurl }}{{ security.url }}">{{ security.name }}</td>
+                    <td>{{ security.description }}</td>
+                    <td>{{ security.first_vulnerable }}</td>
+                    <td>{{ security.first_fixed }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>

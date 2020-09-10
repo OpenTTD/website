@@ -42,6 +42,11 @@ defaults:
       type: "screenshots"
     values:
       layout: "screenshot"
+  - scope:
+      path: ""
+      type: "security"
+    values:
+      layout: "security"
 
 collections:
   downloads:
@@ -53,6 +58,8 @@ collections:
   posts:
     permalink: /news/:year/:month/:day/:title.html
   screenshots:
+    output: true
+  security:
     output: true
 
 pagination:

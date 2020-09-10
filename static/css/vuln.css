@@ -1,0 +1,58 @@
+
+#vuln-info-table {
+	font-size: 12px;
+}
+
+#vuln-table {
+	font-size: 12px;
+	table-layout: fixed;
+	width: 738px;
+}
+
+#vuln-table th {
+	text-align: left;
+	text-decoration: underline;
+}
+#vuln-table td, #vuln-info-table td, #vuln-info-table th {
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	padding: 1px 3px 1px 3px;
+	text-align: left;
+}
+
+#vuln-table .odd, #vuln-info-table .odd {
+	background-color: #EEEEEE;
+}
+#vuln-table .even, #vuln-info-table .even {
+	background-color: #FFFFFF;
+}
+#vuln-table tr.odd:hover, #vuln-table tr.even:hover, #vuln-info-table tr.odd:hover, #vuln-info-table tr.even:hover, #vuln-table tr.odd:hover td, #vuln-table tr.even:hover td {
+	background-color: #CCCCCC;
+	border-bottom: 1px dashed #000000;
+	border-top: 1px dashed #000000;
+}
+
+#vuln-table .image {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+}
+
+#vuln-table .odd:hover .image, #vuln-table .even:hover .image {
+	background-color: #FFFFFF;
+	border-bottom: 1px dashed #000000;
+	border-top: 1px dashed #000000;
+}
+
+#vuln-table .name {
+	width: 100px;
+}
+#vuln-table .description {
+	width: 500px;
+}
+#vuln-table .first_vuln {
+	width: 90px;
+}
+#vuln-table .first_fixed {
+	width: 60px;
+}
