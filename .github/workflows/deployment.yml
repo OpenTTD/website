@@ -10,14 +10,14 @@ jobs:
 
     steps:
     - name: Deployment in progress
-      uses: openttd/actions/deployments-update@v1
+      uses: openttd/actions/deployments-update@v2
       with:
         github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
         state: in_progress
         description: "Deployment of ${{ github.event.deployment.payload.version }} to ${{ github.event.deployment.environment }} started"
 
     - name: Deploy on AWS
-      uses: openttd/actions/deploy-aws@v1
+      uses: openttd/actions/deploy-aws@v2
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-region: ${{ secrets.AWS_REGION }}
@@ -26,7 +26,7 @@ jobs:
 
     - if: success()
       name: Deployment successful
-      uses: openttd/actions/deployments-update@v1
+      uses: openttd/actions/deployments-update@v2
       with:
         github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
         state: success
@@ -35,7 +35,7 @@ jobs:
 
     - if: failure() || cancelled()
       name: Deployment failed
-      uses: openttd/actions/deployments-update@v1
+      uses: openttd/actions/deployments-update@v2
       with:
         github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
         state: failure
