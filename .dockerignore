@@ -1,2 +1,9 @@
-.git/**
-_downloads/**
+__pycache__/
+*.pyc
+/.env
+/.git/**
+/.jekyll-cache/
+/.jekyll-metadata/
+/.sass-cache/
+/_downloads/**
+/_site/
