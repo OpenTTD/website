@@ -17,4 +17,4 @@ There is only one downside:
 
 While this is good news for all translators, this is also a great step forward for our infrastructure:
 after migrating the source code and bug tracker in 2019, this year we could migrate BaNaNaS and the WebTranslator.
-This only leaves the [Wiki](https://wiki.openttd.org) as last service that still needs an OpenTTD-specific account. (guess what task is next?)
+This only leaves the [Wiki](https://wiki.openttd.org) as the last service that still needs an OpenTTD-specific account. (guess what task is next?)
