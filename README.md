@@ -1,4 +1,4 @@
-# OpenTTD's website
+# OpenTTD's website Advance version of TTD
 
 [![GitHub License](https://img.shields.io/github/license/OpenTTD/website)](https://github.com/OpenTTD/website/blob/master/LICENSE)
 [![GitHub Tag](https://img.shields.io/github/v/tag/OpenTTD/website?include_prereleases&label=stable)](https://github.com/OpenTTD/website/releases)
