@@ -1,6 +1,6 @@
 ---
 name: Remko Bijker
 email: rubidium@openttd.org
-role: General Coding, Project Leader
+role: General Coding
 nick: Rubidium
 ---
