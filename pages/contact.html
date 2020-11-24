@@ -27,7 +27,9 @@ permalink: /contact.html
                             {% endif %}
                         </div>
                             <div class="content">
+                            {% if person.email %}
                             <span style="display: block;">Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+                            {% endif %}
                             {% if person.role %}
                                 <span style="display: block;">Role: {{ person.role }}</span>
                             {% endif %}
