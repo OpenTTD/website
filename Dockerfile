@@ -31,6 +31,7 @@ RUN apk --no-cache add \
         ruby \
         ruby-bigdecimal \
         ruby-dev \
+        ruby-etc \
         ruby-json \
         ruby-rdoc \
     && echo "gem: --no-ri --no-rdoc --no-document" > ~/.gemrc \
