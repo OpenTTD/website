@@ -124,6 +124,10 @@ linux-ubuntu-focal-amd64-dbg.deb:
   description: Debug Symbols for Linux Ubuntu Focal 20.04 (x86_64, 64 bit)
 linux-ubuntu-focal-amd64.deb:
   description: Linux Ubuntu Focal 20.04 (x86_64, 64 bit)
+linux-ubuntu-groovy-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Groovy 20.10 (x86_64, 64 bit)
+linux-ubuntu-groovy-amd64.deb:
+  description: Linux Ubuntu Groovy 20.10 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64-dbg.deb:
   description: Debug Symbols for Linux Ubuntu Karmic 9.10 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64.deb:
@@ -198,6 +202,8 @@ linux-ubuntu-xenial-i386.deb:
   description: Linux Ubuntu Xenial 16.04 (i386, 32 bit)
 macosx-i686.zip:
   description: Mac OS X 10.4-10.5 (Intel build)
+macosx-x86_64.dmg:
+  description: MacOS 10.12+ (Apple Disk Image)
 macosx-jaguar.dmg:
   description: Mac OS X 10.2 (PowerPC binary)
 macosx-panther.dmg:
