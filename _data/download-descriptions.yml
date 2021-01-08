@@ -203,9 +203,9 @@ linux-ubuntu-xenial-i386.deb:
 macosx-i686.zip:
   description: Mac OS X 10.4-10.5 (Intel build)
 macosx-arm64.dmg:
-  description: MacOS 10.12+ (Apple Silicon, arm64)
+  description: MacOS 11+ (Apple Silicon, arm64)
 macosx-x86_64.dmg:
-  description: MacOS 10.12+ (Intel, x86_64)
+  description: MacOS 10.9+ (Intel, x86_64)
 macosx-jaguar.dmg:
   description: Mac OS X 10.2 (PowerPC binary)
 macosx-panther.dmg:
