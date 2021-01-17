@@ -246,6 +246,10 @@ source.zip:
   description: Sources (zip archive)
 win.zip:
   description: Headers/libraries to compile with MSVC for Windows
+windows-arm64.exe:
+  description: Windows 10 (ARM64) (installer)
+windows-arm64.zip:
+  description: Windows 10 (ARM64) (zip archive)
 windows-win32.exe:
   description: Windows XP with SP3 / Vista / 7 / 8 / 10 (32bit) (installer)
 windows-win32.pdb.xz:
