@@ -154,7 +154,7 @@ function detectByUA(state, base_name)
 			}
 			break;
 
-		case "Mac OS": match = "macosx"; break;
+		case "Mac OS": match = "macos"; break;
 		case "BeOS": match = "beos"; break;
 		case "Morph OS": match = "morphos"; break;
 		case "Debian": match = "linux-debian"; break;
