@@ -150,6 +150,7 @@ function detectByUA(state, base_name)
 					}
 					break;
 				case "amd64": match = "windows-win64"; break;
+				case "arm64": match = "windows-arm64"; break;
 				default: match = "windows"; break;
 			}
 			break;
