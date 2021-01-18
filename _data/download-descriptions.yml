@@ -248,6 +248,8 @@ win.zip:
   description: Headers/libraries to compile with MSVC for Windows
 windows-arm64.exe:
   description: Windows 10 (ARM64) (installer)
+windows-arm64.pdb.xz:
+  description: Debug Symbols for Windows (ARM64) (xz/lzma archive)
 windows-arm64.zip:
   description: Windows 10 (ARM64) (zip archive)
 windows-win32.exe:
