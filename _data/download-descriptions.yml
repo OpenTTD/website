@@ -201,7 +201,9 @@ linux-ubuntu-xenial-i386-dbg.deb:
 linux-ubuntu-xenial-i386.deb:
   description: Linux Ubuntu Xenial 16.04 (i386, 32 bit)
 macos-universal.dmg:
-  description: macOS 10.9+ (Universal)
+  description: macOS 10.9+ (Universal) (disk image)
+macos-universal.zip:
+  description: macOS 10.9+ (Universal) (zip archive)
 macosx-i686.zip:
   description: Mac OS X 10.4-10.5 (Intel build)
 macosx-arm64.dmg:
