@@ -3,7 +3,7 @@ title: OpenTTD on Steam
 author: TrueBrain
 ---
 
-Historical, OpenTTD always had a single home from where we distribute the game.
+Historically, OpenTTD always had a single home from where we distribute the game.
 We used to be hosted on SourceForge (you know you are old if you remember that being a thing :D), and slowly moved towards our own self-created distribution methods.
 These days, we mostly distribute our game via [our website](https://www.openttd.org).
 
