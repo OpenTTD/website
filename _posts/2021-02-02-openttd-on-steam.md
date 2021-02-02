@@ -16,7 +16,7 @@ This became painfully apparent when we noticed other people post OpenTTD on some
 They are not always updated with new releases, sometimes even slacking behind a few years.
 And maybe more important to us: we can not guarantee that the uploaded version is unmodified and is the version as we intended.
 So, instead of fighting it, why not turn around and join them!
-Why not release our own, verified, build on those stores!
+Why not release our own, verified, builds on those stores!
 
 And this is exactly what we have been doing lately.
 And when I say "we", a bit ironic to me, I mean the two developers that are around longest (myself and orudge).
