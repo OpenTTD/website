@@ -3,14 +3,18 @@ title: OpenTTD on Steam
 author: TrueBrain
 ---
 
+As of today, you can Wishlist OpenTTD on [Steam](https://store.steampowered.com/app/1536610/OpenTTD/).
+
 Historically, OpenTTD always had a single home from where we distribute the game.
 We used to be hosted on SourceForge (you know you are old if you remember that being a thing :D), and slowly moved towards our own self-created distribution methods.
 These days, we mostly distribute our game via [our website](https://www.openttd.org).
 
-But times are changing, and so are we.
+But times are changing, and so is our hair.
 Over the last few months, we have silently been working on become a bit more visible in the world.
 Not for reasons you might think: OpenTTD has as many active users as we had in 2007.
 But more because we no longer think it is the right approach to only distribute via our own website.
+
+<!-- more -->
 
 This became painfully apparent when we noticed other people post OpenTTD on some stores.
 They are not always updated with new releases, sometimes even slacking behind a few years.
