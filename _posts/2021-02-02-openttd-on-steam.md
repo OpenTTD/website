@@ -13,7 +13,7 @@ Not for reasons you might think: OpenTTD has as many active users as we had in 2
 But more because we no longer think it is the right approach to only distribute via our own website.
 
 This became painfully apparent when we noticed other people post OpenTTD on some stores.
-They are not always updated with new releases, sometimes even slacking behind for a few years.
+They are not always updated with new releases, sometimes even slacking behind a few years.
 And maybe more important to us: we can not guarantee that the uploaded version is unmodified and is the version as we intended.
 So, instead of fighting it, why not turn around and join them!
 Why not release our own, verified, build on those stores!
