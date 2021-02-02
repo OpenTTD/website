@@ -19,7 +19,7 @@ So, instead of fighting it, why not turn around and join them!
 Why not release our own, verified, builds on those stores!
 
 And this is exactly what we have been doing lately.
-And when I say "we", a bit ironic to me, I mean the two developers that are around longest (myself and orudge).
+And when I say "we", a bit ironic to me, I mean the two developers that are around longest (myself and orudge) ;)
 
 A while back orudge added OpenTTD to the [Microsoft Store](https://www.microsoft.com/en-us/p/openttd-official/9ncjg5rvrr1c).
 And today, I am happy to announce we will be on [Steam](https://store.steampowered.com/app/1536610/OpenTTD/) too!
