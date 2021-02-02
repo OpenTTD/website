@@ -12,12 +12,11 @@ Over the last few months, we have silently been working on become a bit more vis
 Not for reasons you might think: OpenTTD has as many active users as we had in 2007.
 But more because we no longer think it is the right approach to only distribute via our own website.
 
-This became painfully apparent when we noticed someone posted OpenTTD, the exact binary we created, on some stores, asking money for it.
-For us, that hurts a little bit: we put in all the effort to bring the best game we can, without asking anything in return, and someone else just posts it, unchanged, on a game store and charges money for it.
-I do not mind if people make money for work they did .. but making money from work I did, that just feels wrong.
-But, legally, they are fully allowed.
-So, instead of fighting it, why not turn around and join them .. just do it for free ;)
-That should weed out people who do not add additional value to the game, and try to ask money for it, not? :D
+This became painfully apparent when we noticed other people post OpenTTD on some stores.
+They are not always updated for new releases, sometimes even slacking behind for a few years.
+And maybe more important to us: we can not guarantee that the uploaded version is unmodified and is the version as we intended.
+So, instead of fighting it, why not turn around and join them!
+Why not release our own, verified, build on those stores!
 
 And this is exactly what we have been doing lately.
 And when I say "we", a bit ironic to me, I mean the two developers that are around longest (myself and orudge).
