@@ -53,7 +53,7 @@ collections:
     output: true
   download-meta:
     output: false
-  people:
+  contact:
     output: false
   posts:
     permalink: /news/:year/:month/:day/:title.html

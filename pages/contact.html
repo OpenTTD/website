@@ -6,45 +6,22 @@ permalink: /contact.html
 ---
 
 <div id="section-full">
+    {% assign contact_sorted = site.contact | where_exp: "contact", "contact.sort_priority >= 0" | sort: "sort_priority" %}
+    {% for contact in contact_sorted %}
     <div class="section-header">
-        <h3>Contact Information</h3>
+        <h3>{{ contact.name }}</h3>
     </div>
     <div class="section-item">
         <div class="content">
-            <p>Individual developers are reachable at the following addresses. Note: these are not meant for your questions about a feature, bug, can't get something to work, or want something implemented. You should direct these questions to the <a href="https://forum.openttd.org/">forums</a> or in our IRC channel.</p>
-            <p>Bug reports can be discussed on IRC or forums, but the best place for it to be addressed is on our <a href="{{ site.baseurl }}/development.html">bug tracker</a>.</p>
-            <p>Do not address support requests or general questions to individual developers. You will not get an answer this way!</p>
+            <p>{{ contact.content }}</p>
             <ul class="section-list">
-                {% assign high_priority_contacts = site.people | where_exp: "person", "person.sort_priority >= 0" | sort: "sort_priority" %}
-                {% assign lower_priority_contacts = site.people | where_exp: "person", "person.sort_priority == nil" %}
-                {% assign people_sorted = high_priority_contacts | concat: lower_priority_contacts %}
-                {% for person in people_sorted %}
-                    <li>
-                        <div class="header">
-                            {{ person.name }}
-                            {% if person.nick %}
-                                ({{ person.nick }})
-                            {% endif %}
-                        </div>
-                            <div class="content">
-                            {% if person.email %}
-                            <span style="display: block;">Email: <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
-                            {% endif %}
-                            {% if person.role %}
-                                <span style="display: block;">Role: {{ person.role }}</span>
-                            {% endif %}
-                        <div>
-                    </li>
+                {% for location in contact.locations %}
+                <li>
+                    <b>{{ location.name }}</b>: <a href="{{ location.link }}">{{ location.caption }}</a>
+                </li>
                 {% endfor %}
-            </ul>
+           </ul>
         </div>
     </div>
-    <div class="section-header">
-        <h3>IRC</h3>
-    </div>
-    <div class="section-item">
-        <div class="content">
-            <p>For a more immediate form of communication you can join us in the <a href="irc://irc.oftc.net/openttd">#openttd</a> channel on <a href="https://www.oftc.net/">OFTC</a> with your favourite <a href="https://www.irchelp.org">IRC</a> client. You can use the channel for questions, problems, development or general discussion.</p>
-        </div>
-    </div>
+    {% endfor %}
 </div>
