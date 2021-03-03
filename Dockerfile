@@ -7,7 +7,8 @@ WORKDIR /source/
 
 COPY . /source/
 
-RUN pip --no-cache-dir install -r requirements.txt
+RUN pip --no-cache-dir install -U pip \
+    && pip --no-cache-dir install -r requirements.txt
 
 # Validate that what was installed was what was expected
 RUN pip freeze 2>/dev/null > requirements.installed \
