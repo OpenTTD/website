@@ -48,6 +48,10 @@ linux-generic-amd64.zip:
   description: Linux Generic Binaries (x86_64, 64bit) (zip archive)
 amd64.tar.gz:
   description: Linux Generic Binaries (x86_64, 64bit)
+linux-debian-bullseye-amd64-dbg.deb:
+  description: Debug Symbols for Linux Debian Bullseye (x86_64, 64bit)
+linux-debian-bullseye-amd64.deb:
+  description: Linux Debian Bullseye (x86_64, 64bit)
 linux-debian-buster-amd64-dbg.deb:
   description: Debug Symbols for Linux Debian Buster (x86_64, 64bit)
 linux-debian-buster-amd64.deb:
