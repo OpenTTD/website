@@ -36,7 +36,7 @@ We will get to this back in a bit.
 Mostly what stood out from the Steam release, how difficult it is to setup a network game.
 And this might sound silly, but it is not something we really realised before.
 Back in 2007, from which this network implementation dates, it was one of the only ways available.
-But as time went on, better and easier ways to join eachother in a game have been invented; and we have not caught up with that.
+But as time went on, better and easier ways to join each other in a game have been invented; and we have not caught up with that.
 
 So, a few days after release, we started work on improving the whole network experience.
 This is not an easy task, as there are many moving parts.
@@ -58,7 +58,7 @@ To allow this to work easier without things like port-forwarding and firewall ex
 First of all, we will move away from a mix of UDP and TCP, and switch to TCP only (for now; possibly we go full UDP in the future, but baby-steps).
 Additionally, we are changing completely how the master-server (the component responsive for the server-listing) works, and rebranding it to a game-coordinator.
 
-The Game Coordinator has a very important task: if player B wants to join the game of player A with the invite code, he should make that happen.
+The game-coordinator has a very important task: if player B wants to join the game of player A with the invite code, he should make that happen.
 We will use several techniques to make this happen.
 - The first is, of course, a direct connect.
 This is exactly how the current game works, and only works if you have your network setup for it.
@@ -73,16 +73,23 @@ No setup required, no questions asked.
 The downside here is that it means we also have to pay for the traffic.
 So we have to estimate and test out how likely it is the above methods won't work; hence the "not 100% sure" part.
 
+While we are working on this part of the code, we are improving many other things (mostly as we have to).
+But mostly, we are finally redoing the in-game Network GUI.
+It should be a lot more user friendly when we are done with it.
+Mostly, it will mean you don't have to go to the console that much, to do simple stuff like removing a company or changing your nickname.
+
+As cherry-on-top, we want changing from private-game to friends-only-game to be fully transparent.
+That is to say: you say you want to change the visibility of the game, we reload the game in such way that for you nothing changed, but your friend can now join.
+Currently multiplayer is not designed with that in mind, but I am confident we will figure it out.
+
 So what does that mean for you?
 Well .. no fuzz network games.
 You or your friend starts a game in "Friends-only" setup.
 The other person enters the invite code.
 And magic, you are joined together.
 
-Finally, while we are working on this part of the code, we are improving many other things (mostly as we have to).
-But mostly, we are finally redoing the in-game Network GUI.
-It should be a lot more user friendly when we are done with it.
-Mostly, it will mean you don't have to go to the console that much, to do simple stuff like removing a company or changing your nickname.
+Hopefully the end result is a very smooth multiplayer experience for you as user.
+As after all, a game is better enjoyed with friends!
 
 ### Rich Presence / Steam integration
 
@@ -108,7 +115,7 @@ Why should it never happen?
 
 We find so many things we want to fix while playing, it is really depressing :P
 This happens when you build a game .. you notice everything wrong really easily, which is really frustrating.
-So we created a few bugs that really should be addressed .. like for example: there are really few visual queues if rivers go up the hill, making all developers that were online one by one waste a lot of money finding out they have to build really expensive docks.
+So we created a few bugs that really should be addressed .. like for example: there are really few visual cues if rivers go up the hill, making all developers that were online one by one waste a lot of money finding out they have to build really expensive docks.
 Shameful.
 
 We have some plans to do some mass-scale testing with the new network changes, which most likely requires a lot of players to show up and test .. so maybe we do this soon again, but together with you .. maybe even on a livestream?
