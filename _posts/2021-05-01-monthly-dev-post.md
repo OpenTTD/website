@@ -115,7 +115,7 @@ Why should it never happen?
 
 We find so many things we want to fix while playing, it is really depressing :P
 This happens when you build a game .. you notice everything wrong really easily, which is really frustrating.
-So we created a few bugs that really should be addressed .. like for example: there are really few visual cues if rivers go up the hill, making all developers that were online one by one waste a lot of money finding out they have to build really expensive docks.
+So we created a few bugs that really should be addressed .. like for example: there are really few visual cues if rivers go up the hill, making all developers that were online one by one waste a lot of money finding out they have to build really expensive locks.
 Shameful.
 
 We have some plans to do some mass-scale testing with the new network changes, which most likely requires a lot of players to show up and test .. so maybe we do this soon again, but together with you .. maybe even on a livestream?
