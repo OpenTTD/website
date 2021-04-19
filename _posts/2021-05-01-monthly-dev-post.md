@@ -28,7 +28,7 @@ Hopefully soon we have it all figured out.
 As mentioned in our [OpenTTD Developers Livestream - #3 - Q&A](https://www.youtube.com/watch?v=kFtUGxIGLlg), the Steam release was a huge success.
 More than we expected, if we are honest.
 The platform seems mostly stable, ignoring the OpenGL issues mentioned above.
-As so many users are using the platform, it also gives us insentive to start looking into further integration with Steam.
+As so many users are using the platform, it also gives us incentive to start looking into further integration with Steam.
 We will get to this back in a bit.
 
 ### Networking
