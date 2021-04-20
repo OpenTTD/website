@@ -49,7 +49,7 @@ What this mean is, that when you start a game, you can indicate if you either wa
 - Friends-only introduces the concept of "invite codes".
 This is a short code you can give to your friends.
 They can enter it in OpenTTD to join your server.
-No fuzz, nothing.
+No fuss, nothing.
 It just does works.
 - Public games are pretty much like the current public servers.
 
@@ -83,7 +83,7 @@ That is to say: you say you want to change the visibility of the game, we reload
 Currently multiplayer is not designed with that in mind, but I am confident we will figure it out.
 
 So what does that mean for you?
-Well .. no fuzz network games.
+Well .. no fuss network games.
 You or your friend starts a game in "Friends-only" setup.
 The other person enters the invite code.
 And magic, you are joined together.
