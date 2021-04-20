@@ -56,7 +56,7 @@ It just does works.
 To allow this to work easier without things like port-forwarding and firewall exceptions etc etc, we will add some modern techniques to OpenTTD to make that all a bit easier.
 
 First of all, we will move away from a mix of UDP and TCP, and switch to TCP only (for now; possibly we go full UDP in the future, but baby-steps).
-Additionally, we are changing completely how the master-server (the component responsive for the server-listing) works, and rebranding it to a game-coordinator.
+Additionally, we are changing completely how the master-server (the component responsible for the server-listing) works, and rebranding it to a game-coordinator.
 
 The game-coordinator has a very important task: if player B wants to join the game of player A with the invite code, he should make that happen.
 We will use several techniques to make this happen.
