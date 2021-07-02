@@ -3,13 +3,13 @@ name: Publish image
 on:
   push:
     branches:
-    - master
+    - main
     tags:
     - '*'
   repository_dispatch:
     types:
     - publish_latest_tag
-    - publish_master
+    - publish_main
 
 concurrency: publish
 
