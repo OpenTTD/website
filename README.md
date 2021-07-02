@@ -1,10 +1,10 @@
 # OpenTTD's website
 
-[![GitHub License](https://img.shields.io/github/license/OpenTTD/website)](https://github.com/OpenTTD/website/blob/master/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/OpenTTD/website)](https://github.com/OpenTTD/website/blob/main/LICENSE)
 [![GitHub Tag](https://img.shields.io/github/v/tag/OpenTTD/website?include_prereleases&label=stable)](https://github.com/OpenTTD/website/releases)
-[![GitHub commits since latest release](https://img.shields.io/github/commits-since/OpenTTD/website/latest/master)](https://github.com/OpenTTD/website/commits/master)
+[![GitHub commits since latest release](https://img.shields.io/github/commits-since/OpenTTD/website/latest/main)](https://github.com/OpenTTD/website/commits/main)
 
-[![GitHub Workflow Status (Testing)](https://img.shields.io/github/workflow/status/OpenTTD/website/Testing/master?label=master)](https://github.com/OpenTTD/website/actions?query=workflow%3ATesting)
+[![GitHub Workflow Status (Testing)](https://img.shields.io/github/workflow/status/OpenTTD/website/Testing/main?label=main)](https://github.com/OpenTTD/website/actions?query=workflow%3ATesting)
 [![GitHub Workflow Status (Publish Image)](https://img.shields.io/github/workflow/status/OpenTTD/website/Publish%20image?label=publish)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Publish+image%22)
 [![GitHub Workflow Status (Deployments)](https://img.shields.io/github/workflow/status/OpenTTD/website/Deployment?label=deployment)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Deployment%22)
 
@@ -13,7 +13,7 @@
 
 
 This is the main website for OpenTTD, as can be seen on [https://www.openttd.org/](https://www.openttd.org/).
-'master' is always deployed on [staging](https://www.staging.openttd.org/).
+`main` is always deployed on [staging](https://www.staging.openttd.org/).
 
 This is a [Jekyll](https://jekyllrb.com/) website, and is served by nginx as a static site.
 
@@ -57,7 +57,7 @@ The Dockerfile is a multistage Dockerfile to get to this result.
 3) Prepare nginx with static files.
 
 The result is a very small image (~50 MiB) with only static HTML sites.
-After merging into `master`, [Azure Pipelines](https://dev.azure.com/openttd/OpenTTD/_build/latest?definitionId=6?branchName=master) automatically publishes a new image on [Docker Hub](https://hub.docker.com/r/openttd/website/tags), and automatically deploys it on [staging](https://www.staging.openttd.org/).
+After merging into `main`, [GitHub Actions](https://github.com/OpenTTD/website/actions) automatically publishes a new image on [Docker Hub](https://hub.docker.com/r/openttd/website/tags), and automatically deploys it on [staging](https://www.staging.openttd.org/).
 
 To test locally if the Docker will build, you can use:
 
