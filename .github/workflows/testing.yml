@@ -29,7 +29,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Flake8
-      uses: TrueBrain/actions-flake8@master
+      uses: TrueBrain/actions-flake8@v2
       with:
         path: fetch_downloads
 
