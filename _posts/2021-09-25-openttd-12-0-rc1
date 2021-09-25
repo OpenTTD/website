@@ -1,0 +1,15 @@
+---
+title: OpenTTD 12.0-RC1
+author: LordAro
+---
+
+Rejoice, for we are now in feature freeze for the 12.0 release series!
+
+One last flurry of features, including properly displaying when a vehicle is lost, and some new buttons for macOS TouchBar, if you have one.
+A fair few fixes for the new networking setup, and a few other things besides.
+
+Testing is more important than ever, so please keep it up (multiplayer especially), and report any issues as normal!
+
+* [Download](https://www.openttd.org/downloads/openttd-releases/testing.html)
+* [Changelog](https://cdn.openttd.org/openttd-releases/12.0-RC1/changelog.txt)
+* [Bug tracker](https://github.com/OpenTTD/OpenTTD/issues)
