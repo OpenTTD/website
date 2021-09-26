@@ -173,8 +173,8 @@ if STUN fails, we fall back to relaying the session over our relay network.
 Of course, we first ask the client nicely if they are okay with their session being relayed, as there won't be a peer-to-peer connection between client and server as they might expect.
 
 Now in result, combining Direct IP, STUN and TURN, every client should be able to connect to every server no matter what, given they can connect to the Internet properly.
-And data from the 12.0-beta series show that roughly 15% of the STUN connections fail and need TURN.
-This means that we only have to pay for 15% of the users, instead of 100%.
+And data from the 12.0-beta series show that roughly 20% of the STUN connections fail and need TURN.
+This means that we only have to pay for 20% of the users, instead of 100%.
 So although our infrastructure cost will go up slightly, it opens up multiplayer for everyone.
 In the end, a small price to pay.
 
