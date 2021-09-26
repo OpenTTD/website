@@ -16,9 +16,11 @@ Playing together are now just four simple steps:
 There is no need to setup port-forwarding, or anything like that.
 The above will just work, for everyone, as long as you have a working Internet connection.
 
-Depending on your connection, there are some extra infrastructure costs to us, but we hope to cover that with donations.
-If our regular donations (and thank you so much for those!) run out, we will let you know, and run some kind of fundraiser.
-In a sense, I guess, this post is also a fundraiser ;)
+Depending on your connection, there are some extra infrastructure costs to us, but we hope to cover that increase with donations.
+Thanks to many of you, we see regular donations.
+This currently covers our infastructure cost, and we currently foresee no issues going forward.
+If this changes, we will let you know, and run some kind of fundraiser.
+Well, I guess in a sense this post is also a fundraiser ;)
 
 As you might understand, this changes the multiplayer experience drastically, and we felt that waiting 6 more months to deliver that to you is not fair.
 As a result: we are releasing 12.0 early!
