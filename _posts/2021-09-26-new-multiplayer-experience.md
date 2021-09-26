@@ -9,51 +9,51 @@ In summary: 12.0 makes setting up multiplayer games painless.
 You no longer need to configure anything in your home network.
 Playing together are now just four simple steps:
 1) You just start a server.
-2) You set the server to invite-only/public.
+2) You set the server to invite-only or public.
 3) You share your invite-code with your friend.
 4) Your friend joins your server based on the invite-code.
 
 There is no need to setup port-forwarding, or anything like that.
 The above will just work, for everyone, as long as you have a working Internet connection.
 
-Depending on your connection, it costs us extra in infrastructure costs, but we hope to cover that with donations.
-If our regular donations (thank you so much for those!) run out, we will let you know, and run some kind of fundraiser.
+Depending on your connection, it causes us some extra infrastructure costs, but we hope to cover that with donations.
+If our regular donations (and thank you so much for those!) run out, we will let you know, and run some kind of fundraiser.
 In a sense, I guess, this post is also a fundraiser ;)
 
 As you might understand, this changes the multiplayer experience drastically, and we felt that waiting 6 more months to deliver that to you is not fair.
-In result: we are releasing 12.0 early!
+As a result: we are releasing 12.0 early!
 
-In this post I want to explain in a bit more details how we got here and how it works.
+In this post, I want to explain in a bit more details how we got here and how it works.
 
 <!-- more -->
 
 After our release on Steam, you guys wrote a lot of positive reviews.
 Over 95% of them are positive!
-I cannot express how happy that makes me: so many of you still enjoy the game, and this number alone makes it worth continue to work on OpenTTD.
+I cannot express how happy that makes me: so many of you still enjoy the game, and this number alone makes it worth continuing to work on OpenTTD.
 
 But that leaves the 5% that did not like the game.
 Although some reviews are just .. weird, a lot of them had clearly written out what they were missing.
 
-The number 1, without a doubt is: no tutorial.
+The number one is, without a doubt: no tutorial.
 Okay, we see you, and even agree.
 Just there is no simple solution for that .. we have some ideas, but it will take a while before that takes shape.
 
-The number 2 was much more interesting to me: I cannot play with my friend.
+The number two is much more interesting to me: I cannot play with my friend.
 I even personally notice that, that I often don't play OpenTTD as I don't fancy playing alone.
-And setting up port-forwarding is, even for me, not trivial.
+And setting up port-forwarding is not trivial, not even for me.
 So, I don't.
 
 This made me wonder: how hard is it to solve this problem in 2021?
-Back in 2007 (when this network implementation was made), there was no real solution, but we are 14 years later .. so, what can we do?
+Back in 2007, when this network implementation was originally made, there was no real solution, but we are 14 years later .. so, what can we do?
 
 Initially we looked into how Steam does it: SDR (Steam Datagram Relay).
-Basically, games using the Steam Multiplayer are likely to use this, and it means all traffic is routed via Steam.
+Basically, games using the Steam Multiplayer system are likely to use this, and it means all traffic is routed via Steam.
 This means that if you can download Steam, you can play together.
 This works really well for a lot of people.
 And a lot of games make use of this.
 
 The problem for us is two-fold:
-using something like this would mean that all the non-Steam players cannot enjoy it, and we still are not sure how to integrate with the Steam SDK.
+using something like this would mean that all the non-Steam players cannot enjoy it, and we still are not sure, from a license-standpoint, how to integrate with the Steam SDK.
 
 This made me wonder.
 What happens if we build our own "SDR", where we just relay every session via our servers?
@@ -77,23 +77,23 @@ Which is a lot better, in every way you look at it.
 This sounds like a promising solution for OpenTTD too:
 - If the server is using port-forwarding, connect to it directly. We call this "Direct IP".
 - Otherwise, try to connect the server and client via some clever network tricks. We call this "STUN".
-- If that all fail, use our freshly created relay service. We call this "TURN".
+- If that all fails, use our freshly created relay service. We call this "TURN".
 
 And this is what 12.0 delivers.
-A very simple, newbie friendly, no configuration needed, network solution.
+A very simple, user friendly, no configuration needed, network solution.
 This will completely change how you play online with OpenTTD, basically.
 
 But this change is not trivial.
 Where in the old situation a server always used port-forwarding, it can now be that a server is not reachable from the Internet.
 So how does the server know a client wants to connect to him, so we can execute those network tricks?
 
-To solve this issue, we had to introduce a new service: Game Coordinator.
+To solve this issue, we had to introduce a new service: the Game Coordinator.
 A server always has a persistent connection to the Game Coordinator.
 If a client wishes to connect to the server, it tells the Game Coordinator.
 And the Game Coordinator can now coordinate (see where the name comes from?) the connection, as it can talk with both the server and client now.
 
 This is a radical change in how OpenTTD does connection setup, and required some huge changes in our code.
-In total, 67 file changes, 5955 insertions, 3475 deletions were needed to make it happen.
+In total, 67 file changes, 5955 insertions, and 3475 deletions were needed to make it happen.
 
 As added benefit, it also means OpenTTD no longer listens on UDP for public games.
 It still uses UDP to discover LAN games, but no longer do you need to port-forward the UDP port if you want to use "Direct IP".
@@ -108,7 +108,7 @@ That all said and done, there is still a lot of future work.
 This will not be done for the 12-series, and possibly not even for the 13-series, but are things we see as good additions to this new multiplayer experience:
 - Integration with Discord / Steam.
 - Automatically download BaNaNaS content if possible.
-- Change a singleplayer game into a multiplayer game seamlessly.
+- Seamlessly change a singleplayer game into a multiplayer game.
 And so much more.
 But for all these things, we need more help.
 So, if you are interested in helping us out, code-wise, to make the above a reality, drop by on IRC and ask where you can help out!
@@ -128,7 +128,7 @@ With port-forwarding you tell your NATs and firewalls to expect an incoming conn
 But outgoing connections normally aren't checked, and you can freely create any to anywhere on the Internet.
 
 So, the trick STUN uses comes down to this:
-the client and server at the same time make an outgoing connection to each other.
+the client and server, at the same time, make an outgoing connection to each other.
 If done properly, both the NATs and firewalls think it is their outgoing connection, and as such allow bi-directional communication between the client and server.
 Without anything sitting between them.
 
