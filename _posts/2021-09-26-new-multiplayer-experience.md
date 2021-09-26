@@ -16,7 +16,7 @@ Playing together are now just four simple steps:
 There is no need to setup port-forwarding, or anything like that.
 The above will just work, for everyone, as long as you have a working Internet connection.
 
-Depending on your connection, it causes us some extra infrastructure costs, but we hope to cover that with donations.
+Depending on your connection, there are some extra infrastructure costs to us, but we hope to cover that with donations.
 If our regular donations (and thank you so much for those!) run out, we will let you know, and run some kind of fundraiser.
 In a sense, I guess, this post is also a fundraiser ;)
 
@@ -27,7 +27,7 @@ In this post, I want to explain in a bit more details how we got here and how it
 
 <!-- more -->
 
-After our release on Steam, you guys wrote a lot of positive reviews.
+After our release on Steam, we got a lot of positive reviews.
 Over 95% of them are positive!
 I cannot express how happy that makes me: so many of you still enjoy the game, and this number alone makes it worth continuing to work on OpenTTD.
 
@@ -36,9 +36,9 @@ Although some reviews are just .. weird, a lot of them had clearly written out w
 
 The number one is, without a doubt: no tutorial.
 Okay, we see you, and even agree.
-Just there is no simple solution for that .. we have some ideas, but it will take a while before that takes shape.
+Just there is no simple solution for that .. we have some ideas, but it will be a while before that takes shape.
 
-The number two is much more interesting to me: I cannot play with my friend.
+The number two was much more interesting to me: I cannot play with my friend.
 I even personally notice that, that I often don't play OpenTTD as I don't fancy playing alone.
 And setting up port-forwarding is not trivial, not even for me.
 So, I don't.
@@ -125,7 +125,7 @@ The "outgoing connection" part just means from which side the connection was ini
 Normally, NATs and firewalls block incoming connections, but not outgoing connections.
 
 With port-forwarding you tell your NATs and firewalls to expect an incoming connection on a certain port, and to send those to your computer.
-But outgoing connections normally aren't checked, and you can freely create any to anywhere on the Internet.
+But outgoing connections normally aren't checked, and you can freely create connections to anywhere on the Internet.
 
 So, the trick STUN uses comes down to this:
 the client and server, at the same time, make an outgoing connection to each other.
