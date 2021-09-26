@@ -23,20 +23,20 @@ In a sense, I guess, this post is also a fundraiser ;)
 As you might understand, this changes the multiplayer experience drastically, and we felt that waiting 6 more months to deliver that to you is not fair.
 In result: we are releasing 12.0 early!
 
-Anyway, in this post I want to explain in a bit more details how we got here, how it works, and why we release early.
+In this post I want to explain in a bit more details how we got here and how it works.
 
 <!-- more -->
 
-After our release on Steam, we saw a lot of positive reviews coming in.
-Over 95% of the reviews is positive!
-I cannot express how happy that makes me to see that so many of you still enjoy the game, and this number alone makes it worth working on OpenTTD.
+After our release on Steam, you guys wrote a lot of positive reviews.
+Over 95% of them are positive!
+I cannot express how happy that makes me: so many of you still enjoy the game, and this number alone makes it worth continue to work on OpenTTD.
 
 But that leaves the 5% that did not like the game.
 Although some reviews are just .. weird, a lot of them had clearly written out what they were missing.
 
 The number 1, without a doubt is: no tutorial.
 Okay, we see you, and even agree.
-Just there is no simple solution for that .. we have some ideas, but it will be a while before that takes shape.
+Just there is no simple solution for that .. we have some ideas, but it will take a while before that takes shape.
 
 The number 2 was much more interesting to me: I cannot play with my friend.
 I even personally notice that, that I often don't play OpenTTD as I don't fancy playing alone.
@@ -64,13 +64,13 @@ And this is not cheap.
 We did some early math, and realised the bandwidth-bill could peak to an amount we cannot cover by donations.
 
 So, if that doesn't work, what else is out there?
-If you look into relaying, you find TURN (I will explain in a bit what this is).
-If you find TURN, you find STUN (I will explain in a bit what this is).
+If you look into relaying, you find TURN (I will explain this in a bit).
+If you find TURN, you find STUN (I will also explain this in a bit).
 And this is how VoIP phones work.
 VoIP services don't want to pay for bandwidth if they can help it, so what they do is pretty clever:
 - First, try to directly connect to the other phone.
 - If it fails, try some clever network tricks to connect two phones together (called STUN).
-- If that fails, relay the connection via their server (called TURN).
+- If that fails, relay the connection via the VoIP servers (called TURN).
 
 As the first two cover 80% of the connections, instead of paying for 100% of your clients, you only pay for 20%.
 Which is a lot better, in every way you look at it.
@@ -93,7 +93,7 @@ If a client wishes to connect to the server, it tells the Game Coordinator.
 And the Game Coordinator can now coordinator (see where the name comes from?) the connection, as it can talk with both the server and client now.
 
 This is a radical change in how OpenTTD does connection setup, and required some huge changes in our code.
-In total, 67 files changes, 5955 insertions, 3475 deletions were needed to make it happen.
+In total, 67 file changes, 5955 insertions, 3475 deletions were needed to make it happen.
 
 As added benefit, it also means OpenTTD no longer listens on UDP for public games.
 It still uses UDP to discover LAN games, but no longer do you need to port-forward the UDP port if you want to use "Direct IP".
@@ -125,17 +125,18 @@ The "outgoing connection" part just means from which side the connection was ini
 Normally, NATs and firewalls block incoming connections, but not outgoing connections.
 
 With port-forwarding you tell your NATs and firewalls to expect an incoming connection on a certain port, and to send those to your computer.
-But outgoing connections normally aren't checked, and you can freely create any to anywhere on the internet.
+But outgoing connections normally aren't checked, and you can freely create any to anywhere on the Internet.
 
 So, the trick STUN uses comes down to this:
-The client and server at the same time make an outgoing connection to each other.
-If done properly, both the NATs and firewalls think it is their outgoing connection, and as such allow bi-directional communication.
+the client and server at the same time make an outgoing connection to each other.
+If done properly, both the NATs and firewalls think it is their outgoing connection, and as such allow bi-directional communication between the client and server.
+Without anything sitting between them.
 
-But you say: wuth? how? this .. no, this cannot be possible.
+But you say: wuth? how? this .. no, this cannot be possible, can it?
 
 Well, no, not in the way I describe above.
 We need an extra trick for it to work: a STUN server.
-How the flow works:
+How this works:
 
 - Client asks the Game Coordinator to connect them to server.
 - Game Coordinator tells client and server to make a STUN request.
@@ -160,20 +161,25 @@ The expensive types.
 The ones corporations have.
 So, there we see STUN failing.
 
-There are a few more scenarios, but for now: not all connections can be made via STUN.
+Also important to mention that STUN works best with UDP.
+OpenTTD uses TCP.
+So, a bit more trickery is needed on a technical level, but this also means some cheaper NATs do not always work the first try.
+Our solution?
+If it fails, just try again ;)
 
-And this is where TURN comes in: if STUN fails, we fall back to relaying the session over our relay network.
-Of course, we first as the client nicely if they are okay with it, as there won't be a peer-to-peer connection between client and server.
+But this does mean STUN doesn't always work.
+And this is where TURN comes in:
+if STUN fails, we fall back to relaying the session over our relay network.
+Of course, we first ask the client nicely if they are okay with their session being relayed, as there won't be a peer-to-peer connection between client and server as they might expect.
 
-In result, every client should be able to connect to every server no matter what, given they can connect to the Internet properly.
-
+Now in result, combining Direct IP, STUN and TURN, every client should be able to connect to every server no matter what, given they can connect to the Internet properly.
 And data from the 12.0-beta series show that roughly 15% of the STUN connections fail and need TURN.
 This means that we only have to pay for 15% of the users, instead of 100%.
+So although our infrastructure cost will go up slightly, it opens up multiplayer for everyone.
+In the end, a small price to pay.
 
 So, there you have it: our new multiplayer experience.
-From a technical view, it is a lot more complex.
-From a user view, it is as trivial as it gets.
+From a technical view, a lot more complex.
+From a user view, as trivial as it gets.
 
-If you have any further questions or interests, feel free to contact me via email, Discord or IRC.
-
-
+If you have any further questions or interests about this, feel free to contact me (TrueBrain) via email, Discord or IRC.
