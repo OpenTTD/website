@@ -32,7 +32,7 @@ Over 95% of them are positive!
 I cannot express how happy that makes me: so many of you still enjoy the game, and this number alone makes it worth continuing to work on OpenTTD.
 
 But that leaves the 5% that did not like the game.
-Although some reviews are just .. weird, a lot of them had clearly written out what they were missing.
+A lot of reviews have clearly written out what they were missing.
 
 The number one is, without a doubt: no tutorial.
 Okay, we see you, and even agree.
@@ -91,6 +91,9 @@ To solve this issue, we had to introduce a new service: the Game Coordinator.
 A server always has a persistent connection to the Game Coordinator.
 If a client wishes to connect to the server, it tells the Game Coordinator.
 And the Game Coordinator can now coordinate (see where the name comes from?) the connection, as it can talk with both the server and client now.
+
+As implementation-wise it was easier, the Game Coordinator includes the functionality of the Master Server.
+The Master Server will remain running for pre 12.0 clients/servers, but is otherwise deprecated.
 
 This is a radical change in how OpenTTD does connection setup, and required some huge changes in our code.
 In total, 67 file changes, 5955 insertions, and 3475 deletions were needed to make it happen.
