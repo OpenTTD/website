@@ -90,7 +90,7 @@ So how does the server know a client wants to connect to him, so we can execute 
 To solve this issue, we had to introduce a new service: Game Coordinator.
 A server always has a persistent connection to the Game Coordinator.
 If a client wishes to connect to the server, it tells the Game Coordinator.
-And the Game Coordinator can now coordinator (see where the name comes from?) the connection, as it can talk with both the server and client now.
+And the Game Coordinator can now coordinate (see where the name comes from?) the connection, as it can talk with both the server and client now.
 
 This is a radical change in how OpenTTD does connection setup, and required some huge changes in our code.
 In total, 67 file changes, 5955 insertions, 3475 deletions were needed to make it happen.
