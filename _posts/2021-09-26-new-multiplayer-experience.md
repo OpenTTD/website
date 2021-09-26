@@ -108,7 +108,7 @@ That all said and done, there is still a lot of future work.
 This will not be done for the 12-series, and possibly not even for the 13-series, but are things we see as good additions to this new multiplayer experience:
 - Integration with Discord / Steam.
 - Automatically download BaNaNaS content if possible.
-- Change a singleplayer game into a multiplayer game seamless.
+- Change a singleplayer game into a multiplayer game seamlessly.
 And so much more.
 But for all these things, we need more help.
 So, if you are interested in helping us out, code-wise, to make the above a reality, drop by on IRC and ask where you can help out!
@@ -174,7 +174,7 @@ Of course, we first ask the client nicely if they are okay with their session be
 
 Now in result, combining Direct IP, STUN and TURN, every client should be able to connect to every server no matter what, given they can connect to the Internet properly.
 And data from the 12.0-beta series show that roughly 20% of the STUN connections fail and need TURN.
-This means that we only have to pay for 20% of the users, instead of 100%.
+This means that we only have to pay for 20% of the users not using Direct IP, instead of 100%.
 So although our infrastructure cost will go up slightly, it opens up multiplayer for everyone.
 In the end, a small price to pay.
 
