@@ -13,7 +13,7 @@
 
 
 This is the main website for OpenTTD, as can be seen on [https://www.openttd.org/](https://www.openttd.org/).
-`main` is always deployed on [staging](https://www.staging.openttd.org/).
+`main` is always deployed on [staging](https://www-staging.openttd.org/).
 
 This is a [Jekyll](https://jekyllrb.com/) website, and is served by nginx as a static site.
 
@@ -57,7 +57,7 @@ The Dockerfile is a multistage Dockerfile to get to this result.
 3) Prepare nginx with static files.
 
 The result is a very small image (~50 MiB) with only static HTML sites.
-After merging into `main`, [GitHub Actions](https://github.com/OpenTTD/website/actions) automatically publishes a new image on [Docker Hub](https://hub.docker.com/r/openttd/website/tags), and automatically deploys it on [staging](https://www.staging.openttd.org/).
+After merging into `main`, [GitHub Actions](https://github.com/OpenTTD/website/actions) automatically publishes a new image on [GitHub Container Registry](https://github.com/OpenTTD/website/pkgs/container/website), and automatically deploys it on [staging](https://www-staging.openttd.org/).
 
 To test locally if the Docker will build, you can use:
 
@@ -72,7 +72,7 @@ docker build --no-cache --pull -t website:test .
 Create a new file in _posts.
 Follow the existing format.
 Make a Pull Request, have it approved, and merge.
-It will automatically show up on [staging](https://www.staging.openttd.org/).
+It will automatically show up on [staging](https://www-staging.openttd.org/).
 After tagging, it will move to [production](https://www.openttd.org/).
 
 ### I am a developer, and want to be on the website
