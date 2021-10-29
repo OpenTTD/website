@@ -1,0 +1,3 @@
+👋 Welcome to OpenTTD's website devcontainer!
+
+📝 Press F1 -> "Tasks: Run Tasks" -> "Start server" to start Jekyll. After that, edit away!

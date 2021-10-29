@@ -19,16 +19,25 @@ This is a [Jekyll](https://jekyllrb.com/) website, and is served by nginx as a s
 
 ## Development
 
-### Populating _downloads
+### Running via devcontainer / VSCode Remote Containers / GitHub Codespaces
+
+If you open up this repository with VSCode Remote Containers or GitHub Codespaces, it will automatically set up the development environment for you.
+You are immediately ready for development.
+
+There are two predefined tasks for you (you can access these via F1 -> "Run Tasks"):
+- "Update downloads": fetches the latest downloads available. This is also done on start-up of the devcontainer.
+- "Start server": starts the webserver. A popup will show to open the browser to view the website.
+
+### Populating _downloads (only for any of the below methods of development)
 
 By default `_downloads` is empty, so when building the website locally there is no latest stable/nightly.
 This can be resolved by running `fetch_downloads`.
 This script will download the latest available binaries, and populate `_downloads`.
 
 ```bash
-python3 -m venv .env
-.env/bin/pip install -r requirements.txt
-.env/bin/python -m fetch_downloads
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python -m fetch_downloads
 ```
 
 ### Running a local server

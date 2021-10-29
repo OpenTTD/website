@@ -16,7 +16,7 @@ plugins:
 
 exclude:
   - Dockerfile
-  - fetch-downloads.py
+  - fetch_downloads
   - nginx.default.conf
   - requirements.base
   - requirements.txt
