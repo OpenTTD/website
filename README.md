@@ -26,9 +26,9 @@ This can be resolved by running `fetch_downloads`.
 This script will download the latest available binaries, and populate `_downloads`.
 
 ```bash
-python3 -m venv .env
-.env/bin/pip install -r requirements.txt
-.env/bin/python -m fetch_downloads
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python -m fetch_downloads
 ```
 
 ### Running a local server
