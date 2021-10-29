@@ -1,8 +1,8 @@
 __pycache__/
 *.pyc
-/.env
 /.jekyll-cache/
 /.jekyll-metadata/
 /.sass-cache/
+/.venv/
 /_downloads/**
 /_site/
