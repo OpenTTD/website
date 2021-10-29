@@ -1,14 +1,12 @@
 {
 	"name": "Ruby",
 	"runArgs": ["--init"],
-	"build": {
-		"context": "..",
-		"dockerfile": "Dockerfile",
-		"args": {
-			"VARIANT": "2-bullseye",
-			"NODE_VERSION": "lts/*"
-		}
-	},
+	"image": "ghcr.io/truebrain/openttd-website:devcontainer",
+	// Disable "image" and enable "build" if you want to rebuild the devcontainer locally.
+	// "build": {
+	// 	"context": "..",
+	// 	"dockerfile": "base.Dockerfile",
+	// },
 
 	"settings": {
 		"python.linting.enabled": true,

@@ -1,0 +1,42 @@
+name: Pre-build devcontainer
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+    paths:
+      - Gemfile
+      - Gemfile.lock
+      - '.devcontainer/**'
+      - '.vscode/**'
+
+concurrency: devcontainer
+
+jobs:
+  publish_image:
+    name: Publish image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set variables
+      id: vars
+      run: |
+        REPOSITORY_LC=$(echo "${{ github.repository }}" | tr [A-Z] [a-z])
+        echo "::set-output name=name::${REPOSITORY_LC}"
+
+    - name: Build
+      run: |
+        docker build -t ghcr.io/${{ steps.vars.outputs.name }}:devcontainer -f .devcontainer/base.Dockerfile .
+
+    - name: Publish
+      uses: openttd/actions/docker-publish@v2
+      with:
+        registry-username: ${{ secrets.GHCR_USERNAME }}
+        registry-password: ${{ secrets.GHCR_PASSWORD }}
+        registry: ghcr.io
+        name: ${{ steps.vars.outputs.name }}
+        tag: devcontainer
