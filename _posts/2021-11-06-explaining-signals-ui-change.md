@@ -72,6 +72,8 @@ This design is also relatively simple and compact, but it does lose some capacit
 
 This is a through-station on a line, with two platforms per direction on the line.
 There are one-way path signals at the exit of each platform, and one-way path signals before the switching point to select which platform to use.
+The signals at the platform exit are needed as otherwise the first train to enter a platform would also block the path out of the station up to the next signal.
+The signal after the platform breaks this path and makes sure that trains waiting in the station will not block trains from leaving the station.
 
 This station design lets one train enter a platform while another train is stopped or leaving the other platform in the same direction.
 That makes it efficient even for busy stations.
