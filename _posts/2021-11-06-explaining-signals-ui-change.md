@@ -4,7 +4,7 @@ author: nielsmh
 ---
 
 In OpenTTD version 12, we changed rail signals building UI only shows the Path Signal types by default.
-It was implemented in [PR#8688](https://github.com/OpenTTD/OpenTTD/pull/8688), for those who want to see the development history.
+It was implemented in [pull request #8688](https://github.com/OpenTTD/OpenTTD/pull/8688), for those who want to see the development history.
 This is the one change in version 12 that has by far caused the most questions everywhere, so let's talk a bit more about it, and show some examples of simple signal setups for path signals.
 
 ![The simplified signal building UI]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/signals-ui.png %})
@@ -13,13 +13,13 @@ The reason for hiding the block signals by default is to make it easier to choos
 For almost all players, path signals are the easier choice, that will cause fewer issues in your network.
 One question would then be, if path signals are better, why are block signals then in the game?
 The simple answer is, because they always were there.
-It was the only type of signal in the original game, and it's not really possible to remove them without making it impossible to load old saved games.
+It was the only type of signal in the original game, and if we removed them, then old saved games would stop working.
 
 As for why path signals are generally better than block signals, the reason is that path signals don't reserve entire blocks, but only pieces of track.
 When a train wants to pass a block signal, the train asks the block signal to find all other signals on the other side, and turn them to red.
 Nobody else can enter this area.
 When a train wants to pass a path signal, the path signal finds a way to where the train is going, and blocks off (reserves) just those pieces of track.
-Other trains can still go into the same area, as long as they won't touch the reserved path.
+Other trains can still go into the same area, as long as they won't touch the reserved pieces of track.
 This means more trains can go through the same area at a time.
 
 <!-- more -->
@@ -60,6 +60,7 @@ This design is simple, compact, and good for moderate traffic.
 
 This is a terminus station, with two lines connecting to it.
 It works very much like the one above, but it's larger and the switching area needs to take up more space.
+Trains can enter the station from the left and bottom lines at the same time, as long as they don't need to cross.
 
 The signal setup works the same way:
 Trains entering or leaving the station look for a free path to go where they want.
