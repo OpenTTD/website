@@ -7,7 +7,7 @@ In OpenTTD version 12, we changed rail signals building UI only shows the Path S
 It was implemented in [PR#8688](https://github.com/OpenTTD/OpenTTD/pull/8688), for those who want to see the development history.
 This is the one change in version 12 that has by far caused the most questions everywhere, so let's talk a bit more about it, and show some examples of simple signal setups for path signals.
 
-![The simplified signal building UI]({% link /static/img/post_explaining-signals-ui-change/signals-ui.png %})
+![The simplified signal building UI]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/signals-ui.png %})
 
 The reason for hiding the block signals by default is to make it easier to choose a signal.
 For almost all players, path signals are the easier choice, that will cause fewer issues in your network.
@@ -42,7 +42,7 @@ That's why we want to guide players, especially new players, to use path signals
 Now let's look at some examples of common layouts with path signals.
 All of these examples use right-hand drive for the trains.
 
-![Terminus station with one line connecting]({% link /static/img/post_explaining-signals-ui-change/terminus-station-1.png %})
+![Terminus station with one line connecting]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/terminus-station-1.png %})
 
 This is a terminus station, with one line connecting to it, and a train depot.
 Because it's a terminus station, the points to select platform can be right next to the platform, no signal is needed between the platform and the points.
@@ -56,7 +56,7 @@ Trains only go to the depot if they are ordered to go there.
 
 This design is simple, compact, and good for moderate traffic.
 
-![Terminus station with two lines connecting]({% link /static/img/post_explaining-signals-ui-change/terminus-station-2.png %})
+![Terminus station with two lines connecting]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/terminus-station-2.png %})
 
 This is a terminus station, with two lines connecting to it.
 It works very much like the one above, but it's larger and the switching area needs to take up more space.
@@ -68,7 +68,7 @@ If the path is blocked, such as if all platforms are blocked, or another train i
 
 This design is also relatively simple and compact, but it does lose some capacity when several lines need to cross.
 
-![Through station with two platforms per direction]({% link /static/img/post_explaining-signals-ui-change/through-station.png %})
+![Through station with two platforms per direction]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/through-station.png %})
 
 This is a through-station on a line, with two platforms per direction on the line.
 There are one-way path signals at the exit of each platform, and one-way path signals before the switching point to select which platform to use.
@@ -78,7 +78,7 @@ The signal after the platform breaks this path and makes sure that trains waitin
 This station design lets one train enter a platform while another train is stopped or leaving the other platform in the same direction.
 That makes it efficient even for busy stations.
 
-![Roll-on/Roll-off station with one line connecting]({% link /static/img/post_explaining-signals-ui-change/ro-ro-station.png %})
+![Roll-on/Roll-off station with one line connecting]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/ro-ro-station.png %})
 
 This is a roll-on/roll-off (ro-ro) station, with one line connecting to it.
 Trains entering the station come from the upper track on the right, drive around the industry, and then meet the one-way path signal protecting entry to the station platforms, on the bottom left.
@@ -87,14 +87,14 @@ As soon as an entering train clears the point turning in to the platform, anothe
 
 This design is much more efficient than a terminus station, when a lot of trains need to enter, load/unload, and then leave the same way.
 
-![Flat Y-merge of two lines, without bridges]({% link /static/img/post_explaining-signals-ui-change/y-junction.png %})
+![Flat Y-merge of two lines, without bridges]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/y-junction.png %})
 
 This is a flat Y-merge junction, merging two lines into one.
 Trains can pass each other at the junction, without stopping, as long as they don't cross paths.
 
 This is a good and simple design for moderate traffic. When the network gets busier, you may need to upgrade this with a bridge or a tunnel, for example like this:
 
-![Y-merge of two lines, with a bridge avoiding level crossing]({% link /static/img/post_explaining-signals-ui-change/y-junction-bridge.png %})
+![Y-merge of two lines, with a bridge avoiding level crossing]({% link /static/img/post_2021-11-06-explaining-signals-ui-change/y-junction-bridge.png %})
 
 These six examples can be uses as basis to build large train networks that will also be efficient.
 It's also possible to extend them all with more tracks and such, as needed.
