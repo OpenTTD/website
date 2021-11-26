@@ -31,6 +31,7 @@ RUN apk --no-cache add \
         libstdc++ \
         ruby \
         ruby-bigdecimal \
+        ruby-bundler \
         ruby-dev \
         ruby-etc \
         ruby-json \
