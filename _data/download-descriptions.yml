@@ -132,6 +132,10 @@ linux-ubuntu-groovy-amd64-dbg.deb:
   description: Debug Symbols for Linux Ubuntu Groovy 20.10 (x86_64, 64 bit)
 linux-ubuntu-groovy-amd64.deb:
   description: Linux Ubuntu Groovy 20.10 (x86_64, 64 bit)
+linux-ubuntu-jammy-amd64-dbg.deb:
+  description: Debug Symbols for Linux Ubuntu Jammy 22.04 (x86_64, 64 bit)
+linux-ubuntu-jammy-amd64.deb:
+  description: Linux Ubuntu Jammy 22.04 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64-dbg.deb:
   description: Debug Symbols for Linux Ubuntu Karmic 9.10 (x86_64, 64 bit)
 linux-ubuntu-karmic-amd64.deb:
