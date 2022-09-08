@@ -257,23 +257,23 @@ source.zip:
 win.zip:
   description: Headers/libraries to compile with MSVC for Windows
 windows-arm64.exe:
-  description: Windows 10 (ARM64) (installer)
+  description: Windows 10 / 11 (ARM64) (installer)
 windows-arm64.pdb.xz:
   description: Debug Symbols for Windows (ARM64) (xz/lzma archive)
 windows-arm64.zip:
-  description: Windows 10 (ARM64) (zip archive)
+  description: Windows 10 / 11 (ARM64) (zip archive)
 windows-win32.exe:
-  description: Windows Vista / 7 / 8 / 10 (32-bit) (installer)
+  description: Windows Vista / 7 / 8 / 10 / 11 (32-bit) (installer)
 windows-win32.pdb.xz:
   description: Debug Symbols for Windows (32-bit) (xz/lzma archive)
 windows-win32.zip:
-  description: Windows Vista / 7 / 8 / 10 (32-bit) (zip archive)
+  description: Windows Vista / 7 / 8 / 10 / 11 (32-bit) (zip archive)
 windows-win64.exe:
-  description: Windows Vista / 7 / 8 / 10 (64-bit) (installer)
+  description: Windows Vista / 7 / 8 / 10 / 11 (64-bit) (installer)
 windows-win64.pdb.xz:
   description: Debug Symbols for Windows (64-bit) (xz/lzma archive)
 windows-win64.zip:
-  description: Windows Vista / 7 / 8 / 10 (64-bit) (zip archive)
+  description: Windows Vista / 7 / 8 / 10 / 11 (64-bit) (zip archive)
 windows-win9x.exe:
   description: Windows 95 / 98 / ME / 2000 / XP without SP3 (installer)
 windows-win9x.zip:
