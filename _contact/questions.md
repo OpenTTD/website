@@ -7,7 +7,7 @@ locations:
   link: https://www.tt-forums.net/viewforum.php?f=31
 - name: Discord
   caption: OpenTTD's Discord
-  link: https://discord.gg/hKzMGUx
+  link: https://discord.gg/openttd
 - name: Reddit
   caption: /r/openttd/
   link: https://www.reddit.com/r/openttd/
