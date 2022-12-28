@@ -4,9 +4,9 @@
 [![GitHub Tag](https://img.shields.io/github/v/tag/OpenTTD/website?include_prereleases&label=stable)](https://github.com/OpenTTD/website/releases)
 [![GitHub commits since latest release](https://img.shields.io/github/commits-since/OpenTTD/website/latest/main)](https://github.com/OpenTTD/website/commits/main)
 
-[![GitHub Workflow Status (Testing)](https://img.shields.io/github/workflow/status/OpenTTD/website/Testing/main?label=main)](https://github.com/OpenTTD/website/actions?query=workflow%3ATesting)
-[![GitHub Workflow Status (Publish Image)](https://img.shields.io/github/workflow/status/OpenTTD/website/Publish%20image?label=publish)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Publish+image%22)
-[![GitHub Workflow Status (Deployments)](https://img.shields.io/github/workflow/status/OpenTTD/website/Deployment?label=deployment)](https://github.com/OpenTTD/website/actions?query=workflow%3A%22Deployment%22)
+[![GitHub Workflow Status (Testing)](https://img.shields.io/github/actions/workflow/status/OpenTTD/website/testing.yml?branch=main&label=main)](https://github.com/OpenTTD/website/actions/workflows/testing.yml)
+[![GitHub Workflow Status (Publish Image)](https://img.shields.io/github/actions/workflow/status/OpenTTD/website/publish.yml?label=publish)](https://github.com/OpenTTD/website/actions/workflows/publish.yml)
+[![GitHub Workflow Status (Deployments)](https://img.shields.io/github/actions/workflow/status/OpenTTD/website/deployment.yml?label=deployment)](https://github.com/OpenTTD/website/actions/workflows/deployment.yml)
 
 [![GitHub deployments (Staging)](https://img.shields.io/github/deployments/OpenTTD/website/staging?label=staging)](https://github.com/OpenTTD/website/deployments)
 [![GitHub deployments (Production)](https://img.shields.io/github/deployments/OpenTTD/website/production?label=production)](https://github.com/OpenTTD/website/deployments)
