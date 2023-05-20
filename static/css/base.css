@@ -9,6 +9,9 @@ html {
 }
 body {
 	margin: auto auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 select {
 	color: black;
@@ -163,6 +166,7 @@ main {
 	padding: 7px;
 	border-radius: 5px;
 	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
+	flex: 1;
 }
 body > footer {
 	background-color: white;
