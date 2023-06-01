@@ -15,9 +15,7 @@ plugins:
   - jekyll-paginate-v2
 
 exclude:
-  - Dockerfile
   - fetch_downloads
-  - nginx.default.conf
   - requirements.base
   - requirements.txt
   - thirdparty
