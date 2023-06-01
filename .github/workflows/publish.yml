@@ -1,73 +1,66 @@
-name: Publish image
+name: Publish
 
 on:
   push:
     branches:
     - main
-    tags:
-    - '*'
+  pull_request_target:
+    branches:
+    - main
   repository_dispatch:
     types:
     - publish_latest_tag
-    - publish_main
 
-concurrency: publish
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+  deployments: write
 
 jobs:
-  publish_image:
-    name: Publish image
+  publish:
+    name: Publish
+
     runs-on: ubuntu-latest
+
+    environment:
+      name: ${{ github.event_name == 'push' && 'Production' || 'Preview' }}
+      url: ${{ steps.pages.outputs.url }}
 
     steps:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0
+        ref: ${{ github.event.pull_request.head.sha || github.ref }}
+        submodules: true
 
-    - if: github.event_name == 'repository_dispatch'
-      name: Repository dispatch
-      uses: openttd/actions/checkout-dispatch@v2
-
-    - name: Checkout tags and submodules
-      uses: openttd/actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        with-tags: true
-        with-submodules: true
+        ruby-version: 3.0
+        bundler-cache: true
 
-    - name: Set variables
-      id: vars
-      uses: openttd/actions/docker-vars@v2
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        registry-username: ${{ secrets.GHCR_USERNAME }}
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: python -m pip install -r requirements.txt
 
     - name: Build
-      uses: openttd/actions/docker-build@v2
-      with:
-        name: ${{ steps.vars.outputs.name }}
-        tag: ${{ steps.vars.outputs.tag }}
-        tags: ${{ steps.vars.outputs.tags }}
-        version: ${{ steps.vars.outputs.version }}
-        date: ${{ steps.vars.outputs.date }}
-        registry: ghcr.io
+      run: |
+        python -m fetch_downloads
+        JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
 
-    - if: steps.vars.outputs.dry-run == 'false'
-      name: Publish
-      id: publish
-      uses: openttd/actions/docker-publish@v2
+    - name: Publish to Cloudflare Pages
+      uses: cloudflare/pages-action@v1
+      id: pages
       with:
-        registry-username: ${{ secrets.GHCR_USERNAME }}
-        registry-password: ${{ secrets.GHCR_PASSWORD }}
-        registry: ghcr.io
-        name: ${{ steps.vars.outputs.name }}
-        tag: ${{ steps.vars.outputs.tag }}
-
-    - if: steps.vars.outputs.dry-run == 'false'
-      name: Trigger deployment
-      uses: openttd/actions/deployments-create@v2
-      with:
-        ref: ${{ steps.vars.outputs.sha }}
-        environment: ${{ steps.vars.outputs.environment }}
-        version: ${{ steps.vars.outputs.version }}
-        date: ${{ steps.vars.outputs.date }}
-        docker-tag: ${{ steps.publish.outputs.remote-tag }}
-        github-token: ${{ secrets.DEPLOYMENT_TOKEN }}
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+        directory: _site
+        branch: ${{ github.event_name == 'push' && github.ref_name || github.event_name == 'repository_dispatch' && 'main' || format('pull/{0}', github.event.pull_request.number) }}
