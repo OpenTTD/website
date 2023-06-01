@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-/.git/**
-/.jekyll-cache/
-/.jekyll-metadata/
-/.sass-cache/
-/.venv/
-/_downloads/**
-/_site/
