@@ -181,6 +181,21 @@ body > footer {
 #content-bottom-links {
 	font-size: 11px;
 	padding: 3px 5px;
+	display: flex;
+	list-style: none;
+	margin: 0;
+}
+#content-bottom-links li:not(:last-child)::after {
+	content: "|";
+}
+#content-bottom-links li a {
+	display: inline-block;
+}
+#content-bottom-links li:not(:first-child) a {
+	margin-left: 3px;
+}
+#content-bottom-links li:not(:last-child) a {
+	margin-right: 3px;
 }
 #content-bottom-copyright {
 	font-size: 11px;
