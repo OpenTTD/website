@@ -178,9 +178,11 @@ body > footer {
 	border-radius: 5px;
 	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
 }
-#content-bottom-links {
+body > footer > * {
 	font-size: 11px;
 	padding: 3px 5px;
+}
+#content-bottom-links {
 	display: flex;
 	list-style: none;
 	margin: 0;
@@ -196,10 +198,6 @@ body > footer {
 }
 #content-bottom-links li:not(:last-child) a {
 	margin-right: 3px;
-}
-#content-bottom-copyright {
-	font-size: 11px;
-	padding: 3px 5px;
 }
 #hr-clear {
 	clear: both;
