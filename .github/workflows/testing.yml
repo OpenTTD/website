@@ -57,13 +57,13 @@ jobs:
     name: Flake8
     uses: OpenTTD/actions/.github/workflows/rw-py-flake8.yml@v4
     with:
-      path: fetch_downloads
+      python-path: fetch_downloads
 
   black:
     name: Black
     uses: OpenTTD/actions/.github/workflows/rw-py-black.yml@v4
     with:
-      path: fetch_downloads
+      python-path: fetch_downloads
       python-version: 3.8
 
   annotation_check:
