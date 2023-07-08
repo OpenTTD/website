@@ -5,7 +5,7 @@ author: TrueBrain
 
 This post is part of a two-part series, of which this is the first.
 In this post, we go a bit into the infrastructure that runs OpenTTD, from BaNaNaS to our main website.
-The second post will explain a bit about the migration we just did to get to this infrastructure.
+The [second post](/news/2023/07/09/infra-migration) will explain a bit about the migration we just did to get to this infrastructure.
 
 Often I get comments that people are surprised how complex OpenTTD's infrastructure is, and why that is.
 With this post, I will try to explain a bit what is going on in the backend, and why it takes a bit of effort to keep everything running smoothly.
