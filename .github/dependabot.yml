@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: "pip"
+  directory: "/"
+  schedule:
+    interval: "monthly"
+  groups:
+    dependencies:
+      patterns:
+      - "*"
+- package-ecosystem: "bundler"
+  directory: "/"
+  schedule:
+    interval: "monthly"
+  groups:
+    regression:
+      patterns:
+      - "*"
