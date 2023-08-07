@@ -45,15 +45,17 @@ All BaNaNaS content, releases, nightlies, etc: they all go here.
 
 None of our R2 buckets are connected directly to a public domain; there is always a Cloudflare Worker in between, making sure the requests are valid, making sure our CDN feels like directory listing, etc etc.
 
-One important note here is, that Cloudflare's access sucks balls (sorry, there really isn't any reason to sugarcoat this one).
+~~One important note here is, that Cloudflare's access sucks balls (sorry, there really isn't any reason to sugarcoat this one).
 There isn't any RBAC yet, which means that if you create an API token for Cloudflare R2 with Write access, it can write in EVERY BUCKET, including the deletion of files.
 This of course is a potential security issue, as we need our services (like BaNaNaS, or when we make a new nightly) to write in those buckets, and that code can make mistakes (we are all human after all).
 To harden things a bit more, even writing a new file to R2 is done via a Cloudflare Worker.
-An interesting fact is that a Cloudflare Worker can be bound to a single R2 bucket, where it cannot access any other.
+An interesting fact is that a Cloudflare Worker can be bound to a single R2 bucket, where it cannot access any other.~~
 
-This is really the only real complaint I have about Cloudflare; although AWS's IAM is far far better, if we consider AWS's IAM all the way on the right side of the access rights spectrum, Cloudflare's API tokens are far on the left.
+~~This is really the only real complaint I have about Cloudflare; although AWS's IAM is far far better, if we consider AWS's IAM all the way on the right side of the access rights spectrum, Cloudflare's API tokens are far on the left.
 There is a lot of room between those two, and I hope Cloudflare addresses that soon.
-Either way, slapping a simple Cloudflare Worker between it really isn't the biggest problem.
+Either way, slapping a simple Cloudflare Worker between it really isn't the biggest problem.~~
+
+Update: by now Cloudflare addressed this issue, and R2 API tokens can be scoped per bucket.
 
 ### Cloudflare Workers
 
