@@ -54,7 +54,7 @@ To recover, remove `_site/static/js/ua-parser.js` manually.
 
 On download pages, you notice that every binary has a human readable description.
 `windows-win64.exe` is for most people to cryptic.
-`Windows XP / Vista / 7 / 8 / 10 (64bit) (installer)` is much more clear.
+`Windows 7 / 8 / 10 / 11 (64bit) (installer)` is much more clear.
 This file takes care of that mapping, based on the postfix of the file.
 
 ### Why the downloads?
