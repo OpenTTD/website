@@ -46,6 +46,8 @@ linux-generic-amd64.tar.xz:
   description: Linux Generic Binaries (x86_64, 64bit) (xz/lzma archive)
 linux-generic-amd64.zip:
   description: Linux Generic Binaries (x86_64, 64bit) (zip archive)
+linux-legacy-amd64.tar.xz:
+  description: Ubuntu 18.04 / Debian 9 / Fedora 32 / RHEL 8 or older (x86_64, 64bit)
 amd64.tar.gz:
   description: Linux Generic Binaries (x86_64, 64bit)
 linux-debian-bullseye-amd64-dbg.deb:
