@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         submodules: true
 
@@ -35,7 +35,7 @@ jobs:
         bundler-cache: true
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: 3.8
 
@@ -49,19 +49,19 @@ jobs:
 
   codeql:
     name: CodeQL
-    uses: OpenTTD/actions/.github/workflows/rw-py-codeql.yml@v4
+    uses: OpenTTD/actions/.github/workflows/rw-py-codeql.yml@v5
     with:
       python-version: 3.8
 
   flake8:
     name: Flake8
-    uses: OpenTTD/actions/.github/workflows/rw-py-flake8.yml@v4
+    uses: OpenTTD/actions/.github/workflows/rw-py-flake8.yml@v5
     with:
       python-path: fetch_downloads
 
   black:
     name: Black
-    uses: OpenTTD/actions/.github/workflows/rw-py-black.yml@v4
+    uses: OpenTTD/actions/.github/workflows/rw-py-black.yml@v5
     with:
       python-path: fetch_downloads
       python-version: 3.8
@@ -74,4 +74,4 @@ jobs:
     - black
     # not codeql, as that reports its own status
 
-    uses: OpenTTD/actions/.github/workflows/rw-annotation-check.yml@v4
+    uses: OpenTTD/actions/.github/workflows/rw-annotation-check.yml@v5
