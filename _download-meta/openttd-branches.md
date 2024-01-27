@@ -12,6 +12,11 @@ Sound and music sets are recommended (but not necessary).
 
 Additional graphics, sound, and music sets can be downloaded via the in-game content download manager.
 
+For integration with Social Platforms, you have to manually download and install the plugin of the platform (only available on OpenTTD 14.0 and later):
+- [Discord](../discord-social-releases/latest)
+- [GOG Galaxy](../gog-galaxy-social-releases/latest)
+- [Steam](../steam-social-releases/latest)
+
 Please refer to the [readme](https://cdn.openttd.org/@@folder@@/README.md) for more information.
 
 **WARNING** - These binaries are built based on [Pull Request](https://github.com/OpenTTD/OpenTTD/pulls); the quality might vary, as the Pull Request might not be merge-ready.
