@@ -10,6 +10,7 @@ on:
   repository_dispatch:
     types:
     - publish_latest_tag
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -63,4 +64,4 @@ jobs:
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
         directory: _site
-        branch: ${{ github.event_name == 'push' && github.ref_name || github.event_name == 'repository_dispatch' && 'main' || format('pr/{0}', github.event.pull_request.number) }}
+        branch: ${{ github.event_name == 'push' && github.ref_name || github.event_name == 'repository_dispatch' && 'main' || github.event_name == 'workflow_dispatch' && 'main' || format('pr/{0}', github.event.pull_request.number) }}
