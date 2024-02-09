@@ -7,7 +7,6 @@ staticurl: /static
 url: "https://www.openttd.org"
 timezone: Etc/UTC
 excerpt_separator: <!-- more -->
-future: true
 
 markdown: kramdown
 plugins:
