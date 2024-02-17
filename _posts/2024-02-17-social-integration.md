@@ -117,8 +117,9 @@ In here plugins can be installed, for example the [Steam plugin](https://www.ope
 You have to extract its content in this "social_integration" folder, and start the game.
 
 When the game starts, it is validated that the plugins are signed off by OpenTTD, and if they are, they are loaded.
-The first step for the plugin is to check whether its target platform it installed.
+The first step for the plugin is to check whether the social platform is running.
 If so, it starts the integration with that platform.
+A plugin can only integrate with a platform if it is running when OpenTTD starts; so make sure Steam, Discord, or GOG Galaxy is already running before you start OpenTTD.
 
 Under "Game Options" -> "Social", you will find whether the integration is running.
 
