@@ -11,7 +11,7 @@ For years, players have requested an easier way to keep vehicles with shared ord
 
 <!-- more -->
 
-![A comparison of red bunched buses versus purple unbunched buses]({% link /static/img/post_2024-02-06-bus-bunching/bunched-comparison.png %})
+![A comparison of red bunched buses versus purple unbunched buses]({% link /static/img/post_2024-02-10-bus-bunching/bunched-comparison.png %})
 
 To keep vehicles spaced evenly, we can either speed up or slow down vehicles.
 Speeding up vehicles is tricky even in real life, requiring adding extra vehicles, skipping stops, or turning a vehicle around before its final destination.
@@ -30,7 +30,7 @@ There is one place where vehicles cannot deadlock: Depots.
 Vehicles in depots don't take up space on roads or rails in the game world, so they cannot block each other.
 This is the trick to the new unbunching feature in OpenTTD 14.
 
-![The depot menu, with its new Unbunch action]({% link /static/img/post_2024-02-06-bus-bunching/unbunch.png %})
+![The depot menu, with its new Unbunch action]({% link /static/img/post_2024-02-10-bus-bunching/unbunch.png %})
 
 Vehicles can have orders to get serviced or stop at a depot.
 This feature adds a new type of depot order, marking that depot as the unbunching point for a group of vehicles which share orders.
