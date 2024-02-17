@@ -55,7 +55,7 @@ Make it a choice.
 To ensure the game itself remains licensed under GPLv2, we created a simple plugin system which allows us to extend the game with other binaries which might be licensed differently.
 We have been doing this for years and years now, via our [BaNaNaS system](https://bananas.openttd.org).
 This delivers in-game content to the user, while the author of such content can license it how ever they like.
-The only "demand" we make, is that the author gives us the right to distribute their content, and that is is available free of charge.
+The only "demand" we make, is that the author gives us the right to distribute their content, and that it is available free of charge.
 
 In result, we see a wide variety of content on BaNaNaS, under all kinds of licenses.
 Some authors embrace the ideology of OpenTTD, and use open or free licenses.
@@ -71,7 +71,7 @@ The source of those plugins are released under MIT licenses; another Open Source
 ## Security is a thing
 
 Content uploaded to BaNaNaS is executed in the game via sandboxes: nobody can read files on your computer, make network connections, or anything like that.
-They can only do things we allow the addons, which is a very restrictive set of actions.
+They can only do things we allow the addons to do, which is a very restrictive set of actions.
 
 This is a lot harder for a plugin system that integrates with platforms like Steam, Discord, GOG Galaxy, etc.
 We can't sandbox those really, as they have to be native binaries (executables) that run on the player's system.
@@ -117,7 +117,7 @@ In here plugins can be installed, for example the [Steam plugin](https://www.ope
 You have to extract its content in this "social_integration" folder, and start the game.
 
 When the game starts, it is validated that the plugins are signed off by OpenTTD, and if they are, they are loaded.
-The first a plugin does is check if the platform it is designed for is loaded.
+The first step for the plugin is to check whether its target platform it installed.
 If so, it starts the integration with that platform.
 
 Under "Game Options" -> "Social", you will find whether the integration is running.
@@ -125,8 +125,8 @@ Under "Game Options" -> "Social", you will find whether the integration is runni
 !["Game Options" -> "Social"]({% link /static/img/post_2024-02-17-social-integration/game-options.png %})
 
 For Steam, we automatically add the Steam and Discord plugin.
-For people downloading the game manually, they have to download the plugins manually too.
-This is mentioned on [the download page](https://www.openttd.org/downloads/openttd-releases/testing).
+For people downloading the game manually, they have to download the plugins manually as well.
+This is explained on [the download page](https://www.openttd.org/downloads/openttd-releases/testing).
 
 ## The future
 
