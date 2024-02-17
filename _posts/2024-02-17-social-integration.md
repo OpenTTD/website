@@ -10,7 +10,7 @@ You finally can!
 
 <!-- more -->
 
-In OpenTTD 14.0 we ship a plugin system which allows OpenTTD to integrate with platforms like Steam, Discord, GOG Galaxy, etc.
+In OpenTTD 14.0, we ship a plugin system which allows OpenTTD to integrate with platforms like Steam, Discord, GOG Galaxy, etc.
 This didn't come easy, and is the work of many years figuring out what the best approach would be.
 
 When we first released on Steam back in 2021, it became clear that we would love to integrate with Steam.
@@ -18,7 +18,7 @@ Only two months after our release on Steam, we started to figure out how to make
 In that same month a first draft was created ... and it took until now to make that a reality.
 
 We have been asked many times over these three years why we didn't integrate with Steam yet; why it is taking this long.
-So in this blog post we will shed some light on what was needed for this to happen.
+So in this blog post, we will shed some light on what was needed for this to happen.
 Answering the question: why does it take so long?
 
 Let's delve in!
@@ -29,7 +29,7 @@ The first hurdle we had to take wasn't technical at all: how do we deal with all
 
 As you might know, OpenTTD is released under GPLv2.
 This is a good license for an Open Source game, as it ensures that everyone who makes a modification to the game also have to release the source for that modification.
-And, if we would like so, we can integrate that change back into the vanilla game again, allowing everyone to enjoy that modification.
+And, if we would like to, we can integrate that change back into the vanilla game again, allowing everyone to enjoy that modification.
 
 There is one downside of the GPLv2 license: it is not really compatible with many other licenses, as it is kinda strict in the implications.
 I am not going to delve too much into the details in this post, but just know once something is GPLv2, everything it touches has to be GPLv2 or compatible with it.
@@ -125,7 +125,7 @@ Under "Game Options" -> "Social", you will find whether the integration is runni
 
 !["Game Options" -> "Social"]({% link /static/img/post_2024-02-17-social-integration/game-options.png %})
 
-For Steam, we automatically add the Steam and Discord plugin.
+For Steam, we automatically add the Steam and Discord plugins.
 For people downloading the game manually, they have to download the plugins manually as well.
 This is explained on [the download page](https://www.openttd.org/downloads/openttd-releases/testing).
 
