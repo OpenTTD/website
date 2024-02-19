@@ -61,14 +61,14 @@ The automated checks include what is called *continuous integration* (CI), which
 Automated checks are well and good, but so far they can't replace a human code review.
 In code review, other people look at the code and try to find any issues or spots that could be improved.
 This can be everything from validating functionality, checking UI and user experience, to proof-reading code comments.
-For a large change like the ship pathfinder, we've even organized a multi-player test game to check for any dreaded desync problems.
+For a large change like the ship pathfinder, we even organized a multi-player test game to check for any dreaded desync problems.
 
 Usually, this results in a back and forth between the author updating the PR and the reviewers looking again until the PR is either declared good or rejected.
 Unfortunately, not every author has the motivation to follow this until the end, so it happens that PRs just kind of fizzle off without reaching a finished state.
 Up to here, everybody can pitch in with reviewing a PR, but actually approving or rejecting a PR requires a decision by someone that has commit access to the OpenTTD repository.
 
 PR aren't actually outright rejected that often.
-Reasons for rejection might be that the PR is contrary to the goals of the OpenTTD project, like e.g. re-creating the original Transport Tycoon gameplay.
+Reasons for rejection might be that the PR is contrary to the goals of the OpenTTD project, like trying to add content that could be very well done as an add-on NewGRF.
 Sometimes it also happens that a PR is meant well, but just not the right solution for a particular issue because it might affect some other part of the game negatively.
 
 For approving a PR we're quite strict, maybe stricter than many other projects out there.
@@ -84,7 +84,8 @@ If we wouldn't care about code quality, the source code would probably be a hot 
 One thing of note here is that no author can self-approve a PR, even if they have commit access to OpenTTD.
 In this sense, all PR authors are treated equal and need to follow the same process to get a PR approved.
 
-Finally, if a PR has the coveted approval, it is merged into the main code base.
+Finally, if a PR has the coveted approval, it can be merged into the main code base.
+This can be done by the person approving it, but especially for bigger changes we like the merge to be done by a second set of eyes.
 From that point in time it is part of the game, but not yet in the version you are playing right now.
 For this it still needs a release, which we'll cover in the next section.
 
@@ -113,7 +114,7 @@ Beta releases are still marked as testing releases and are usually not included 
 
 Even if it's directly taken from the main source, there's still a lot of stuff that needs to be done even for a beta release.
 Someone has to look over all the changes since the last release and write the changelog.
-The website news post has to be written, posts for social media like Discord or reddit prepared, and an image for the Steam news post drawn.
+The website news post has to be written, posts for social media like Discord or Reddit prepared, and an image for the Steam news post drawn.
 When everything is ready, a so-called tag is created that marks a specific commit.
 With this tag, some more automated CI workflows compile binaries for the various platforms we support and upload them to our website and the other distribution platforms.
 When the CI is done, the news post can be published and the social media posts made so you will actually know that there is a new release.
@@ -154,8 +155,8 @@ So what's up with that?
 
 While many people think that the individuals with merge permissions are "the" developers of OpenTTD, this isn't really true at all.
 GitHub provides various statistics for each project, and lists 169 contributors to OpenTTD at the time of writing this.
-And this number is still much too low, as it is for example missing many contributors from before we were on GitHub or our language translators.
-These hundreds of individuals are the real developers of OpenTTD and the people with merge permissions are more like housekeeping or maintenance.
+And this number is still much too low, as it is for example missing many contributors from before we were on GitHub, and doesn't count our language translators since their changes are committed by a bot.
+These hundreds of individuals are the real developers of OpenTTD and the people with commit access are more akin to housekeeping or maintenance.
 
 When you read something like "Why haven't the devs included X yet?", it is very rarely because someone with merge permissions said "nope", even if the questions is often phrased to imply this.
 It is not included yet because nobody volunteered their time for it.
@@ -172,7 +173,7 @@ So the best way to get X included is to donate some of your time.
 
 OpenTTD would not have made close to 20 years if it weren't for the hundreds of people that chose to donate some of their time to the project.
 As such, we are very thankful for everybody who contributed something, no matter how small or big.
-Without people who contribute code, triage issues on GitHub, make translations, create content like NewGRFs or AIs, or help answer questions on places like the official Discord, reddit, or Steam forums, OpenTTD would not be where it is right now.
+Without people who contribute code, triage issues on GitHub, make translations, create content like NewGRFs or AIs, or help answer questions on places like the official Discord, Reddit, or Steam forums, OpenTTD would not be where it is right now.
 And without you playing the game, it wouldn't be here either.
 
 
