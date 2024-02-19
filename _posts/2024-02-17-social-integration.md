@@ -6,7 +6,7 @@ author: TrueBrain
 Always wanted to know what kind of OpenTTD game your friends are playing on Steam, Discord or GOG Galaxy?
 You finally can!
 
-![Discord Example]({% link /static/img/post_2024-02-17-social-integration/discord.png %})
+![Discord Example]({% link /static/img/post_2024-02-17-social-integration/discord.png %}){:width="50%"}
 
 <!-- more -->
 
