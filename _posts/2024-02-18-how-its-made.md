@@ -172,7 +172,7 @@ So the best way to get X included is to donate some of your time.
 
 OpenTTD would not have made close to 20 years if it weren't for the hundreds of people that chose to donate some of their time to the project.
 As such, we are very thankful for everybody who contributed something, no matter how small or big.
-Without people who contribute code, triage issues on GitHub, make translations, create content like NewGRFs or AIs, or help answer questions on placed like the official Discord, reddit, or Steam forums, OpenTTD would not be where it is right now.
+Without people who contribute code, triage issues on GitHub, make translations, create content like NewGRFs or AIs, or help answer questions on places like the official Discord, reddit, or Steam forums, OpenTTD would not be where it is right now.
 And without you playing the game, it wouldn't be here either.
 
 
