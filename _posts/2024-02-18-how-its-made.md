@@ -5,7 +5,7 @@ author: michi_cc
 ---
 
 Ever wondered how a new OpenTTD release is made?
-How we decide what features to include and what to reject or how some people to seem to know the "future" before you?
+How we decide what features to include and what to reject or how some people seem to know the "future" before you?
 Curious what it means that OpenTTD is Open Source?
 Or maybe you've even wondered what it takes to get your idea included in OpenTTD?
 
@@ -147,7 +147,7 @@ Compared to that, the current automatic CI workflows really do feel like awesome
 
 ## Getting personal
 
-If you've been diligently reading till now, you might have noticed that haven't used the word "developer" so far.
+If you've been diligently reading till now, you might have noticed that I haven't used the word "developer" so far.
 Instead, I've mostly talked about a generic someone.
 So what's up with that?
 
