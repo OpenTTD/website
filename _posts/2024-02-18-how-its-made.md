@@ -16,7 +16,7 @@ In this post, you'll get a peek behind the quite transparent curtain and learn m
 ## What's source anyway?
 
 Let's start with the meaning of Open Source, as the source (or source code) of a computer program really is the source of it all.
-In a nutshell, the source code of a computer program is the human-readable form of any program.
+In a nutshell, the source code of a computer program is a form that is a lot easier for humans to understand than the instructions the computer is executing.
 For OpenTTD, we use the programming language [C++](https://en.wikipedia.org/wiki/C%2B%2B).
 This source code is then transformed by a piece of software called a compiler into a binary form that the processor in your device can run.
 The binary is then combined with various other data files to create the game you can download from our website or for example get via Steam.
@@ -25,7 +25,7 @@ While every computer program has a source, not every program is Open Source.
 Open Source requires that the source code is freely available and allows modifications by other parties.
 You can look at the source code of OpenTTD right now in our [git repository on GitHub](https://github.com/OpenTTD/OpenTTD) <small>(but please come back here afterwards)</small>.
 To be able to track changes to the source code, we use a version control system called <code>git</code>.
-It shows us each and every individual change (called commit in git) that was made to the game since its inception 20 years ago.
+It shows us each and every individual change (called *commit* in git) that was made to the game since its inception 20 years ago.
 Being able to see old changes is quite useful when trying to fix problems or figuring out why something was done the way it was done.
 The list of commits is also what you need to watch to gain "magical" knowledge about things that are coming in future releases of OpenTTD.
 
@@ -33,7 +33,7 @@ The list of commits is also what you need to watch to gain "magical" knowledge a
 
 Our GitHub page is also where things are tracked that are not yet part of the game and still in development.
 You might have encountered it before as the place where you can report an issue with the game.
-Besides the git repository of the game itself, GitHub also hosts various other git repository related to the game, like for example OpenGFX, NewGRF development tools or various back-end infrastructure.
+Besides the git repository of the game itself, GitHub also hosts various other git repositories related to the game, like for example OpenGFX, NewGRF development tools or various back-end infrastructure.
 
 ## How a feature is born
 
@@ -50,18 +50,11 @@ OpenTTD is purely developed by volunteers, there's no company, foundation, or ot
 
 Now let's assume that the person is in fact developing a feature (like for example the new ship pathfinder) and has completed the initial development.
 Since OpenTTD moved to its current home on GitHub almost 6 years ago, we've adopted a fixed process for any change to OpenTTD.
-The first step in the process is to open a so-called pull request (PR) on GitHub with the proposed changes to the source code in the form of git commits.
+The first step in the process is to open what is called a *pull request* (PR) on GitHub with the proposed changes to the source code in the form of git commits.
 Additionally, we require a description of the changes following a specific template to make sure nothing important is left out.
 
-Whenever a PR is opened or updated, a set of automatic checks is kicked off that are designed to catch some easy to make errors.
-The checks can be divided into three groups.
-The first group does some formal checks that are designed to make sure the source code stays readable and consistently formatted.
-The second group triggers a set of various compiles for different compilers and platforms.
-This is to make sure the PR compiles on all platforms we support and not just the one feature was developed on.
-The third group of checks are some automated code security checks that scan the code for common logic errors.
-
-This kind of automated checking are usually referred to as Continuous Integration (CI).
-GitHub will show the result of each check on the PR and also offers a convenient dashboard shown below to dive into all the details.
+Whenever a PR is opened, various automatic checks run to verify some formal things, but while those checks are running, other contributors can already begin to review and comment on the pull request.
+The automated checks include what is called *continuous integration* (CI), which ensures the PR actually compiles on all platforms we support and not just the one the author is working on.
 
 ![Pull request overview]({% link /static/img/post_2024-02-18-how-its-made/PR.png %}){:width="100%"}
 
@@ -119,7 +112,7 @@ The main purpose of beta releases is to gather feedback from players about new f
 Beta releases are still marked as testing releases and are usually not included in Linux distributions or the normal Steam updates, thus depend on players willingly trying a potentially unstable game version.
 
 Even if it's directly taken from the main source, there's still a lot of stuff that needs to be done even for a beta release.
-Someone has to collect all the changes since the last release and create the changelog from them.
+Someone has to look over all the changes since the last release and write the changelog.
 The website news post has to be written, posts for social media like Discord or reddit prepared, and an image for the Steam news post drawn.
 When everything is ready, a so-called tag is created that marks a specific commit.
 With this tag, some more automated CI workflows compile binaries for the various platforms we support and upload them to our website and the other distribution platforms.
