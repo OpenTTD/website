@@ -48,6 +48,11 @@ But really, everybody has a different personal motivation.
 There's one reason you're not going to find though: Because the boss said so, or because it is on the big company road map.
 OpenTTD is purely developed by volunteers, there's no company, foundation, or other controlling central entity behind it.
 
+Ideas are often discussed in the development channel of the [official OpenTTD Discord](https://discord.gg/openttd).
+It's a good way to gauge interest, exchange ideas and chat about issues before spending any significant time on something.
+It's also a fast way to get help or inspiration when stuck on something while developing for OpenTTD.
+While activity in the channel does vary over the day, someone is usually always awake.
+
 Now let's assume that the person is in fact developing a feature (like for example the new ship pathfinder) and has completed the initial development.
 Since OpenTTD moved to its current home on GitHub almost 6 years ago, we've adopted a fixed process for any change to OpenTTD.
 The first step in the process is to open what is called a *pull request* (PR) on GitHub with the proposed changes to the source code in the form of git commits.
