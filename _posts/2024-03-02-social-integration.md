@@ -6,7 +6,7 @@ author: TrueBrain
 Always wanted to know what kind of OpenTTD game your friends are playing on Steam, Discord or GOG Galaxy?
 You finally can!
 
-![Discord Example]({% link /static/img/post_2024-02-17-social-integration/discord.png %}){:width="50%"}
+![Discord Example]({% link /static/img/post_2024-03-02-social-integration/discord.png %}){:width="50%"}
 
 <!-- more -->
 
@@ -65,7 +65,7 @@ From our point of view, we don't actually mind either way: as long as our player
 The plugin system that is added to 14.0 uses the same logic and mechanism.
 Although technically it is very different, more on that later, but from your point of view it is the same: download a plugin, put it in the right folder, and enjoy the added functionality.
 
-Currently we release three plugins: Steam, Discord, and GOG Galaxy.
+Currently we are releasing three plugins: Steam, Discord, and GOG Galaxy.
 The source of those plugins are released under MIT licenses; another Open Source license, with much simpler conditions compared to GPLv2.
 
 ## Security is a thing
@@ -119,11 +119,11 @@ You have to extract its content in this "social_integration" folder, and start t
 When the game starts, it is validated that the plugins are signed off by OpenTTD, and if they are, they are loaded.
 The first step for the plugin is to check whether the social platform is running.
 If so, it starts the integration with that platform.
-A plugin can only integrate with a platform if it is running when OpenTTD starts; so make sure Steam, Discord, or GOG Galaxy is already running before you start OpenTTD.
+A plugin can only integrate with a platform that is running when OpenTTD starts; so make sure Steam, Discord, or GOG Galaxy is already running before you start OpenTTD.
 
 Under "Game Options" -> "Social", you will find whether the integration is running.
 
-!["Game Options" -> "Social"]({% link /static/img/post_2024-02-17-social-integration/game-options.png %})
+!["Game Options" -> "Social"]({% link /static/img/post_2024-03-02-social-integration/game-options.png %})
 
 For Steam, we automatically add the Steam and Discord plugins.
 For people downloading the game manually, they have to download the plugins manually as well.
@@ -167,4 +167,5 @@ And I can't wait for the next step!
 ## More about OpenTTD 14
 
 This post is part of the series of dev diaries about big new features coming in OpenTTD 14.
-Next week, we'll ...
+Next week, we'll talk about how OpenTTD 14 came into existence, and how you can be part of it.
+Till then!
