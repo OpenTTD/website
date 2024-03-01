@@ -102,13 +102,19 @@ An additional challenge was that we release for three OSes: Windows, Linux and M
 And they all deal with plugins in a slightly different way; enough to be challenging.
 A lot of testing, failing, trying again went into getting this right.
 
-Which also meant we had to make choices: get something to work now, and build on it later, or try to do everything at once, potentially never finishing it at all.
+Complicating the situation further, is that we don't have an active MacOS developer, nor do we have access to an actual Mac.
+This meant we had to proxy the development / testing via other people who do have a Mac.
+The conversation went like: "does this work?", "and now?", "what does it say?", "no, in that other window".
+I mostly want to thank Emperor Jake for helping out here.
+Your patience to test yet-another-MacOS-test-build is greatly appreciated.
+
+All this also meant we had to make choices: get something to work now, and build on it later, or try to do everything at once, potentially never finishing it at all.
 We went for the first approach, but it also means the current capabilities of the plugin system are rather limited.
 So don't think too much of it yet.
 
 The main thing it currently does is announce you are playing the game, whether you are in the Main Menu or in-game, and what kind of map-size you are playing.
 Other things like being able to join each others games etc is all not implemented yet, but hopefully someone will pick that up for the next version.
-But, as always, no promises there.
+But, as always, no promises!
 
 ## How does it work?
 
@@ -119,7 +125,7 @@ You have to extract its content in this "social_integration" folder, and start t
 When the game starts, it is validated that the plugins are signed off by OpenTTD, and if they are, they are loaded.
 The first step for the plugin is to check whether the social platform is running.
 If so, it starts the integration with that platform.
-A plugin can only integrate with a platform that is running when OpenTTD starts; so make sure Steam, Discord, or GOG Galaxy is already running before you start OpenTTD.
+A plugin can only integrate with a platform that is running when OpenTTD starts; so make sure Steam, Discord, and/or GOG Galaxy is already running before you start OpenTTD.
 
 Under "Game Options" -> "Social", you will find whether the integration is running.
 
