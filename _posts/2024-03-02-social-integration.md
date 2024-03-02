@@ -102,7 +102,7 @@ An additional challenge was that we release for three OSes: Windows, Linux and M
 And they all deal with plugins in a slightly different way; enough to be challenging.
 A lot of testing, failing, trying again went into getting this right.
 
-Complicating the situation further: we don't have an active MacOS developer, nor do we have access to aphysical Mac.
+Complicating the situation further: we don't have an active MacOS developer, nor do we have access to a physical Mac.
 This meant we had to proxy the development / testing via other people who do have a Mac.
 The conversation went like: "does this work?", "and now?", "what does it say?", "no, in that other window".
 I mostly want to thank Emperor Jake for helping out here.
