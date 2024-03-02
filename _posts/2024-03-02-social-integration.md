@@ -102,13 +102,13 @@ An additional challenge was that we release for three OSes: Windows, Linux and M
 And they all deal with plugins in a slightly different way; enough to be challenging.
 A lot of testing, failing, trying again went into getting this right.
 
-Complicating the situation further, is that we don't have an active MacOS developer, nor do we have access to an actual Mac.
+Complicating the situation further: we don't have an active MacOS developer, nor do we have access to an physical Mac.
 This meant we had to proxy the development / testing via other people who do have a Mac.
 The conversation went like: "does this work?", "and now?", "what does it say?", "no, in that other window".
 I mostly want to thank Emperor Jake for helping out here.
 Your patience to test yet-another-MacOS-test-build is greatly appreciated.
 
-All this also meant we had to make choices: get something to work now, and build on it later, or try to do everything at once, potentially never finishing it at all.
+All this also meant we had to make a choice: either get something to work now and build on it later, or try to do everything at once, potentially never finishing it at all.
 We went for the first approach, but it also means the current capabilities of the plugin system are rather limited.
 So don't think too much of it yet.
 
