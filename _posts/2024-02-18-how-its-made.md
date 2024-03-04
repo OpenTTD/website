@@ -176,11 +176,12 @@ So the best way to get X included is to donate some of your time.
 
 ## Final thoughts
 
-OpenTTD would not have made close to 20 years if it weren't for the hundreds of people that chose to donate some of their time to the project.
+OpenTTD would not have made to 20 years if it weren't for the hundreds of people that chose to donate some of their time to the project.
 As such, we are very thankful for everybody who contributed something, no matter how small or big.
 Without people who contribute code, triage issues on GitHub, make translations, create content like NewGRFs or AIs, or help answer questions on places like the official Discord, Reddit, or Steam forums, OpenTTD would not be where it is right now.
 And without you playing the game, it wouldn't be here either.
 
+## More about OpenTTD 14
 
-
-***** Insert teaser here ******
+This post is part of the series of dev diaries about big new features coming in OpenTTD 14.
+Next week, well get a survey of some more behind-the-scenes work that helps us to better understand what players like about OpenTTD.
