@@ -184,4 +184,4 @@ And without you playing the game, it wouldn't be here either.
 ## More about OpenTTD 14
 
 This post is part of the series of dev diaries about big new features coming in OpenTTD 14.
-Next week, well get a survey of some more behind-the-scenes work that helps us to better understand what players like about OpenTTD.
+Next week, we'll get a survey of some more behind-the-scenes work that helps us to better understand what players like about OpenTTD.
