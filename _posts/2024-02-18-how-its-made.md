@@ -53,7 +53,7 @@ It's a good way to gauge interest, exchange ideas and chat about issues before s
 It's also a fast way to get help or inspiration when stuck on something while developing for OpenTTD.
 While activity in the channel does vary over the day, someone is usually always awake.
 
-Now let's assume that the person is in fact developing a feature (like for example the new ship pathfinder) and has completed the initial development.
+Now let's assume that the person is in fact developing a feature (like for example the [new ship pathfinder](https://www.openttd.org/news/2024/02/24/new-ship-pathfinder)) and has completed the initial development.
 Since OpenTTD moved to its current home on GitHub almost 6 years ago, we've adopted a fixed process for any change to OpenTTD.
 The first step in the process is to open what is called a *pull request* (PR) on GitHub with the proposed changes to the source code in the form of git commits.
 Additionally, we require a description of the changes following a specific template to make sure nothing important is left out.
