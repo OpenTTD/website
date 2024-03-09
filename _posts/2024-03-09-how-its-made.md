@@ -29,7 +29,7 @@ It shows us each and every individual change (called *commit* in git) that was m
 Being able to see old changes is quite useful when trying to fix problems or figuring out why something was done the way it was done.
 The list of commits is also what you need to watch to gain "magical" knowledge about things that are coming in future releases of OpenTTD.
 
-![List of commits on GitHub]({% link /static/img/post_2024-02-18-how-its-made/commits.png %}){:width="100%"}
+![List of commits on GitHub]({% link /static/img/post_2024-03-09-how-its-made/commits.png %}){:width="100%"}
 
 Our GitHub page is also where things are tracked that are not yet part of the game and still in development.
 You might have encountered it before as the place where you can report an issue with the game.
@@ -61,7 +61,7 @@ Additionally, we require a description of the changes following a specific templ
 Whenever a PR is opened, various automatic checks run to verify some formal things, but while those checks are running, other contributors can already begin to review and comment on the pull request.
 The automated checks include what is called *continuous integration* (CI), which ensures the PR actually compiles on all platforms we support and not just the one the author is working on.
 
-![Pull request overview]({% link /static/img/post_2024-02-18-how-its-made/PR.png %}){:width="100%"}
+![Pull request overview]({% link /static/img/post_2024-03-09-how-its-made/PR.png %}){:width="100%"}
 
 Automated checks are well and good, but so far they can't replace a human code review.
 In code review, other people look at the code and try to find any issues or spots that could be improved.
@@ -102,7 +102,7 @@ The first one is the "nightly".
 This is automatically made out of a snapshot of the source code each day.
 The nightly release uses almost the same CI workflow as described for the PR checks, except that the result is published on our website and on Steam.
 
-![Types of versions]({% link /static/img/post_2024-02-18-how-its-made/release_versions.png %}){:width="300px" style="float:right; padding:10px"}
+![Types of versions]({% link /static/img/post_2024-03-09-how-its-made/release_versions.png %}){:width="300px" style="float:right; padding:10px"}
 
 The other kind of releases are the interesting ones, the ones that get a proper version assigned, like the upcoming OpenTTD 14.0.
 These happen whenever we think there are enough new things, improvements, and bug fixes since we made the last major release.
@@ -156,7 +156,7 @@ If you've been diligently reading till now, you might have noticed that I haven'
 Instead, I've mostly talked about a generic someone.
 So what's up with that?
 
-![Contributors to OpenTTD]({% link /static/img/post_2024-02-18-how-its-made/contributors.png %}){:width="300px" style="float:right; padding:10px"}
+![Contributors to OpenTTD]({% link /static/img/post_2024-03-09-how-its-made/contributors.png %}){:width="300px" style="float:right; padding:10px"}
 
 While many people think that the individuals with merge permissions are "the" developers of OpenTTD, this isn't really true at all.
 GitHub provides various statistics for each project, and lists 169 contributors to OpenTTD at the time of writing this.
