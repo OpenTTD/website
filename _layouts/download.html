@@ -34,7 +34,13 @@ js:
         <div class="content">
             <p>Latest {{ page.name }} release in {{ page.category }} is {{ page.version }}, released on {{ page.date | date: "%Y-%m-%d %H:%M" }} UTC.</p>
 
+            {% assign markdowndate = '22-10-2024' | date: '%s' %}
+            {% assign versiondate = page.date | date: '%s' %}
+            {% if page.date <= markdowndate %}
             <div class="changelog">[&nbsp;<a href="https://cdn.openttd.org/{{ folder }}/changelog.txt">Changelog</a>&nbsp;]</div>
+            {% else %}
+            <div class="changelog">[&nbsp;<a href="https://cdn.openttd.org/{{ folder }}/changelog.md">Changelog</a>&nbsp;]</div>
+            {% endif %}
             <div id="download-combo">
                 <input type="hidden" id="download-combo-state" value="" />
                 <input type="hidden" id="download-base-name" value="{{ page.base }}" />
