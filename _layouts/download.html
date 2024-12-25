@@ -36,7 +36,7 @@ js:
 
             {% assign markdowndate = '22-10-2024' | date: '%s' %}
             {% assign versiondate = page.date | date: '%s' %}
-            {% if versiondate <= markdowndate %}
+            {% if versiondate <= markdowndate && raw_type contains "openttd" %}
             <div class="changelog">[&nbsp;<a href="https://cdn.openttd.org/{{ folder }}/changelog.txt">Changelog</a>&nbsp;]</div>
             {% else %}
             <div class="changelog">[&nbsp;<a href="https://cdn.openttd.org/{{ folder }}/changelog.md">Changelog</a>&nbsp;]</div>
