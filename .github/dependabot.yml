@@ -5,7 +5,7 @@ updates:
   schedule:
     interval: "monthly"
   groups:
-    dependencies:
+    python:
       patterns:
       - "*"
 - package-ecosystem: "bundler"
@@ -13,7 +13,7 @@ updates:
   schedule:
     interval: "monthly"
   groups:
-    regression:
+    ruby:
       patterns:
       - "*"
 - package-ecosystem: "github-actions"
