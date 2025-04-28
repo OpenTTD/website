@@ -39,9 +39,9 @@
                 {% endif %}
                 <li><a href="{{ site.baseurl }}{{ latest_nightly.url }}">Download nightly ({{ nightly_version }})</a></li>
             </ul>
-            <div id="openttd-logo">
-                <div id="openttd-logo-text"><a href="{{ site.baseurl }}/"><img src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" /></a></div>
-            </div>
+            <a id="openttd-logo" href="{{ site.baseurl }}/">
+                <img id="openttd-logo-text" src="{{ site.staticurl }}/img/layout/openttd-logo.png" alt="OpenTTD" />
+            </a>
         </header>
         <nav>
             {% if page.active_nav == 'security' or layout.active_nav == 'security' %}
