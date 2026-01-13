@@ -31,7 +31,7 @@ css:
                     <th class="first_vuln">first vulnerable</th>
                     <th class="first_fixed">first fixed</th>
                 </tr>
-            {% assign security_reverse = site.security | where_exp: "item", "item.name" | reverse %}
+            {% assign security_reverse = site.security | where_exp: "item", "item.first_vulnerable" | reverse %}
             {% for security in security_reverse %}
                 <tr class="{% cycle 'odd', 'even' %}">
                     <td><a href="{{ site.baseurl }}{{ security.url }}">{{ security.name }}</td>
