@@ -127,14 +127,14 @@ body > nav {
 	background: #555555;
 	border-radius: 0px 0px 10px 10px;
 	box-shadow: 0px 0px 5px #000000;
-	margin: 0px auto;
+	margin: 0 auto;
 	overflow: hidden;
 }
 #navigation-bar {
 	font-size: 0.75em;
 	display: flex;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 #navigation-bar li {
 	flex-grow: 1;
