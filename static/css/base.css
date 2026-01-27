@@ -99,7 +99,7 @@ body > header {
 }
 
 #openttd-logo {
-	background: url("../img/layout/openttd-64.gif") no-repeat left bottom 2px;
+	background: url("../img/layout/openttd.svg") no-repeat left calc(100% - 3px) / 64px 64px;
 	height: 68px;
 	width: 250px;
 	position: relative;
