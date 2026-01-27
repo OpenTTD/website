@@ -45,7 +45,7 @@ permalink: /index.html
     <div id="index-right">
         <figure id="screenshot">
             {% assign random_screenshot = site.screenshots | sample %}
-            <a href="{{ site.baseurl }}/screenshots.html" id="screenshot-image">
+            <a href="{{ site.baseurl }}{{ random_screenshot.id }}.html" id="screenshot-image">
                 {% assign stripped_content = random_screenshot.content | strip_html | strip_newlines %}
                 <img src="{{ site.baseurl }}{{ random_screenshot.id }}_thumb.png"
                     alt=""
