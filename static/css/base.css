@@ -144,7 +144,7 @@ body > nav {
 #navigation-bar li a {
 	color: #DDDDDD;
 	display: block;
-	padding: 0px 3px 0px 3px;
+	padding-inline: 0.25em;
 	text-decoration: none;
 	text-align: center;
 }
