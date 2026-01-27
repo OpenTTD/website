@@ -62,9 +62,9 @@ body > * {
 }
 
 body > header {
-	margin: 0px auto;
-	padding: 6px 10px 10px 10px;
 	font-size: 1rem;
+	margin: 0 auto;
+	padding: 0.625em;
 	box-shadow: 0px 0px 5px #000000;
 	background: #323536;
 	/* Stripes! */
