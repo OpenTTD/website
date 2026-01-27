@@ -177,7 +177,7 @@ body > footer {
 	margin-inline: auto;
 	padding: 0.5em;
 	overflow: hidden;
-	border-radius: 5px;
+	border-radius: 0.5em;
 	box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.11);
 }
 body > footer > * {
