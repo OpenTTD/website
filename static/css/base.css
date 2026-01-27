@@ -123,6 +123,7 @@ body > header {
 }
 
 body > nav {
+	font-size: 1rem;
 	background: #555555;
 	border-radius: 0px 0px 10px 10px;
 	box-shadow: 0px 0px 5px #000000;
@@ -132,12 +133,12 @@ body > nav {
 	overflow: hidden;
 }
 #navigation-bar {
+	font-size: 0.75em;
 	display: flex;
 	margin: 0px;
 	padding: 0px;
 }
 #navigation-bar li {
-	font-size: 12px;
 	flex-grow: 1;
 	line-height: 32px;
 	list-style-type: none;
