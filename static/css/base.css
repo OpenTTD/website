@@ -75,14 +75,15 @@ body > header {
 }
 
 #download-fast {
-	background: url("../img/layout/download-package.gif") 12px 50% no-repeat, rgba(85, 87, 89, 0.4);
 	font-size: 0.86em;
+	background: url("../img/layout/download-package.gif") 0.875em 50% no-repeat, rgba(85, 87, 89, 0.4);
 	border: 0 solid;
 	border-radius: 0.25em;
 	list-style: none;
 	margin: 0;
-	padding: 6px 10px 6px 45px;
 	text-align: left;
+	padding-block: 0.25em;
+	padding-inline: calc(0.875em + 21px + 0.875em) 0.75em;
 }
 #download-fast a {
 	color: #ccc;
