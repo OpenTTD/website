@@ -164,6 +164,9 @@
        xlink:href="#linearGradient3421"
        gradientUnits="userSpaceOnUse" />
   </defs>
+  <g>
+    <path d="m 126,15 l 110,110 -110,110, -110,-110z" style="fill:#eee;stroke:none;" />
+  </g>
   <g
      transform="translate(-246.4375,-405.5443)"
      id="layer1">
