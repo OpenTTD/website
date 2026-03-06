@@ -12,6 +12,8 @@ Sound and music sets are recommended (but not necessary).
 
 Additional graphics, sound, and music sets can be downloaded via the in-game content download manager.
 
+You can purchase Transport Tycoon Deluxe alongside OpenTTD on [Steam](https://store.steampowered.com/app/3766810/Transport_Tycoon_Deluxe) and [GOG](https://www.gog.com/game/transport_tycoon_deluxe).
+
 For integration with Social Platforms, you have to manually download and install the plugin of the platform (only available on OpenTTD 14.0 and later):
 - [Discord](../discord-social-releases/latest)
 - [GOG Galaxy](../gog-galaxy-social-releases/latest)
