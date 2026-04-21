@@ -1,0 +1,63 @@
+name: Build
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  repository_dispatch:
+    types:
+    - publish_latest_tag
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+      with:
+        ref: ${{ github.event.pull_request.head.sha || github.ref }}
+        submodules: true
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true
+
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: python -m pip install -r requirements.txt
+
+    - name: Build
+      run: |
+        python -m fetch_downloads
+        JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
+
+    - name: Prepare branch name
+      run: |
+        mkdir branch
+        echo "${{ github.event_name == 'push' && github.ref_name || github.event_name == 'repository_dispatch' && 'main' || github.event_name == 'workflow_dispatch' && 'main' || format('pr/{0}', github.event.pull_request.number) }}" > ./branch/name
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v6
+      with:
+        name: payload
+        path: |
+          _site
+          branch
+        retention-days: 1
