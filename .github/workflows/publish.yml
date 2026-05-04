@@ -55,4 +55,4 @@ jobs:
         -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
         -H "X-GitHub-Api-Version: 2026-03-10" \
         ${{ steps.deployment.outputs.url }} \
-        -d '{"state":"${{ job.status }}","log_url":"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}","environment_url":"${{ steps.pages.outputs.pages-deployment-alias-url }}","auto_inactive":false}'
+        -d '{"state":"${{ job.status }}","log_url":"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}","environment_url":"${{ steps.pages.outputs.pages-deployment-alias-url || steps.pages.outputs.deployment-url }}","auto_inactive":false}'
