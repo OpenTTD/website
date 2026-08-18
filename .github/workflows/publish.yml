@@ -39,7 +39,7 @@ jobs:
         echo "name=$(cat branch/name)" >> $GITHUB_OUTPUT
 
     - name: Publish to Cloudflare Pages
-      uses: cloudflare/wrangler-action@v3
+      uses: cloudflare/wrangler-action@v4
       id: pages
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
