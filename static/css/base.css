@@ -62,29 +62,36 @@ body > * {
 }
 
 body > header {
-	margin: 0px auto;
-	padding: 6px 10px 10px 10px;
+	font-size: 1rem;
+	margin: 0 auto;
+	padding: 0.625em;
 	box-shadow: 0px 0px 5px #000000;
+	background: #323536;
 	/* Stripes! */
-	background-image: repeating-linear-gradient(to bottom, #323536 0, #323536 1px, #3c3e40 1px, #3c3e40 2px);
+	background: repeating-linear-gradient(to bottom, #323536 0, #323536 1px, #3c3e40 1px, #3c3e40 2px);
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 }
 
 #download-fast {
-	background: url("../img/layout/download-package.gif") 12px 50% no-repeat, rgba(85, 87, 89, 0.4);
+	font-size: 0.86em;
+	background: url("../img/layout/download-package.gif") 0.875em 50% no-repeat, rgba(85, 87, 89, 0.4);
 	border: 0 solid;
-	border-radius: 6px;
+	border-radius: 0.25em;
 	list-style: none;
 	margin: 0;
-	padding: 6px 10px 6px 45px;
 	text-align: left;
+	padding-block: 0.25em;
+	padding-inline: calc(0.875em + 21px + 0.875em) 0.75em;
+}
+#download-fast li:not(:last-child) {
+	margin-block-end: 0.125em;
 }
 #download-fast a {
 	color: #ccc;
-	font-size: 11px;
 	text-decoration: none;
+	display: block;
 }
 #download-fast a:focus, #download-fast a:hover {
 	color: #999;
@@ -92,7 +99,7 @@ body > header {
 }
 
 #openttd-logo {
-	background: url("../img/layout/openttd-64.gif") no-repeat left bottom 2px;
+	background: url("../img/layout/openttd.svg") no-repeat left calc(100% - 3px) / 64px 64px;
 	height: 68px;
 	width: 250px;
 	position: relative;
