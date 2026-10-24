@@ -7,4 +7,4 @@ idna==3.18
 multidict==6.7.1
 propcache==0.5.2
 PyYAML==6.0.3
-yarl==1.24.5
+yarl==1.25.1
