@@ -46,3 +46,9 @@ We will continue to deliver new versions of OpenTTD to all platforms, including 
 
 If you want to ask questions about OpenTTD, make suggestions, or report bugs in the game, nothing has changed - see details [here](https://www.openttd.org/contact).
 Transport Tycoon Deluxe and the new Steam and GOG listings are managed and supported by [Atari](https://support.atari.com/).
+
+<!-- more -->
+
+## Additional information
+
+Our follow-up post with more information can be found [here](https://www.openttd.org/news/2026/03/19/steam-changes-update).
