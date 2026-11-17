@@ -42,6 +42,9 @@ OpenTTD continues to be developed by a team of independent developers, supported
 There has been no change to the development team, our workflow, or the open source nature of the project.
 We will continue to deliver new versions of OpenTTD to all platforms, including Steam and GOG.
 
+## Why did this happen?
+We cover the backstory in [this post](https://www.openttd.org/news/2026/03/19/steam-changes-update).
+
 ## Help and support
 
 If you want to ask questions about OpenTTD, make suggestions, or report bugs in the game, nothing has changed - see details [here](https://www.openttd.org/contact).
